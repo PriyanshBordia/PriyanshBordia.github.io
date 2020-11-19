@@ -1,3 +1,3 @@
 # PriyanshBordia.github.io
 
-Personal Website
+[Personal Website](priyanshbordia.github.io)
