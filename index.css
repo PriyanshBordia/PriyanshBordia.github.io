@@ -1,0 +1,116 @@
+
+@media only screen and (max-width: 600px)
+{
+    body
+    {
+        background-color: lightblue;
+    }
+}
+
+    .content
+    {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    body
+    {
+        border-top-style: solid;
+        border-top-color: black;
+        border-top-width: thick;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: thick;
+        background-color: #f5f5f5;
+        font-family: sans-serif;
+    }
+
+/*Headnote*/
+    #linkesite
+    {
+        margin: 20px;
+        padding: 5px;
+        border-bottom: groove;
+        font-size: 25px;
+    }
+
+    a:link
+    {
+        text-decoration: none !important;
+    }
+
+    a:hover
+    {
+        color: #F6AF44;
+    }
+
+/*List header*/
+    header
+    {
+        padding: 10px;
+        font-size: 40px;
+    }
+
+/*Body text*/
+    div
+    {
+        margin: 20px;
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+/*Image*/
+    img
+    {
+        max-width: 600px;
+        margin: auto;
+    }
+
+/*table style*/
+    table, tr, td
+    {
+        margin: 10px;
+        padding: 30px;
+    }
+
+
+    #hobbies td:hover
+    {
+        border: 1px solid black;
+        border-radius: 24px;
+        border-color: #f9f8fd;
+        background: #005a73;
+        color: #F6AF44;
+    }
+
+/*Login page*/
+    #log-on
+    {
+        text-align: center;
+        padding: 5px;
+        color: #F6AF44;
+    }
+
+    footer
+    {
+        text-decoration: none;
+        color: grey;         /* Gray */
+        font-size: 16px;
+        text-align: center;
+        margin: 10px;
+    }
+
+/*Hower Over Effect*/
+    .button
+    {
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    .button:hover
+    {
+        background-color: #f5f5f5;
+        color: rgb(120,81,169);
+    }
+
+/*Social Media handles*/
