@@ -48,32 +48,15 @@ body
     }
 
 /*Body text*/
-    #content-body
-    {
-        margin: 20px;
-        padding: 10px;
-        font-family: Verdana, Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        /* border-left: 2px solid grey; */
-        /* border-bottom: 2px solid grey; */
-    }
-
-/*About page*/
-
-/*Image*/
-    img
-    {
-        max-width: 700px;
-        max-height: 700px;
-        margin: auto;
-    }
-
-/*table style*/
-    table, tr, td
-    {
-        margin: 10px;
-        padding: 30px;
-    }
+#content-body
+{
+    margin: 20px;
+    padding: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* border-left: 2px solid grey; */
+    /* border-bottom: 2px solid grey; */
+}
 
 /*Social Media handles*/
 #social-handles a
