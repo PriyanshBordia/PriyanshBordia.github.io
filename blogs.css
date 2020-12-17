@@ -24,7 +24,6 @@ body
 .description-container .floating-image.right
 {
     float: right;
-    /* margin-right: 1.0px; */
     margin-left: 50px;
     margin-bottom: 100px;
 }
@@ -33,7 +32,6 @@ body
 {
     float: left;
     margin-right: 50px;
-    /* margin-left: 20px;  */
     margin-bottom: 100px;
 }
 
@@ -42,7 +40,7 @@ p
 {
     text-align: justify;
     margin: 30px;
-    padding: 40px;
+    padding: 35px;
     line-height: 4.0;
     font-size: 25px;
     font-family: fantasy;
