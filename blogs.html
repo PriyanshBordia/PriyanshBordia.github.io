@@ -3,27 +3,43 @@
     <head>
         <meta charset="utf-8">
 
-        <link href = "index.css" rel="stylesheet">
+        <!-- Link Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+        <link href = "blogs.css" rel="stylesheet">
 
         <title> | Blogs </title>
     </head>
     <body>
-        <p>I like capturing landscapes. One of which is..</p>
-        <div class="container container-fluid">
-            <picture>
-                <img src = "images/lnmiit.png" alt="LNMIIT, Jaipur">
-            </picture>
-            <picture>
-                <img src = "images/Garden.png" alt="Somewhere in Australia" style="float:right;">
-            </picture>
-            <picture>
-                <img src = "images/streets.png" alt="Streets of Jaipur" style="float:left;">
-            </picture>
+        <div class="container">
+            <div class="description-container">
+                <img class="img-responsive floating-image right" src = "images/lnmiit.png" alt="LNMIIT, Jaipur">
+                <p>
+                    View of The LNMIIT, Jaipur on one fine day.
+                </p>
 
-            <footer class = "button">
-               &copy; 2020 Priyansh Bordia
-            </footer>
+                <img class="img-responsive floating-image left" src = "images/streets.png" alt="Streets of Jaipur">
+                <p>
+                    Streets of Jaipur City on one lazy morning.
+                </p>
+
+            <!-- <div class="">
+                <picture>
+                    <img class="img-fluid" src = "images/Garden.png" alt="Somewhere in Australia" style="float:right;">
+                    <div id="img-text" style="float:left;">
+                        Streets of Jaipur City on one lazy morning.
+                    </div>
+                </picture>
+            </div> -->
+            </div>
         </div>
 
+        <footer class = "button">
+           &copy; 2020 Priyansh Bordia
+        </footer>
     </body>
 </html>

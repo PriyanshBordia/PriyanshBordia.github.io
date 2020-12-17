@@ -1,0 +1,87 @@
+body
+{
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: thick;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: thick;
+}
+
+.description-container
+{
+    margin: 40px auto 20px;
+}
+
+.description-container .floating-image
+{
+    max-height: 700px;
+    max-width: 700px;
+    border-radius: 20px;
+}
+
+.description-container .floating-image.right
+{
+    float: right;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.description-container .floating-image.left
+{
+    float: left;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+
+p
+{
+    text-align: justify;
+    margin: 30px;
+    padding: 40px;
+    line-height: 4.0;
+    font-size: 25px;
+    font-family: fantasy;
+    text-align: center;
+}
+
+
+/*Social Media handles*/
+#social-handles a
+{
+    /* margin: 10px; */
+    padding: 5px;
+    margin-left: 10px;
+    /* float: left; */
+}
+
+#social-handles a:hover
+{
+    color: #447EA6;
+    text-decoration: none !important;
+}
+
+/* Footer */
+footer
+{
+    text-decoration: none !important;
+    color: grey;         /* Gray */
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+}
+
+/*Hower Over Effect*/
+.button, #social-handles a
+{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover
+{
+    color: rgb(120,81,169);
+}
