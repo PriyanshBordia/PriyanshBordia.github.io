@@ -10,11 +10,12 @@ body
 
 .description-container
 {
-    margin: 40px auto 20px;
+    margin: 10px auto 10px;
 }
 
 .description-container .floating-image
 {
+    margin: auto;
     max-height: 700px;
     max-width: 700px;
     border-radius: 20px;
@@ -23,17 +24,17 @@ body
 .description-container .floating-image.right
 {
     float: right;
-    margin-right: 30px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    /* margin-right: 1.0px; */
+    margin-left: 50px;
+    margin-bottom: 100px;
 }
 
 .description-container .floating-image.left
 {
     float: left;
-    margin-right: 10px;
-    margin-left: 30px;
-    margin-bottom: 10px;
+    margin-right: 50px;
+    /* margin-left: 20px;  */
+    margin-bottom: 100px;
 }
 
 
