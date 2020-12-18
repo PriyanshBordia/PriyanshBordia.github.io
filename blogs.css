@@ -36,7 +36,7 @@ body
 }
 
 
-p
+.text
 {
     text-align: justify;
     margin: 30px;
@@ -47,6 +47,20 @@ p
     text-align: center;
 }
 
+#pcode
+{
+    max-width: 500px;
+    margin: auto;
+    font-size: 20px;
+}
+
+#gists
+{
+    max-width: 700px;
+    margin: auto;
+    word-wrap: normal;
+    background-color: black;
+}
 
 /*Social Media handles*/
 #social-handles a
