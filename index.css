@@ -22,7 +22,7 @@ body
     font-size: 25px;
 }
 
-a
+.content-head a
 {
     float: right;
     text-decoration: none !important;
@@ -56,8 +56,13 @@ header
 {
     padding: 10px;
     margin: auto;
-    max-width: 600px;
     text-align: center;
+}
+
+#social-handles a
+{
+    padding: 5px;
+    color: grey;
 }
 
 #social-handles a:hover
