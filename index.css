@@ -25,7 +25,6 @@ body
 .content-head a
 {
     float: right;
-    text-decoration: none !important;
     color: grey;
 }
 
@@ -33,6 +32,7 @@ body
 {
     color: rgb(120,81,169);
     border-bottom: 1px solid black;
+    text-decoration: none !important;
 }
 
 /*List header*/
