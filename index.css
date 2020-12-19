@@ -29,7 +29,7 @@ body
     color: grey;
 }
 
-a:hover
+.content-head a:hover
 {
     color: rgb(120,81,169);
     border-bottom: 1px solid black;
