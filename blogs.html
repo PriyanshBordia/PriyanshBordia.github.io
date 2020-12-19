@@ -4,23 +4,24 @@
         <meta charset="utf-8">
 
         <!-- Link Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-        <link href = "blogs.css" rel="stylesheet">
 
         <!--Load the AJAX API-->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript" src="blogs.js"></script>
+
+        <!-- CSS -->
+        <link href="blogs.css" rel="stylesheet">
+
+        <!-- Java Script -->
+        <!-- <script type="text/javascript" src="blogs.js"></script> -->
 
         <link rel="icon" href="icons/link.jpeg">
 
         <title> | Blogs </title>
+
     </head>
     <body>
-        <div class="container">
+        <!-- <div class="container">
             <div class="description-container justify-content-center">
                 <img class="img-responsive floating-image right" src = "images/lnmiit.png" alt="LNMIIT, Jaipur">
                 <aside class="text">
@@ -54,7 +55,7 @@
 
         <hr>
 
-        <section >
+        <section>
             <pre id="pcode">
                 <code class="language-python">import os
                     def main:
@@ -67,11 +68,13 @@
 
         <div id="pieChart"></div>
 
-        <hr>
+        <hr> -->
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true" width="640" height="1516" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div id="map"></div>
 
-        <section id = "social-handles" class="justify-content-center mb-3">
+        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true" width="640" height="1516" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+<!-- 
+        <section id = "social-handles" class=" mb-3">
             <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i class = "fab fa-github fa"></i></a>
             <a href="mailto::priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i class = "fab fa-envelope fa"></i></a>
             <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank" title="Priyansh B."><i class = "fab fa-linkedin fa"></i></a>
@@ -80,13 +83,45 @@
             <a href="#" class="ml-3" target="_blank" title = "GitBucket"><i class = "fab fa-bitbucket fa"></i></a>
             <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-gitlab fa"></i></a>
             <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-slack fa"></i></a>
-            <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa"></i></a> -->
             <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-telegram fa"></i></a>
             <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3" target="_blank" title="Priyansh Bordia"><i class = "fab fa-youtube fa-"></i></a>
         </section>
 
         <footer class = "button">
            &copy; 2020 Priyansh Bordia
-        </footer>
+        </footer> -->
+
+        <script>
+            function initMap() {
+                    const myLatLng = {
+                        lat: 21.1452,
+                        lng: 72.8001
+                    };
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 20,
+                        center: myLatLng,
+                        fullscreenControl: true,
+                        zoomControl: true,
+                        streetViewControl: true
+                    });
+
+                    const marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map,
+                        title: "Home"
+                    });
+
+                    const contentString = "C-1101";
+
+                    const infowindow = new google.maps.InfoWindow({
+                        content: contentString,
+                    });
+
+                    marker.addListener("click", () => {
+                        infowindow.open(map, marker);
+                    })
+                }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkVJPMmyZ4FAZnFC6mCBPIHK_XqBf1I5w&callback=initMap"></script>
     </body>
 </html>
