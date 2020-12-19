@@ -1,3 +1,29 @@
+@media only screen and (max-width: 600px) 
+{
+   #sp-text
+   {
+        margin: 20px;
+        font-size: 30px;
+        text-align: center;
+        display: block;
+   }
+
+    #sp-link a
+   {
+        font-size: 16px;
+        justify-content: center;
+        display: block;
+        padding: 10px;
+   }
+
+   span::after 
+   { 
+       content: '\A'; 
+       white-space: pre; 
+    }
+}
+
+
 body
 {
     border-top-style: solid;
