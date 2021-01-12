@@ -1,0 +1,19 @@
+#options
+{
+	float: left;
+	margin-top: 10px;
+	font-weight: 200;
+	font-family: Chalkduster, Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 36px;
+	font-style: oblique;
+}
+
+#color-picker, #thickness-picker, #erase
+{
+	width: 100px;
+}
+
+#draw {
+	border: 2px solid gray;
+	border-radius: 5px;
+}

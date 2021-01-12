@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+
+	    <link rel="stylesheet" type="text/css" href="board.css">
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="board.js"></script>
+
+        <title> White Board </title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="options" class="row">
+            	<header id="brand" class="mr-2">Tinker</header>
+
+                <select id="color-picker" class="custom-select mt-2 mb-3 ml-3">
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="pink">Pink</option>
+                    <option value="grey">Grey</option>
+                    <option value="violet">Violet</option>
+                </select>
+
+                <select id="thickness-picker" class="custom-select mt-2 mb-3 ml-3">
+                </select>
+
+                <button id="erase" class="btn btn-outline-danger mt-2 ml-3 mb-3">Erase</button>
+            </div>
+        </div>
+        <svg id="draw">
+        </svg>
+    </body>
+</html>
