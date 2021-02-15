@@ -95,6 +95,11 @@ body
     font-size: 25px;
 }
 
+#sp-text
+{
+	cursor: pointer;
+}
+
 #sp-link
 {
     float: right;
@@ -103,13 +108,14 @@ body
 .content-head a
 {
     padding: 10px;
-    color: grey;
+    color: grey
 }
 
 .content-head a:hover
 {
     color: rgb(120,81,169);
     border-bottom: 1px solid black;
+    transition: top ease 0.3s;
     text-decoration: none !important;
 }
 
@@ -147,6 +153,17 @@ header
 {
     color: #447EA6;
     text-decoration: none !important;
+}
+
+
+#social-handles i
+{
+    transition: top ease 0.5s;
+}
+
+#social-handles i:hover
+{
+	top: -10px;
 }
 
 /* Footer */
