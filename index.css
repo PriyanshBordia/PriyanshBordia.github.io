@@ -75,9 +75,6 @@ body
     border-top-style: solid;
     border-top-color: black;
     border-top-width: thick;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width: thick;
 }
 
 .content
@@ -164,6 +161,11 @@ header
 #social-handles i:hover
 {
 	top: -10px;
+}
+
+.footnote 
+{
+    background-color: red;
 }
 
 /* Footer */
