@@ -1,28 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    var opacity = 0;
-    var intervalId = 0;
+    console.log('DOM Loaded..!!');
 
-    window.onload = fadeout;
+    const btnHamburger = document.querySelector('#btnHamburger');
 
-    function fadeout()
-    {
-        setInterval(hide, 200);
-    }
+    btnHamburger.onclick = () => {
 
-    function hide()
-    {
-        var wrapper = document.getElementById("body");
+        if (btnHamburger.classList.contains('open'))
+            btnHamburger.classList.remove('open');
 
-        opacity = Number(window.getComputedStyle(wrapper).getPropertyValue("opacity"));
+        else
+            btnHamburger.classList.add('open');
+    };
 
-        if (opacity > 0) 
-        {
-            opacity = opacity - 0.1;
-        }
+    function play() {
+        var audio = new Audio('media/music/chime.mp3');
+        audio.play();
+    };
 
-        else {
-            clearInterval(intervalId);
-        }
-    }
+    // var opacity = 0;
+    // var intervalId = 0;
+
+    // window.onload = fadeout;
+
+    // function fadeout()
+    // {
+    //     setInterval(hide, 200);
+    // }
+
+    // function hide()
+    // {
+    //     var wrapper = document.getElementById("body");
+
+    //     opacity = Number(window.getComputedStyle(wrapper).getPropertyValue("opacity"));
+
+    //     if (opacity > 0) 
+    //     {
+    //         opacity = opacity - 0.1;
+    //     }
+
+    //     else {
+    //         clearInterval(intervalId);
+    //     }
+    // }
 });

@@ -1,0 +1,117 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+a {
+  color: grey;
+  text-decoration: none !important;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header nav {
+  padding: 20px;
+}
+
+.header__logo img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #F6AF44;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header__menu.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header__links a {
+  position: relative;
+  font-size: 1.25rem;
+  color: grey;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__links a:hover {
+  color: #7851a9;
+  -webkit-transition: top ease 0.4s;
+  transition: top ease 0.4s;
+}
+/*# sourceMappingURL=style.css.map */
