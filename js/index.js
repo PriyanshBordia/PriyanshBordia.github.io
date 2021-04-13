@@ -3,14 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Loaded..!!');
 
     const btnHamburger = document.querySelector('#btnHamburger');
+    const header = document.querySelector('.header');
+    const fadeElements = document.querySelectorAll('.has-fade');
+
 
     btnHamburger.onclick = () => {
 
-        if (btnHamburger.classList.contains('open'))
-            btnHamburger.classList.remove('open');
+        if (header.classList.contains('open'))
+        {
+            header.classList.remove('open');
+            fadeElements.forEach((element) => {
+                element.classList.remove('fade-in');
+                element.classList.add('fade-out');
+            });
+        }
+
 
         else
-            btnHamburger.classList.add('open');
+        {
+            header.classList.add('open');
+            fadeElements.forEach((element) => {
+                element.classList.remove('fade-out');
+                element.classList.add('fade-in');
+            });
+        }
     };
 
     function play() {
