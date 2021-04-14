@@ -1,6 +1,6 @@
 .header {
 
-    border-bottom: 1px solid black;
+    border: 1px solid $NeonGreen;
     // Hamburger Open Styles
     &.open {
 
@@ -31,7 +31,7 @@
         right: 0px;
         left: 0px;
         bottom: 0px;
-        background-image: linear-gradient(to bottom, lightblue, white);
+        background-image: linear-gradient(to bottom, $Navy, $LightestNavy);
     }
 
     &__logo {
@@ -40,6 +40,7 @@
             width: 30%;
             height: 30%;
             border-radius: 50%;
+            border-color: $NeonGreen;
         }
     }
 
@@ -47,11 +48,12 @@
 
         > span {
             display: block;
-            width: 26px;
-            height: 2px;
-            background-color: $u1;
+            height: .125rem;
+            width: 1.625rem;
+            background-color: $NeonGreen;
             transition: all 200ms ease-in-out;
             transform-origin: 3px 1px;
+            
 
             &:not(:last-child) {
                 margin-bottom: 5px;
@@ -61,7 +63,7 @@
     
     nav {
         position: relative;
-        background-color: white;
+        background-color: $Navy;
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
     }
@@ -72,7 +74,7 @@
         width: calc(100% -3rem);
         left: 50%;
         transform: translateX(-50%);
-        background: rgb(252, 252, 252);
+        background: $White;
         margin-top: 1.5rem;
         padding: 1.625rem;
         border-radius: 7px;

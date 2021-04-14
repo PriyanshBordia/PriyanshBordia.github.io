@@ -86,9 +86,16 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.125rem;
   font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  background-color: #0a192f;
+  color: #a8b2d1;
   line-height: 1.3;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -97,7 +104,7 @@ body {
 }
 
 a {
-  color: grey;
+  color: #a8b2d1;
   text-decoration: none !important;
 }
 
@@ -114,11 +121,15 @@ img {
 }
 
 h4 {
-  color: #5B677D;
+  color: #8892b0;
+}
+
+i:hover {
+  color: #64ffda;
 }
 
 li, p {
-  color: gray;
+  color: #a8b2d1;
   text-decoration: none !important;
 }
 
@@ -126,18 +137,19 @@ li, p {
 #social-handles {
   padding: 10px;
   margin: auto;
+  color: #ccd6f6;
   text-align: center;
 }
 
-#social-handles a:hover {
-  color: #447EA6;
+#social-handles > a:hover {
+  color: #64ffda;
   text-decoration: none !important;
 }
 
 /* Footer */
 footer {
   text-decoration: none !important;
-  color: grey;
+  color: #a8b2d1;
   /* Gray */
   font-size: 16px;
   text-align: center;
@@ -152,7 +164,7 @@ footer {
 }
 
 .button:hover {
-  color: #7851a9;
+  color: #64ffda;
 }
 
 .flex {
@@ -192,7 +204,7 @@ footer {
 }
 
 .header {
-  border-bottom: 1px solid black;
+  border: 1px solid #64ffda;
 }
 
 .header.open .overlay {
@@ -220,21 +232,22 @@ footer {
   right: 0px;
   left: 0px;
   bottom: 0px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(lightblue), to(white));
-  background-image: linear-gradient(to bottom, lightblue, white);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0a192f), to(#233554));
+  background-image: linear-gradient(to bottom, #0a192f, #233554);
 }
 
 .header__logo img {
   width: 30%;
   height: 30%;
   border-radius: 50%;
+  border-color: #64ffda;
 }
 
 .header__toggle > span {
   display: block;
-  width: 26px;
-  height: 2px;
-  background-color: #F6AF44;
+  height: .125rem;
+  width: 1.625rem;
+  background-color: #64ffda;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   -webkit-transform-origin: 3px 1px;
@@ -247,7 +260,7 @@ footer {
 
 .header nav {
   position: relative;
-  background-color: white;
+  background-color: #0a192f;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
 }
@@ -258,7 +271,7 @@ footer {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: #fcfcfc;
+  background: #e6f1ff;
   margin-top: 1.5rem;
   padding: 1.625rem;
   border-radius: 7px;
