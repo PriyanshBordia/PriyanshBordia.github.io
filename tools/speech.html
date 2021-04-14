@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+  	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  	
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  	<!-- load font awesome here for icon used on the page -->
+
+	<script src="js/speech.js"></script>
+
+	<link rel="stylesheet" href="css/speech.css">
+
+	<title>| Speech Recognition App</title>
+
+</head>
+<body>
+	<div class="container"> <!--page container -->
+	    <div class="text-box" contenteditable="true"></div> 
+	    <!--text box which will contain spoken text -->
+	    <i class="fa fa-microphone" onclick="play()"></i> 
+	    <!-- microphone icon to be clicked before speaking -->
+	</div>
+
+  	<audio class="sound" src="chime.mp3"></audio> 
+</body>
+</html>

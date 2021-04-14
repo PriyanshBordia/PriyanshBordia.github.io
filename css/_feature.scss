@@ -1,33 +1,33 @@
 .feature {
 
-    &__grid {
-        
-        @include breakpoint-up(large) {
+	&__grid {
+		
+		@include breakpoint-up(large) {
 
-            display: flex;
-        }
-    }
+			display: flex;
+		}
+	}
 
-    &__item {
-        
-        border: 1px solid magenta;
-        padding: 0.9375rem;
+	&__item {
+		
+		border: 1px solid magenta;
+		padding: 0.9375rem;
 
-        @include breakpoint-up(large) {
+		@include breakpoint-up(large) {
 
-            flex: 1;
-        }
-    }
+			flex: 1;
+		}
+	}
 
-    &__title {
-        
-    }
+	&__title {
+		//
+	}
 
-    &__icon {
-        
-    }
+	&__icon {
+		//	
+	}
 
-    &__description {
-        
-    }
+	&__description {
+		//
+	}
 }
