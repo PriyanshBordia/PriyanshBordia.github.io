@@ -1,12 +1,35 @@
 .main {
 
-    background-color: rgb(95, 199, 150);
+    font-weight: 100;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-70%) translateY(-55%);
 
-    .greetings {
+    &__greeting {
 
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        font-size: 1rem;
+        color: $NeonGreen;
+    }
+
+    &__name {
+
+        font-size: 5rem;
+        color: $White;
+    }
+
+    &__positions {
+
+        font-size: 3.2rem;
+        color: $LightSlate;
+    }
+    
+    &__description {
+
+        margin: 1rem;
+        padding-top: 2rem;
+        max-width: 40rem;
+        font-size: 1rem;
+        color: $LightestSlate;
     }
 }

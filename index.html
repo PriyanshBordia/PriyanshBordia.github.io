@@ -1,74 +1,117 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel = "stylesheet">
-        <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel = "stylesheet">
+    <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
 
-        <!-- Java Script -->
-        <script src="js/script.js"></script>
+    <!-- Java Script -->
+    <script src="js/animejs/lib/anime.js"></script>
+    <script src="js/script.js"></script>
 
-        <!-- CSS -->
-        <link href="css/style.css" rel="stylesheet">
-        
-        <!-- Icon -->
-        <link rel="icon" href="media/icons/profile.jpg">
-        <title> Woosh.! | Priyansh Bordia </title>
-    </head>
-
-    <body>  
-        <header class="header">
-            <div class="overlay has-fade"></div>
-            <nav class=" container flex flex-jc-sb flex-ai-c">
-                <a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
-                    <img src="media/icons/profile0.jpg" alt="Priyansh Bordia">
-                </a>
-                <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <div class="header__links hide-for-mobile">
-                    <a href="about.html" title="About Me">About</a>
-                    <a href="blogs.html" title="Blog" target="_blank">Blog</a>
-                    <a href="tools.html" title="Tools">Tools</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1" title="General Survey Form" target="_blank">Survey</a>
-                    <a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" title="Résumé" target="_blank">Résumé</a>
-                </div>
-            </nav>
-            <div class="header__menu has-fade">
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Icon -->
+    <link rel="icon" href="media/icons/profile.jpg">
+    <title> Woosh.! | Priyansh Bordia </title>
+</head>
+<body id="body">  
+    <!-- Window Onload Animation -->
+    <!-- <div class="hex__animation">
+        <svg id="hexagon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g>
+                <g id="B" transform="translate(36, 33)" fill="#64FFDA" style="opacity: 0"
+                    font-family="Calibre-Medium, Calibre" font-size="50" font-weight="400" letter-spacing="4.16666603">
+                    <text><tspan x="0.141666985" y="33">P</tspan></text>
+                </g>
+                <path stroke="#64FFDA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" 
+                    d="M 50, 5
+                    L 11, 27
+                    L 11, 72
+                    L 50, 95
+                    L 89, 73
+                    L 89, 28 z" />
+            </g>
+        </svg>
+    </div> -->
+    
+    <header class="header">
+        <div class="overlay has-fade"></div>
+        <nav class="container flex flex-jc-sb flex-ai-c">
+            <a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
+                <img src="media/icons/profile0.jpg" alt="Priyansh Bordia">
+            </a>
+            <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="header__links hide-for-mobile">
                 <a href="about.html" title="About Me">About</a>
                 <a href="blogs.html" title="Blog" target="_blank">Blog</a>
                 <a href="tools.html" title="Tools">Tools</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1" title="General Survey Form" target="_blank">Survey</a>
                 <a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" title="Résumé" target="_blank">Résumé</a>
             </div>
-        </header>
-
-        
-        <main class="main"></main>
-            <div class="container conatiner-fluid">
-                <h6>Hi, my name is </h6>
-                <br>
-                <h1>Priyansh Bordia</h1>
-                <h2>I am a Software developer.</h2>
-                <h6> I'm a Software Engineer specialized in building web applications using Django. 
-                    I love contributing to OpenSource projects. 
-                    I also maintain a blog to share my learnings with the community.
-                </h6>
-                <hr>
-            </main>
+        </nav>
+        <div class="header__menu has-fade">
+            <a href="about.html" title="About Me">About</a>
+            <a href="blogs.html" title="Blog" target="_blank">Blog</a>
+            <a href="tools.html" title="Tools">Tools</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1" title="General Survey Form" target="_blank">Survey</a>
+            <a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" title="Résumé" target="_blank">Résumé</a>
         </div>
+    </header>
 
-        <script src="//code.tidio.co/sa5z7xvsujd7dyf3qsxekfh1exhwg9tj.js" async></script>
-    </body>
+    <main class="main">
+        <p class="main__greeting">Hi, my name is</p>
+        <p class="main__name">Priyansh Bordia.</p>
+        <p class="main__positions">I am a Software Developer.</p>
+        <p class="main__description"> 
+            I'm a Software Engineer specialized in building web applications using <code>Django</code>.
+            <br> 
+            I love contributing to <code>OpenSource</code> projects. 
+            I am currently working as a Software Engineering Intern at <code>Delta Exchange</code>.
+        </p>
+    </main>
+
+    <div class="fixed-bottom">
+        <div id="social-handles" class="justify-content-center mb-3 mt-3">
+            <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i
+                    class="fab fa-github fa" onmouseover="play()"></i></a>
+            <a href="mailto:priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i
+                    class="fab fa-envelope fa" onmouseover="play()"></i></a>
+            <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank" title="Priyansh B."><i
+                    class="fab fa-linkedin fa" onmouseover="play()"></i></a>
+            <a href="https://twitter.com/BordiaPriyansh" class="ml-3" target="_blank" title="BordiaPriyansh"><i
+                    class="fab fa-twitter fa" onmouseover="play()"></i></a>
+            <a href="https://www.instagram.com/priyansh.bordia/" class="ml-3" target="_blank" title="priyansh.bordia"><i
+                    class="fab fa-instagram fa" onmouseover="play()"></i></a>
+            <!-- <a href="#" class="ml-3" target="_blank" title="priyansh.bordia"><i class="fa fa-snapchat-ghost" onmouseover="play()"></i></a> -->
+            <!-- <a href="#" class="ml-3" target="_blank" title="BitBucket"><i class="fab fa-bitbucket fa" onmouseover="play()"></i></a> -->
+            <!-- <a href="#" class="ml-3" target="_blank" title="GitLab"><i class="fab fa-gitlab fa" onmouseover="play()"></i></a> -->
+            <!-- <a href="#" class="ml-3" target="_blank" title="Slack"><i class="fab fa-slack fa" onmouseover="play()"></i></a> -->
+            <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa" onmouseover="play()"></i></a> -->
+            <a href="https://t.me/priyanshbordia" class="ml-3" target="_blank" title="Priyansh Bordia"><i
+                    class="fab fa-telegram fa" onmouseover="play()"></i></a>
+            <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3" target="_blank"
+                title="Priyansh Bordia"><i class="fab fa-youtube fa-" onmouseover="play()"></i></a>
+        </div>
+        
+        <footer class="button">
+            Created by Priyansh Bordia &copy; 2021
+        </footer>
+    </div>
+</body>
 </html>
+
+        <!-- <script src="//code.tidio.co/sa5z7xvsujd7dyf3qsxekfh1exhwg9tj.js" async></script> -->
 
 <!-- <div class="loader-wrapper">
             <span class="loader"><span class="loader-inner"></span></span>

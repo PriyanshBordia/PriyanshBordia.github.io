@@ -7,9 +7,17 @@ html {
     box-sizing: inherit;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
@@ -22,6 +30,20 @@ body {
     }
 }
 
+.hex__animation {
+    width: max-content;
+    max-width: 100px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    fill: none;
+}
+
+
 .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -33,11 +55,9 @@ a {
     text-decoration: none !important;
 }
 
-// a:visited {
-//     color: #F6AF44;
-//     text-decoration: none !important;
-// }
-
+a:hover, .button:hover {
+    color: $NeonGreen;
+}
 
 /*Image*/
 img
@@ -52,23 +72,14 @@ img
     border-radius: 500px;
 }
 
-
-h4
-{
-    // margin-left: 20px;
-    color: $Slate;
-}
-
 i:hover {
     color: $NeonGreen;
 }
 
 li, p
 {
-    // margin: 10px;
-    // padding-top: 5px;
     color: $LightSlate;
-    text-decoration: none !important;
+    // text-decoration: none !important;
 }
 
 /*Social Media handles*/
@@ -80,20 +91,14 @@ li, p
     text-align: center;
 }
 
-#social-handles > a:hover
-{
-    color: $NeonGreen;
-    text-decoration: none !important;
-}
-
 /* Footer */
 footer
 {
-    text-decoration: none !important;
+    margin: 10px;
     color: $LightSlate;         /* Gray */
     font-size: 16px;
     text-align: center;
-    margin: 10px;
+    text-decoration: none !important;
 }
 
 /* Hover Over Effect*/
@@ -101,11 +106,6 @@ footer
 {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-}
-
-.button:hover
-{
-    color: $NeonGreen;
 }
 
 
@@ -138,11 +138,3 @@ footer
         display: none;
     }
 }
-
-// .content {
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-// }

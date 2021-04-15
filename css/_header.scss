@@ -1,6 +1,7 @@
 .header {
 
-    border: 1px solid $NeonGreen;
+    box-shadow: 10px;
+    // border: 1px solid $NeonGreen;
     // Hamburger Open Styles
     &.open {
 
@@ -101,7 +102,7 @@
         }
 
         a:hover {
-            color: rgb(120,81,169);
+            color: $NeonGreen;
             transition: top ease 0.4s;
         }
     }
