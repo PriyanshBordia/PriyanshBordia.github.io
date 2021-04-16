@@ -138,18 +138,6 @@ a:hover, .button:hover {
   color: #64ffda;
 }
 
-/*Image*/
-img {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 500px;
-}
-
 i:hover {
   color: #64ffda;
 }
@@ -254,10 +242,10 @@ footer {
 }
 
 .header__logo img {
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
-  border-color: #64ffda;
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  background-color: #64ffda;
 }
 
 .header__toggle > span {
@@ -341,12 +329,11 @@ footer {
 }
 
 .main {
-  font-weight: 100;
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 45%;
-  -webkit-transform: translateX(-70%) translateY(-55%);
-          transform: translateX(-70%) translateY(-55%);
+  top: 50%;
+  -webkit-transform: translate(-70%, -70%);
+          transform: translate(-70%, -70%);
 }
 
 .main__greeting {
@@ -365,9 +352,7 @@ footer {
 }
 
 .main__description {
-  margin: 1rem;
-  padding-top: 2rem;
-  max-width: 40rem;
+  font-weight: 300;
   font-size: 1rem;
   color: #ccd6f6;
 }
