@@ -1,5 +1,7 @@
 .main {
     
+    margin-bottom: 2rem;
+    
     @include breakpoint-up(large) {
         display: flex;
     }

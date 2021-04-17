@@ -1,0 +1,17 @@
+.footer {
+
+    background-color: $LightNavy;    
+    border-top: .125rem solid $LightSlate;
+    border-bottom: .125rem solid $LightSlate;
+
+    &__grid {
+
+        margin: 1.5rem;
+        // padding-bottom: 1rem;
+        color: $LightSlate;
+        font-size: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+

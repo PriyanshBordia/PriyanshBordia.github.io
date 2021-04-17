@@ -18,6 +18,19 @@
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet">
 
+    <style>
+        .row {
+            border: 1px solid aquamarine;
+            margin:auto; 
+            /* align-items: center; */
+            margin: 1rem;
+        }
+
+        .one {
+            padding: 1rem;
+            border: 1px solid red;
+        }        
+    </style>
     <!-- Icon -->
     <link rel="icon" href="media/icons/profile0.png">
     <title> About | Priyansh Bordia </title>
@@ -48,9 +61,16 @@
         </div>
     </header>
 
+    <main>
+        <div class="row">
+            <div class="one col-md-4">1</div>
+            <div class="one col-md-4">2</div>
+            <div class="one col-md-4">3</div>
+        </div>
+    </main>
     <section class="features">
-        <div class="feature__grid">
-            <div class="feature__item">
+        <div class="row feature__grid">
+            <div class="one col-md-6 feature__item">
                 <div class="feature__title">
                     <h4>Skills <code><i class="fas fa-code"></i></code></h4>
                 </div>
@@ -70,7 +90,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="feature__item">
+            <!-- <div class="one col-md-4"></div> -->
+            <div class="one col-md-6 feature__item">
                 <div class="feature__title">
                     <h4>Hobbies <code><i class="fas fa-futbol"></i></code></h4>
                 </div>
@@ -135,24 +156,34 @@
         </div> -->
     </div>
 
-
-
-    <div id = "social-handles" class="fex-jc-c mb-3">
-        <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i class = "fab fa-github fa"></i></a>
-        <a href="mailto:priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i class = "fab fa-envelope fa"></i></a>
-        <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank" title="Priyansh B."><i class = "fab fa-linkedin fa"></i></a>
-        <a href="https://twitter.com/PriyanshBordia1" class="ml-3" target="_blank" title="PriyanshBordia1"><i class = "fab fa-twitter fa"></i></a>
-        <a href="https://www.instagram.com/priyansh.bordia/" class="ml-3" target="_blank" title = "priyansh.bordia"><i class = "fab fa-instagram fa"></i></a>
-        <!-- <a href="#" class="ml-3" target="_blank" title = "GitBucket"><i class = "fab fa-bitbucket fa"></i></a> -->
-        <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-gitlab fa"></i></a> -->
-        <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-slack fa"></i></a> -->
-        <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa"></i></a> -->
-        <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-telegram fa"></i></a> -->
-        <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3" target="_blank" title="Priyansh Bordia"><i class = "fab fa-youtube fa-"></i></a>
-    </div>
-
-    <footer class="button">
-        Created by Priyansh Bordia &copy; 2021
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div id="footer__handles">
+                <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i
+                        class="fab fa-github fa" onmouseover="play()"></i></a>
+                <a href="mailto:priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i
+                        class="fab fa-envelope fa" onmouseover="play()"></i></a>
+                <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank"
+                    title="Priyansh B."><i class="fab fa-linkedin fa" onmouseover="play()"></i></a>
+                <a href="https://twitter.com/BordiaPriyansh" class="ml-3" target="_blank" title="BordiaPriyansh"><i
+                        class="fab fa-twitter fa" onmouseover="play()"></i></a>
+                <a href="https://www.instagram.com/priyansh.bordia/" class="ml-3" target="_blank" title="priyansh.bordia"><i
+                        class="fab fa-instagram fa" onmouseover="play()"></i></a>
+                <a href="#" class="ml-3" target="_blank" title="priyansh.bordia"><i class="fa fa-snapchat-ghost"
+                        onmouseover="play()"></i></a>
+                <!-- <a href="#" class="ml-3" target="_blank" title="BitBucket"><i class="fab fa-bitbucket fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title="GitLab"><i class="fab fa-gitlab fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title="Slack"><i class="fab fa-slack fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa" onmouseover="play()"></i></a> -->
+                <a href="https://t.me/priyanshbordia" class="ml-3" target="_blank" title="Priyansh Bordia"><i
+                        class="fab fa-telegram fa" onmouseover="play()"></i></a>
+                <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3"
+                    target="_blank" title="Priyansh Bordia"><i class="fab fa-youtube fa-" onmouseover="play()"></i></a>
+            </div>
+            <br>
+            <div class="footer__text has-hover">Created by Priyansh Bordia &copy; 2021</div>
+        </div>
     </footer>
 </body>
 </html>
