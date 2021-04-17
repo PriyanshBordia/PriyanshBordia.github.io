@@ -1,13 +1,12 @@
 .main {
-
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    
+    @include breakpoint-up(large) {
+        display: flex;
+    }
 
     &__greeting {
 
-        margin-top: 1.6rem;
+        margin-top: 4rem;
         font-size: 1rem;
         color: $NeonGreen;
     }

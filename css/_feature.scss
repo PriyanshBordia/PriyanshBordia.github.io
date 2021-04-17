@@ -2,25 +2,24 @@
 
 	&__grid {
 		
-		@include breakpoint-up(large) {
-
-			display: flex;
-		}
+		// margin-top: 1.5rem;
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
+		// align-items: center;
 	}
 
 	&__item {
 		
+		max-width: 400px;
 		border: 1px solid magenta;
 		padding: 0.9375rem;
-
-		@include breakpoint-up(large) {
-
-			flex: 1;
-		}
 	}
 
 	&__title {
-		//
+		
+		padding: 1rem;
+		border: 1px solid rgb(9, 255, 0);
+		text-align: center;
 	}
 
 	&__icon {
