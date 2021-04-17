@@ -2,44 +2,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('DOM Loaded..!!');
 
-    var opacity = 0;
-    var intervalId = 0;
+    // var opacity = 0;
+    // var intervalId = 0;
 
-    window.onload = fadeout;
+    // window.onload = fadeout;
 
-    function fadeout()
-    {
-        setInterval(hide, 200);
-    }
+    // function fadeout()
+    // {
+    //     setInterval(hide, 200);
+    // }
 
-    function hide()
-    {
-        var wrapper = document.getElementById("body");
+    // function hide()
+    // {
+    //     var wrapper = document.getElementById("body");
 
-        opacity = Number(window.getComputedStyle(wrapper).getPropertyValue("opacity"));
+    //     opacity = Number(window.getComputedStyle(wrapper).getPropertyValue("opacity"));
 
-        const anim = anime.timeline({
-            loop: true,
-            direction: 'alternate',
-        });
+        // const anim = anime.timeline({
+        //     loop: true,
+        //     direction: 'alternate',
+        // });
 
-        anim
-            .add({
-                targets: '#hexagon path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutQuart',
-                duration: 2000,
-                delay: function (el, i) { return i * 250 },
-            })
-            .add({
-                targets: '#hexagon #B',
-                duration: 1000,
-                opacity: 1,
-                easing: 'easeInOutQuart'
-            });
+        // anim
+        //     .add({
+        //         targets: '#hexagon path',
+        //         strokeDashoffset: [anime.setDashoffset, 0],
+        //         easing: 'easeInOutQuart',
+        //         duration: 2000,
+        //         delay: function (el, i) { return i * 250 },
+        //     })
+        //     .add({
+        //         targets: '#hexagon #B',
+        //         duration: 1000,
+        //         opacity: 1,
+        //         easing: 'easeInOutQuart'
+        //     });
             
-        window.getComputedStyle(wrapper).setPropertyValue("opacity") = 1
-    }
+        // window.getComputedStyle(wrapper).setPropertyValue("opacity") = 1
+    // }
 
     const btnHamburger = document.querySelector('#btnHamburger');
     const body = document.querySelector('body');

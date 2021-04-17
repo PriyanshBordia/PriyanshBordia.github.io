@@ -1,12 +1,13 @@
 .main {
 
-    position: fixed;
+    position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-70%, -70%);
+    transform: translate(-50%, -50%);
 
     &__greeting {
 
+        margin-top: 1.6rem;
         font-size: 1rem;
         color: $NeonGreen;
     }
@@ -25,8 +26,10 @@
     
     &__description {
 
+        max-width: 700px;
         font-weight: 300;
         font-size: 1rem;
         color: $LightestSlate;
+        line-height: 1.625rem;
     }
 }

@@ -45,10 +45,15 @@ svg {
 
 
 .container {
-    padding-left: 1.5rem;
+    // padding-top: 1.5rem;
     padding-right: 1.5rem;
+    // padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
 }
 
+h1, h2, h3 {
+    margin-top: 0;
+}
 
 a {
     color: $LightSlate;
@@ -79,8 +84,8 @@ i:hover {
 li, p
 {
     color: $LightSlate;
-    // text-decoration: none !important;
 }
+
 
 /*Social Media handles*/
 #social-handles
@@ -90,6 +95,7 @@ li, p
     color: $LightestSlate;
     text-align: center;
 }
+
 
 /* Footer */
 footer
