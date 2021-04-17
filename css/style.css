@@ -286,6 +286,33 @@ hr {
   transition: top ease 0.4s;
 }
 
+.feature__grid {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.feature__item {
+  border: 1px solid magenta;
+  padding: 0.9375rem;
+}
+
+.feature__title {
+  padding: 1rem;
+  border: 1px solid #09ff00;
+  text-align: center;
+}
+
+.feature__title i:hover {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.feature__description {
+  padding: 2rem;
+  line-height: 1.5rem;
+  border: 1px solid cornflowerblue;
+}
+
 .main {
   margin-bottom: 2rem;
 }
@@ -299,7 +326,7 @@ hr {
 }
 
 .main__greeting {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 1rem;
   color: #64ffda;
 }
@@ -320,6 +347,34 @@ hr {
   font-size: 1rem;
   color: #ccd6f6;
   line-height: 1.625rem;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*Image*/
+}
+
+.content__img img {
+  max-width: 11rem;
+  max-height: 11rem;
+  border-radius: 100rem;
+}
+
+.content__title {
+  font-size: 1rem;
+  color: #64ffda;
+}
+
+.content__body {
+  max-width: 900px;
+  margin: auto;
+  font-weight: 200px;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
 }
 
 .project {

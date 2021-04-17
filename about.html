@@ -20,9 +20,8 @@
 
     <style>
         .row {
+            display: flex-end;
             border: 1px solid aquamarine;
-            margin:auto; 
-            /* align-items: center; */
             margin: 1rem;
         }
 
@@ -36,6 +35,7 @@
     <title> About | Priyansh Bordia </title>
 </head>
 <body>
+    <!-- Header Navigation -->
     <header class="header">
         <div class="overlay has-fade"></div>
         <nav class="container flex flex-jc-sb flex-ai-c">
@@ -62,12 +62,29 @@
     </header>
 
     <main>
-        <div class="row">
-            <div class="one col-md-4">1</div>
-            <div class="one col-md-4">2</div>
-            <div class="one col-md-4">3</div>
+        <div class="content container container-fluid">
+            <div class="content__img">
+                <img src="media/images/me0.jpg" alt="Myself">
+            </div>
+            <br>
+            <div class="content__title">
+                Priyansh Bordia | CSE LNMIIT '23
+            </div>
+            <hr>
+            <p class="content__body">
+                I am an UnderGrad studying Computer Science and Engineering(CSE) at LNMIIT Jaipur, India. The major area is Computer Science. Currently, I am working as a Software Engineer Inter at <code>Delta Exchange</code>.
+                <br>
+                For the ones who don't know what a CSE UnderGrad student does let me tell you, a CSE UnderGrad student
+                studies
+                the Science of Computer Day / Night but sticks to a major area for study. Data Science or Data
+                Structures &
+                Algorithms are the highly anticipated ones. Science revolves largely around data that is generated every
+                instance of time. They manipulate this data and try making best use to enhance human understanding about
+                everything around and bring the necessary faculties to work for achieving unprecedented heights.
+            </p>
         </div>
     </main>
+
     <section class="features">
         <div class="row feature__grid">
             <div class="one col-md-6 feature__item">
@@ -76,21 +93,40 @@
                 </div>
                 <div class="feature__icon"></div>
                 <div class="feature__description">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="fal fa-folder-tree fa-2x"></i>&nbsp;C/C++ (DSA)
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fab fa-python fa-2x"></i>&nbsp;Python
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fab fa-java fa-2x"></i>&nbsp;Java (OOPs)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            HTML&nbsp;<i class="fab fa-html5 fa-2x"></i>
+                        </div>
+                        <div class="col-md-3">
+                            CSS&nbsp;<i class="fab fa-css3-alt fa-2x"></i>
+                        </div>
+                        <div class="col-md-3">
+                            SASS&nbsp;<i class="fab fa-sass fa-2x"></i>
+                        </div>
+                        <div class="col-md-3">
+                            JavaScript <i class="fab fa-js-square fa-2x"></i>
+                        </div>
+                    </div>
+                 
                     <ul>
-                        <li>C/C++ (DSA in C)</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fab fa-java"></i> Java (OOP concepts)</li>
-                        <li>HTML<i class="fab fa-html5"></i>, CSS<i class="fab fa-css3-alt"></i>, SASS <i
-                                class="fab fa-sass"></i>, Java
-                            Script <i class="fab fa-js-square"></i></li>
-                        <li><i class="fas fa-terminal"></i> Shell</li>
+                        <li><i class="fas fa-terminal fa-2x"></i> Shell</li>
                         <li>Web Development and Deployment using Heroku</li>
                         <li>SqlAlchemy Object Relational Mapping (ORM) </li>
                         <li><i class="fas fa-database"></i> MySql, Postgresql, Sqlite3</li>
                     </ul>
                 </div>
             </div>
-            <!-- <div class="one col-md-4"></div> -->
             <div class="one col-md-6 feature__item">
                 <div class="feature__title">
                     <h4>Hobbies <code><i class="fas fa-futbol"></i></code></h4>
@@ -111,53 +147,14 @@
     </section>
 
 
-
-
-
-    <!-- <div class="conatiner conatiner-fluid">
-        <div class="content">
-            <br><br><br><br>
-            <img src="media/images/me.jpg" alt="Myself">
-            <p class="mt-2" style="text-align:center;">Priyansh Bordia | CSE LNMIIT '23</p>
-            <hr>
-            <br> -->
-
-            <!-- <section class="content-body">
-                <p>
-                    I am an UnderGrad studying Computer Science and Engineering(CSE) at LNMIIT Jaipur, India. The major area is
-                    Computer Science. Currently, I am working as a Software Engineer Inter at Delta Exchange.
-                    <br>
-                    For the ones who don't know what a CSE UnderGrad student does let me tell you, a CSE UnderGrad student studies
-                    the Science of Computer Day / Night but sticks to a major area for study. Data Science or Data Structures &
-                    Algorithms are the highly anticipated ones. Science revolves largely around data that is generated every
-                    instance of time. They manipulate this data and try making best use to enhance human understanding about
-                    everything around and bring the necessary faculties to work for achieving unprecedented heights.
-                </p>
-            </section> -->
-
-
-
-
-            <!-- <hr>
-
-            <ul>
-                <li><code>Django</code></li>
-                <li><code>Flask</code></li>
-            </ul>
-
-            <hr>
-
-
-
-            <hr>
-
-
-            <hr>
-        </div> -->
+    <div class="row">
+        <div class="one col-md-4">1</div>
+        <div class="one col-md-4">2</div>
+        <div class="one col-md-4">3</div>
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer fixe-bottom">
         <div class="footer__grid">
             <div id="footer__handles">
                 <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i

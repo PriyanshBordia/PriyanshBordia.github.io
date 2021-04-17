@@ -10,7 +10,7 @@
 
 	&__item {
 		
-		max-width: 400px;
+		// max-width: 400px;
 		border: 1px solid magenta;
 		padding: 0.9375rem;
 	}
@@ -20,6 +20,10 @@
 		padding: 1rem;
 		border: 1px solid rgb(9, 255, 0);
 		text-align: center;
+
+		i:hover {
+    		transform: rotate(-180deg);
+		}
 	}
 
 	&__icon {
@@ -27,6 +31,8 @@
 	}
 
 	&__description {
-		//
+		padding: 2rem;
+		line-height: 1.5rem;
+		border: 1px solid cornflowerblue;
 	}
 }
