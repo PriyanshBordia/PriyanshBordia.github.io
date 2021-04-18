@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
-        
-        <!-- Java Script -->
-        <script src="js/script.js"></script>
-        
-        <!-- CSS -->
-        <link href="css/style.css" rel="stylesheet">
-        
-        <!-- Icon -->
-        <link rel="icon" href="media/icons/profile.jpg">
-        <title> Blogs | Priyansh Bordia </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
+    
+    <!-- Java Script -->
+    <script src="js/script.js"></script>
+    
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 
-    </head>
-    <body>
-    	<iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/album/stuck-with-u/1511562938?i=1511562950"></iframe>
-    	<iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/album/best-song-ever/661607954?i=661607956"></iframe>
-    	
-    	<a href="https://twitter.com/PriyanshBordia1" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @PriyanshBordia</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
-    		
-    	</script>
-    	
-        <div class="container">
-            <div class="description-container justify-content-center">
-                <img class="img-responsive floating-image right" src = "media/images/lnmiit.png" alt="LNMIIT, Jaipur">
-                <aside class="text">
-                    View of The LNMIIT, Jaipur on one fine day.
-                </aside>
+    <!-- Icon -->
+    <link rel="icon" href="media/icons/profile0.png">
+    <title> Blogs | Priyansh Bordia </title>
+
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="overlay has-fade"></div>
+        <nav class="container flex flex-jc-sb flex-ai-c">
+            <a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
+                <img src="media/icons/profile4.png" alt="Priyansh Bordia">
+            </a>
+            <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="header__links hide-for-mobile">
+                <a href="index.html" title="Home">Home</a><a href="about.html" title="About Me">About</a><a href="projects.html" title="Projects I have built" target="_blank">Projects</a><a href="tools.html" title="Tools" target="_blank">Tools</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1" title="General Survey Form" target="_blank">Survey</a><a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" title="Résumé" target="_blank">Résumé</a>
             </div>
+        </nav>
+        <div class="header__menu has-fade">
+            <a href="index.html" title="Home">Home</a>
+            <a href="about.html" content__title="About me">About</a>
+            <a href="projects.html" title="Projects I have built" target="_blank">Projects</a>
+            <a href="tools.html" title="Tools">Tools</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1"
+                title="General Survey Form" target="_blank">Survey</a>
+            <a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" title="Résumé"
+                target="_blank">Résumé</a>
+        </div>
+    </header>
 
-            <br>
-            <br><br><br><br>
-            <br>
-            <div class="description-container">
-                <img class="img-responsive floating-image left" src = "media/images/streets.png" alt="Streets of Jaipur">
-                <aside class="text">
-                    Streets of Jaipur City on one lazy morning.
-                </aside>
-            </div>
+
+    <div class="container">
+        <div class="description-container justify-content-center">
+            <img class="img-responsive floating-image right" src = "media/images/lnmiit.png" alt="LNMIIT, Jaipur">
+            <aside class="text">
+                View of The LNMIIT, Jaipur on one fine day.
+            </aside>
         </div>
 
-        <hr>
+        <br>
+        <br><br><br><br>
+        <br>
+        <div class="description-container">
+            <img class="img-responsive floating-image left" src = "media/images/streets.png" alt="Streets of Jaipur">
+            <aside class="text">
+                Streets of Jaipur City on one lazy morning.
+            </aside>
+        </div>
+    </div>
+
         
-        <!-- Footer Section -->
-        <footer class="footer has-fade">
-            <div class="footer__grid">
-                <div id="footer__handles">
-                    <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i
-                            class="fab fa-github fa" onmouseover="play()"></i></a>
-                    <a href="mailto:priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i
-                            class="fab fa-envelope fa" onmouseover="play()"></i></a>
-                    <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank"
-                        title="Priyansh B."><i class="fab fa-linkedin fa" onmouseover="play()"></i></a>
-                    <a href="https://twitter.com/BordiaPriyansh" class="ml-3" target="_blank" title="BordiaPriyansh"><i
-                            class="fab fa-twitter fa" onmouseover="play()"></i></a>
-                    <a href="https://www.instagram.com/priyansh.bordia/" class="ml-3" target="_blank" title="priyansh.bordia"><i
-                            class="fab fa-instagram fa" onmouseover="play()"></i></a>
-                    <a href="#" class="ml-3" target="_blank" title="priyansh.bordia"><i class="fa fa-snapchat-ghost"
-                            onmouseover="play()"></i></a>
-                    <!-- <a href="#" class="ml-3" target="_blank" title="BitBucket"><i class="fab fa-bitbucket fa" onmouseover="play()"></i></a> -->
-                    <!-- <a href="#" class="ml-3" target="_blank" title="GitLab"><i class="fab fa-gitlab fa" onmouseover="play()"></i></a> -->
-                    <!-- <a href="#" class="ml-3" target="_blank" title="Slack"><i class="fab fa-slack fa" onmouseover="play()"></i></a> -->
-                    <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa" onmouseover="play()"></i></a> -->
-                    <a href="https://t.me/priyanshbordia" class="ml-3" target="_blank" title="Priyansh Bordia"><i
-                            class="fab fa-telegram fa" onmouseover="play()"></i></a>
-                    <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3"
-                        target="_blank" title="Priyansh Bordia"><i class="fab fa-youtube fa-" onmouseover="play()"></i></a>
-                </div>
-                <br>
-                <div class="footer__text has-hover">Created by Priyansh Bordia &copy; 2021</div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div id="footer__handles">
+                <a href="https://github.com/PriyanshBordia" class="ml-3" target="_blank" title="PriyanshBordia"><i
+                        class="fab fa-github fa" onmouseover="play()"></i></a>
+                <a href="mailto:priyanshbordia2@gmail.com" class="ml-3" target="_blank" title="priyanshbordia2"><i
+                        class="fab fa-envelope fa" onmouseover="play()"></i></a>
+                <a href="https://www.linkedin.com/in/priyansh-b-81bb8218b/" class="ml-3" target="_blank"
+                    title="Priyansh B."><i class="fab fa-linkedin fa" onmouseover="play()"></i></a>
+                <a href="https://twitter.com/BordiaPriyansh" class="ml-3" target="_blank" title="BordiaPriyansh"><i
+                        class="fab fa-twitter fa" onmouseover="play()"></i></a>
+                <a href="https://www.instagram.com/priyansh.bordia/" class="ml-3" target="_blank" title="priyansh.bordia"><i
+                        class="fab fa-instagram fa" onmouseover="play()"></i></a>
+                <a href="#" class="ml-3" target="_blank" title="priyansh.bordia"><i class="fa fa-snapchat-ghost"
+                        onmouseover="play()"></i></a>
+                <!-- <a href="#" class="ml-3" target="_blank" title="BitBucket"><i class="fab fa-bitbucket fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title="GitLab"><i class="fab fa-gitlab fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title="Slack"><i class="fab fa-slack fa" onmouseover="play()"></i></a> -->
+                <!-- <a href="#" class="ml-3" target="_blank" title=""><i class = "fab fa-discord fa" onmouseover="play()"></i></a> -->
+                <a href="https://t.me/priyanshbordia" class="ml-3" target="_blank" title="Priyansh Bordia"><i
+                        class="fab fa-telegram fa" onmouseover="play()"></i></a>
+                <a href="https://www.youtube.com/channel/UCwBlonvBFFd4UGvnnVKVncQ?view_as=subscriber" class="ml-3"
+                    target="_blank" title="Priyansh Bordia"><i class="fab fa-youtube fa-" onmouseover="play()"></i></a>
             </div>
-        </footer>
-    </body>
+            <br>
+            <div class="footer__text has-hover">Created by Priyansh Bordia &copy; 2021</div>
+        </div>
+    </footer>
+</body>
 </html>

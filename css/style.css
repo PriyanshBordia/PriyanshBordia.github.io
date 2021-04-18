@@ -141,6 +141,7 @@ a {
 
 a:hover, i:hover, .has-hover:hover {
   color: #64ffda;
+  cursor: pointer;
 }
 
 /* Hover Over Effect*/
@@ -151,6 +152,7 @@ a, i, .has-hover {
 }
 
 hr {
+  margin: 3rem;
   height: .125rem;
   background-color: #a8b2d1;
 }
@@ -160,7 +162,7 @@ hr {
   padding: 0.5rem;
 }
 
-.col-md-6 {
+.col-md-6, .col-md-5, .col-md-2 {
   padding: 0.7rem;
 }
 
@@ -326,7 +328,7 @@ hr {
 }
 
 .main {
-  margin-bottom: 2rem;
+  margin-bottom: 13.8rem;
 }
 
 @media (min-width: null) {
@@ -338,7 +340,7 @@ hr {
 }
 
 .main__greeting {
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 1rem;
   color: #64ffda;
 }
