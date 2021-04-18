@@ -13,6 +13,9 @@ html, body {
 }
 
 body {
+    overflow-x: hidden;
+    // -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
     // display: flex;

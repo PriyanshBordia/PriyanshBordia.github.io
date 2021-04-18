@@ -103,7 +103,8 @@
 
         a:hover {
             color: $NeonGreen;
-            transition: top ease 0.4s;
+            border-bottom: 1px solid $NeonGreen;
+            transition: top ease-in-out 0.4s;
         }
     }
 }

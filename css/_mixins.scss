@@ -14,9 +14,29 @@ $breakpoints-down: ("sm": "39.9375em", "md": "63.9375em", "lg": "87.4375em");
     }
 }
 
-// .breapoint-up
 @mixin breakpoint-down($size) {
     @media(max-width: map-get($breakpoints-down, $size)) {
         @content;
     }
+}
+
+@mixin outline {
+  outline: 1px solid red;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin tablet {
+  @media (max-width: 600px) {
+	@content;
+  }
 }

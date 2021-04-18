@@ -89,6 +89,9 @@ html, body {
 }
 
 body {
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   -webkit-box-pack: center;
@@ -291,8 +294,9 @@ hr {
 
 .header__links a:hover {
   color: #64ffda;
-  -webkit-transition: top ease 0.4s;
-  transition: top ease 0.4s;
+  border-bottom: 1px solid #64ffda;
+  -webkit-transition: top ease-in-out 0.4s;
+  transition: top ease-in-out 0.4s;
 }
 
 .feature__grid {
@@ -392,6 +396,122 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+a {
+  display: inline-blesock;
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.project-container {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.project {
+  margin: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.project-content {
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  grid-row: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .project-content {
+    grid-column: 1 / -1;
+    padding: 40px;
+  }
+}
+
+.project-content .project-label {
+  color: #64ffda;
+  font-family: monospace;
+}
+
+.project-content .project-title {
+  font-size: 2rem;
+  margin: 10px 0 30px;
+  color: #eee;
+}
+
+.project-content .project-details {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.project-content .project-details p {
+  background-color: #252525;
+  padding: 20px 25px;
+}
+
+@media (max-width: 600px) {
+  .project-content .project-details p {
+    background-color: transparent;
+    padding: 20px 0;
+  }
+}
+
+.project-content .project-details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.project-content .project-details ul li {
+  margin-right: 20px;
+  color: #aaa;
+  font-family: monospace;
 }
 
 .footer {
