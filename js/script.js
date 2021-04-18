@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnHamburger = document.querySelector('#btnHamburger');
     const body = document.querySelector('body');
     const header = document.querySelector('.header');
+    const footer = document.querySelector('.footer');
     const fadeElements = document.querySelectorAll('.has-fade');
 
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.classList.remove('fade-in');
                 element.classList.add('fade-out');
             });
+            footer.classList.remove('fixed-bottom');
         }
 
 
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.classList.remove('fade-out');
                 element.classList.add('fade-in');
             });
+            footer.classList.add('fixed-bottom');
         }
     };
 
