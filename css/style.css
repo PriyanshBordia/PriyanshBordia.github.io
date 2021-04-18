@@ -154,6 +154,15 @@ hr {
   background-color: #a8b2d1;
 }
 
+.row {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.col-md-6 {
+  padding: 0.7rem;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,19 +296,17 @@ hr {
 }
 
 .feature__grid {
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
-}
-
-.feature__item {
-  border: 1px solid magenta;
-  padding: 0.9375rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  background-color: #112240;
 }
 
 .feature__title {
   padding: 1rem;
-  border: 1px solid #09ff00;
-  text-align: center;
+  font-size: 2rem;
+  color: #64ffda;
+  border: 1px solid #ccd6f6;
 }
 
 .feature__title i:hover {
@@ -308,9 +315,12 @@ hr {
 }
 
 .feature__description {
-  padding: 2rem;
   line-height: 1.5rem;
-  border: 1px solid cornflowerblue;
+  border: 1px solid #a8b2d1;
+}
+
+.feature__description__subtitle {
+  font-size: 1.5rem;
 }
 
 .main {
