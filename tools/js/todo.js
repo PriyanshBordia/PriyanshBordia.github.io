@@ -1,25 +1,66 @@
+if (!localStorage.getItem('todoList'))
+    localStorage.setItem('todoList', []);
+
+if (!localStorage.getItem('notodoList'))
+    localStorage.setItem('notodoList', []);
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    document.querySelector('#submit').disabled = true;
+    document.querySelector('#todo').disabled = true;
+    document.querySelector('#notodo').disabled = true;
 
     document.querySelector('#task').onkeyup = () => {
         if(document.querySelector('#task').value.length > 0)
-            document.querySelector('#submit').disabled = false;
+        {
+            document.querySelector('#todo').disabled = false;
+            document.querySelector('#notodo').disabled = false;
+        }
+            
         else
-            document.querySelector('#submit').disabled = true;
+        {
+            document.querySelector('#todo').disabled = true;
+            document.querySelector('#notodo').disabled = true;
+        }
     };
 
-        document.querySelector('#new-task').onsubmit = () => {
+    const button = document.querySelectorAll('button');
 
-            const li = document.createElement('li');
-            li.innerHTML = document.querySelector('#task').value;
+    const todo = document.querySelector('#todo');
+    const notodo = document.querySelector('#notodo');
 
-            document.querySelector('#task-list').append(li)
+    todo.onclick = () => {
+        
+        const li = document.createElement('li');
+        li.innerHTML = document.querySelector('#task').value;
 
-            document.querySelector('#submit').disabled = true;
+        document.querySelector('.todo__list').append(li)
 
-            document.querySelector('#task').value = '';
+        todoList.append(li.innerHTML);
+        localStorage.setItem('todoList', []);
 
-            return false;
-        };
+        document.querySelector('#todo').disabled = true;
+        document.querySelector('#notodo').disabled = true;
+
+        document.querySelector('#task').value = '';
+
+        return false;
+    };
+
+    notodo.onclick = () => {
+
+        const li = document.createElement('li');
+        li.innerHTML = document.querySelector('#task').value;
+
+        document.querySelector('.notodo__list').append(li)
+
+        notodoList.append(li.innerHTML);
+        localStorage.setItem('notodoList', NodeList);
+
+        document.querySelector('#todo').disabled = true;
+        document.querySelector('#notodo').disabled = true;
+
+        document.querySelector('#task').value = '';
+
+        return false;
+    };
 });

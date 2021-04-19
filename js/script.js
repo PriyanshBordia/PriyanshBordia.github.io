@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('DOM Loaded..!!');
 
+    function play() {
+        var audio = new Audio('../media/music/chime.mp3');
+        audio.play();
+    };
+
     const btnHamburger = document.querySelector('#btnHamburger');
     const body = document.querySelector('body');
     const header = document.querySelector('.header');
@@ -35,10 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
             footer.classList.add('fixed-bottom');
         }
-    };
-
-    function play() {
-        var audio = new Audio('media/music/chime.mp3');
-        audio.play();
     };
 });
