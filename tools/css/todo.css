@@ -26,20 +26,32 @@ body {
 
 .header{
     padding: .8rem;
+    text-align: center;
     font-size: 2rem;
     background-color: #233554;
-}
-
-.col-md-6 {
-    text-align: center;
-    align-items: center;
 }
 
 .container {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-top: 1rem;
-    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
     align-items: center;
-    border: 1px solid grey;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    border: 1px solid cornflowerblue;
+}
+
+h3 {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #bd8c7d;
+}
+
+.row:nth-child(2) .col-md-6 {
+}
+
+.todo__list, .notodo__list {
+    margin: 1.5rem;
+    padding: 2rem;
+    border: 1px solid #64ffda;
 }
