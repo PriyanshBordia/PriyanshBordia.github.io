@@ -25,17 +25,14 @@ body {
 
 
 .header{
-    padding: 1rem;
-    font-size: 1.5rem;
+    padding: .8rem;
+    font-size: 2rem;
     background-color: #233554;
 }
 
-input {
-    margin-left: auto;
-}
-
-button {
-    margin-left: 2rem;
+.col-md-6 {
+    text-align: center;
+    align-items: center;
 }
 
 .container {

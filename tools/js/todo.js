@@ -1,66 +1,90 @@
-if (!localStorage.getItem('todoList'))
-    localStorage.setItem('todoList', []);
-
-if (!localStorage.getItem('notodoList'))
-    localStorage.setItem('notodoList', []);
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    document.querySelector('#todo').disabled = true;
-    document.querySelector('#notodo').disabled = true;
+    var todoList = new Array();
+    var notodoList = new Array();
+
+    if (!localStorage.getItem('todoList'))
+        localStorage.setItem('todoList', JSON.stringify(todoList));
+    else
+    {
+        todoList = JSON.parse(localStorage.getItem('todoList'));
+
+        for (var i = 0; i < todoList.length; i++)
+        {
+            const li = addTaskToList(todoList[i]);
+            document.querySelector('.todo__list').append(li);
+        }
+    }
+
+    if (!localStorage.getItem('notodoList'))
+        localStorage.setItem('notodoList', JSON.stringify(notodoList));
+    else
+    {
+        notodoList = JSON.parse(localStorage.getItem('notodoList'));
+
+        for (var i = 0; i < notodoList.length; i++)
+        {
+            const li = addTaskToList(notodoList[i]);
+            document.querySelector('.notodo__list').append(li);
+        }
+    }
+    
+    setDisabled(true);
 
     document.querySelector('#task').onkeyup = () => {
-        if(document.querySelector('#task').value.length > 0)
-        {
-            document.querySelector('#todo').disabled = false;
-            document.querySelector('#notodo').disabled = false;
-        }
-            
+
+        if((document.querySelector('#task').value.trim()).length > 0)
+            setDisabled(false);
         else
-        {
-            document.querySelector('#todo').disabled = true;
-            document.querySelector('#notodo').disabled = true;
-        }
+            setDisabled(true);
     };
 
-    const button = document.querySelectorAll('button');
+    // const button = document.querySelectorAll('button');
 
-    const todo = document.querySelector('#todo');
-    const notodo = document.querySelector('#notodo');
-
-    todo.onclick = () => {
+    document.querySelector('#todo').onclick = () => {
         
-        const li = document.createElement('li');
-        li.innerHTML = document.querySelector('#task').value;
+        task = document.querySelector('#task').value.trim();
 
-        document.querySelector('.todo__list').append(li)
+        const li = addTaskToList(task);
+        document.querySelector('.todo__list').append(li);
 
-        todoList.append(li.innerHTML);
-        localStorage.setItem('todoList', []);
+        todoList.push(String(task));
+        localStorage.setItem('todoList', JSON.stringify(todoList));
 
-        document.querySelector('#todo').disabled = true;
-        document.querySelector('#notodo').disabled = true;
+        setDisabled(true);
+
+        document.querySelector('#task').value = '';
+
+        return false;
+    };
+
+    document.querySelector('#notodo').onclick = () => {
+
+        task = document.querySelector('#task').value.trim();
+
+        const li = addTaskToList(task);
+        document.querySelector('.notodo__list').append(li);
+
+        notodoList.push(String(task));
+        localStorage.setItem('notodoList', JSON.stringify(notodoList));
+
+        setDisabled(true);
 
         document.querySelector('#task').value = '';
 
         return false;
     };
 
-    notodo.onclick = () => {
-
-        const li = document.createElement('li');
-        li.innerHTML = document.querySelector('#task').value;
-
-        document.querySelector('.notodo__list').append(li)
-
-        notodoList.append(li.innerHTML);
-        localStorage.setItem('notodoList', NodeList);
-
-        document.querySelector('#todo').disabled = true;
-        document.querySelector('#notodo').disabled = true;
-
-        document.querySelector('#task').value = '';
-
-        return false;
+    function setDisabled(value) {
+        document.querySelector('#todo').disabled = value;
+        document.querySelector('#notodo').disabled = value;
     };
+
+    function addTaskToList(task) {
+
+        var li = document.createElement('li');
+        li.innerHTML = task;
+
+        return li;
+    }; 
 });
