@@ -23,6 +23,20 @@ body {
 	background-color: #112240;
 }
 
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #64ffda;
+}
+
+h3 {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #bd8c7d;
+}
 
 .header{
     padding: .8rem;
@@ -39,15 +53,6 @@ body {
     font-size: 1.2rem;
     line-height: 2.2rem;
     border: 1px solid cornflowerblue;
-}
-
-h3 {
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #bd8c7d;
-}
-
-.row:nth-child(2) .col-md-6 {
 }
 
 .todo__list, .notodo__list {
