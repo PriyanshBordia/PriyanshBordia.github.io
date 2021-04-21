@@ -13,17 +13,18 @@ html, body {
 }
 
 body {
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    // display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.3;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
-    background-color: $Navy;
     color: $LightSlate;
-    line-height: 1.3;
+    background-color: $Navy;
+    overflow-x: hidden;
 
     &.no-scroll {
         overflow: hidden;
@@ -33,6 +34,8 @@ body {
 .hex__animation {
     width: max-content;
     max-width: 100px;
+    margin: auto;
+    align-items: center;
 }
 
 svg {
