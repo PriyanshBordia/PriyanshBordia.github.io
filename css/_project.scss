@@ -86,17 +86,27 @@
 			display: flex;
 			margin: 1.125rem;
 
-			a {
-				margin-right: 1.125rem;
+			span {
+				margin-right: 1.1rem;
 				font-family: monospace;
+				font-weight: 100;
+				font-size: 1rem;
+				color: $LightestSlate;
+			}
+
+			a {
+				margin-right: 1rem;
+				margin-left: 1rem;
+				align-items: center;
 				color: $LightSlate;
 			}
-		}
+
+		}	
 
 		@include tablet {
 			
 			grid-column: 1 / -1;
-			padding: 40px;
+			padding: 2.5rem;
 		}
 	}
 
@@ -152,6 +162,3 @@
 		}
 	}
 }
-
-
-

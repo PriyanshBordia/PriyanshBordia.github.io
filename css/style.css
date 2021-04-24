@@ -477,16 +477,27 @@ hr {
   margin: 1.125rem;
 }
 
-.project__content__link a {
-  margin-right: 1.125rem;
+.project__content__link span {
+  margin-right: 1.1rem;
   font-family: monospace;
+  font-weight: 100;
+  font-size: 1rem;
+  color: #ccd6f6;
+}
+
+.project__content__link a {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #a8b2d1;
 }
 
 @media (max-width: 600px) {
   .project__content {
     grid-column: 1 / -1;
-    padding: 40px;
+    padding: 2.5rem;
   }
 }
 
