@@ -1,5 +1,15 @@
 @import "variables";
 @import "mixins";
-@import "globals";
-@import "headers";
+@import "animations";
 
+@import "globals";
+@import "header";
+@import "feature";
+
+@import "main";
+@import "content";
+@import "project";
+@import "tools";
+@import "blog";
+
+@import "footer";

@@ -1,0 +1,41 @@
+.feature {
+
+	&__grid {
+		
+		margin-right: 1rem;
+		margin-left: 1rem;
+		text-align: center;
+		// align-items: center;
+		background-color: $LightNavy;
+	}
+
+	&__item {
+		
+		// padding: 0.9375rem;
+	}
+
+	&__title {
+		
+		padding: 1rem;
+		font-size: 2rem;
+		color: $NeonGreen;
+		border: 1px solid $LightestSlate;
+		
+		i:hover {
+    		transform: rotate(-180deg);
+		}
+	}
+
+	// &__icon {
+	// 	//	
+	// }
+
+	&__description {
+		line-height: 1.5rem;
+		border: 1px solid $LightSlate;
+
+		&__subtitle {
+			font-size: 1.5rem;
+		}
+	}
+}

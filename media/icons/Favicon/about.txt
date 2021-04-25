@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Martel Sans
+- Font Author: Copyright (c) 2014 Dan Reynolds. Copyright (c) 2014 Mathieu Rguer.
+- Font Source: http://fonts.gstatic.com/s/martelsans/v7/h0GsssGi7VdzDgKjM-4d8ijfze-PPlUu.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

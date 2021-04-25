@@ -1,0 +1,59 @@
+.tools {
+
+    max-width: 1000px;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    align-items: center;
+   
+    border: 1px solid grey;
+
+    &__grid {
+
+        max-width: 470px;
+        margin: 0.5rem;
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+        background-color: $LightNavy;
+        border: 1px solid $LightSlate;
+
+        &__img {
+
+            border: 1px solid cyan;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            // overflow: hidden;
+        }
+
+        &__text {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: $LightestNavy;
+            border: 1px solid greenyellow;
+        }
+
+        &__button {
+            
+            margin: auto;
+            padding: 0.7rem;
+            color: $NeonGreen;
+            font-size: $font-md;
+            width: $btn-size-sm;            
+            border: 1px solid $NeonGreen;
+            border-radius: 7px;
+
+            &:hover {
+                background-color: $LightestNavy;
+            }
+        }
+
+        &:nth-child(2)
+        {
+            float: right;
+        }
+    }
+}

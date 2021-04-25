@@ -1,40 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
+    
+    <!-- Java Script -->
+    <script src="js/board.js"></script>
+    
+    <!-- CSS -->
+    <link href="css/board.css" rel="stylesheet">
+    
+    <!-- Icon -->
+    <link rel="icon" href="../media/icons/profile0.png">
+    <title> White Board | Priyansh Bordia</title>
+</head>
+<body>
+    <div class="container conatiner-fluid">
+        <div class="row">
+            <header id="brand" class="mr-5">
+                <a href="../index.html" title="Home">Tinker</a>
+            </header>
 
-	    <link rel="stylesheet" type="text/css" href="board.css">
-
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="board.js"></script>
-
-        <title> White Board </title>
-    </head>
-    <body>
-        <div class="container">
-            <div id="options" class="row">
-            	<header id="brand" class="mr-2">Tinker</header>
-
+            <section id="options">
                 <select id="color-picker" class="custom-select mt-2 mb-3 ml-3">
-                    <option value="black">Black</option>
+                    <option value="white">White</option>
                     <option value="red">Red</option>
-                    <option value="blue">Blue</option>
                     <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
                     <option value="pink">Pink</option>
                     <option value="grey">Grey</option>
                     <option value="violet">Violet</option>
                 </select>
 
-                <select id="thickness-picker" class="custom-select mt-2 mb-3 ml-3">
-                </select>
+                <select id="thickness-picker" class="custom-select mt-2 mb-3 ml-3"></select>
 
-                <button id="erase" class="btn btn-outline-danger mt-2 ml-3 mb-3">Erase</button>
-            </div>
+                <button id="erase" class="btn btn-outline-info mt-2 ml-3 mb-3">Erase</button>
+            </section>
         </div>
-        <svg id="draw">
-        </svg>
-    </body>
+    </div>
+    
+    <svg id="draw">
+    </svg>
+
+    <footer class="button">
+        Created by Priyansh Bordia &copy; 2021
+    </footer>
+</body>
 </html>
