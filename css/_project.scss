@@ -23,8 +23,6 @@
 
 	max-width: 62.5rem;
 	margin: 4rem auto;
-	text-align: center;
-	align-items: center;
 
 	img {
 		width: 100%;
@@ -82,22 +80,30 @@
 			}
 		}
 
-		&__link {
+		&__tech {
 			display: flex;
-			margin: 1.125rem;
+			margin-top: 1.125rem;
+			margin-left: 1.125rem;
 
-			span {
-				margin-right: 1.1rem;
+			p {
+				display: inline;
 				font-family: monospace;
 				font-weight: 100;
 				font-size: 1rem;
 				color: $LightestSlate;
+
+				&:not(:first-child) {
+					margin-left: 1.2rem;
+				}
 			}
+		}
+
+		&__link {
+			display: flex;
 
 			a {
 				margin-right: 1rem;
 				margin-left: 1rem;
-				align-items: center;
 				color: $LightSlate;
 			}
 

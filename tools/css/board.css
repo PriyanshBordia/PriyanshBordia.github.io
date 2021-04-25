@@ -62,3 +62,7 @@ footer {
 	text-align: center;
 	color: thistle;
 }
+
+footer:hover {
+	color: #64ffda;
+}

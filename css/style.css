@@ -398,10 +398,6 @@ hr {
 .project {
   max-width: 62.5rem;
   margin: 4rem auto;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .project img {
@@ -470,27 +466,35 @@ hr {
   }
 }
 
-.project__content__link {
+.project__content__tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1.125rem;
+  margin-top: 1.125rem;
+  margin-left: 1.125rem;
 }
 
-.project__content__link span {
-  margin-right: 1.1rem;
+.project__content__tech p {
+  display: inline;
   font-family: monospace;
   font-weight: 100;
   font-size: 1rem;
   color: #ccd6f6;
 }
 
+.project__content__tech p:not(:first-child) {
+  margin-left: 1.2rem;
+}
+
+.project__content__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .project__content__link a {
   margin-right: 1rem;
   margin-left: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #a8b2d1;
 }
 
