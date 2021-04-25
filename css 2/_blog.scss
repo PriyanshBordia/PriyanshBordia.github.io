@@ -1,0 +1,50 @@
+.blog {
+
+    img {
+
+        width: 550px;
+        height: 350px;
+        border-radius: 2px;
+	}
+
+    &__grid {
+
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        align-items: center; 
+        display: flex;
+    }
+
+    &__content {
+
+        max-width: 500px;
+        margin: auto;      
+        // border: 1px solid red;
+
+        &__title {
+
+            padding: 2rem;
+            font-size: 2rem;
+            color: $NeonGreen;
+            // border: 1px solid cornflowerblue;
+        }
+
+        &__description {
+
+            padding: 1.3rem;
+            font-size: 1.2rem;
+            font-weight: lighter;
+            line-height: 2rem;
+            // border: 1px solid greenyellow;
+        }
+    }
+
+    &__img {
+
+        max-width: 680px;
+        margin: auto;
+    }
+}
