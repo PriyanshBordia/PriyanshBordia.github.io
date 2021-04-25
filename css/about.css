@@ -1,0 +1,84 @@
+body
+{
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: thick;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: thick;
+}
+
+.content
+{
+    max-width: 700px;
+    margin: auto;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h4
+{
+    margin-left: 20px;
+    color: #5B677D;
+}
+
+a, li, p
+{
+    margin: 10px;
+    padding-top: 5px;
+    color: gray;
+    text-decoration: none !important;
+}
+
+a:hover
+{
+    color: #F6AF44;
+}
+
+/*Image*/
+img
+{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 500px;
+}
+
+/*Social Media handles*/
+#social-handles
+{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#social-handles a:hover
+{
+    color: #447EA6;
+    text-decoration: none !important;
+}
+
+/* Footer */
+footer
+{
+    text-decoration: none !important;
+    color: grey;         /* Gray */
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+}
+
+/*Hower Over Effect*/
+.button, #social-handles a
+{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover
+{
+    color: rgb(120,81,169);
+}
