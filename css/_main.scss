@@ -1,6 +1,6 @@
 .main {
     
-    margin-bottom: 13.8rem;
+    margin-bottom: 8rem;
     
     @include breakpoint-up(large) {
         display: flex;
@@ -32,5 +32,22 @@
         font-size: 1rem;
         color: $LightestSlate;
         line-height: 1.625rem;
+    }
+
+    &__button {
+            
+        margin-top: 4rem;
+        padding: 0.7rem;
+        text-align: center;
+        align-items: center;
+        width: $btn-size-xs;            
+        color: $NeonGreen;
+        font-size: $font-md;
+        border: 1px solid $NeonGreen;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: $LightestNavy;
+        }
     }
 }

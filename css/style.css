@@ -336,7 +336,7 @@ hr {
 }
 
 .main {
-  margin-bottom: 13.8rem;
+  margin-bottom: 8rem;
 }
 
 @media (min-width: null) {
@@ -369,6 +369,24 @@ hr {
   font-size: 1rem;
   color: #ccd6f6;
   line-height: 1.625rem;
+}
+
+.main__button {
+  margin-top: 4rem;
+  padding: 0.7rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2in;
+  color: #64ffda;
+  font-size: 1.25rem;
+  border: 1px solid #64ffda;
+  border-radius: 3px;
+}
+
+.main__button:hover {
+  background-color: #233554;
 }
 
 .content {
