@@ -96,7 +96,7 @@
             position: relative;
             font-size: $font-md;
             color: grey;
-            transition: color 300ms ease-in-out;
+            transition: color 200ms ease-in-out;
 
             &:not(:last-child) {
                 margin-right: 32px;
@@ -107,8 +107,8 @@
             color: $NeonGreen;
             // border-bottom: 1px solid $NeonGreen;
             // transition: top ease-in-out 0.4s;
-            transition: all .2s ease-in-out;
-            -webkit-transition: all .15s ease-in-out;
+            transition: all 200ms ease-in-out;
+            -webkit-transition: all 150ms ease-in-out;
         }
     }
 }
