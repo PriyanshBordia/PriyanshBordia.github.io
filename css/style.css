@@ -292,8 +292,8 @@ hr {
   position: relative;
   font-size: 1.25rem;
   color: grey;
-  -webkit-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-in-out;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
@@ -302,9 +302,9 @@ hr {
 
 .header__links a:hover {
   color: #64ffda;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .15s ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
 }
 
 .feature__grid {
@@ -401,7 +401,8 @@ hr {
 .content__img img {
   max-width: 11rem;
   max-height: 11rem;
-  border-radius: 100rem;
+  border: 2px solid #233554;
+  border-radius: 5rem;
 }
 
 .content__title {

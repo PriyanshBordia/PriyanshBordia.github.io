@@ -42,13 +42,15 @@ h3 {
     padding: .8rem;
     text-align: center;
     font-size: 2rem;
-    background-color: #233554;
+    background-color: #112240;
+    border-top: 1px solid #8892b0;
+    border-bottom: 1px solid #8892b0;
 }
 
 .container {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
     align-items: center;
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -59,6 +61,27 @@ h3 {
     margin: 1.5rem;
     padding: 2rem;
     border: 1px solid #64ffda;
+}
+
+li i:first-child {
+    float: right;
+}
+
+li i:last-child {
+    float: right;
+    margin-right: 1rem;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.fa-pencil-alt:hover {
+    color:green;
+}
+
+.fa-trash-alt:hover {
+    color:red;
 }
 
 footer {

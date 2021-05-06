@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             const li = addTaskToList(todoList[i]);
             document.querySelector('.todo__list').append(li);
+
+            const last_li = document.querySelector('.todo__list > li:last-child');
+
+            const bin = document.createElement('i');
+            bin.className = 'far fa-trash-alt'
+            last_li.append(bin);
+
+            const pencil = document.createElement('i');
+            pencil.className = 'fas fa-pencil-alt';
+            last_li.append(pencil);
         }
     }
 
@@ -26,6 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             const li = addTaskToList(notodoList[i]);
             document.querySelector('.notodo__list').append(li);
+
+            const last_li = document.querySelector('.notodo__list > li:last-child');
+
+            const bin = document.createElement('i');
+            bin.className = 'far fa-trash-alt'
+            last_li.append(bin);
+
+            const pencil = document.createElement('i');
+            pencil.className = 'fas fa-pencil-alt';
+            last_li.append(pencil);
         }
     }
     
@@ -47,7 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const li = addTaskToList(task);
         document.querySelector('.todo__list').append(li);
+        
+        const last_li = document.querySelector('.todo__list > li:last-child');
 
+        const bin = document.createElement('i');
+        bin.className = 'far fa-trash-alt'
+        last_li.append(bin);
+
+        const pencil = document.createElement('i');
+        pencil.className = 'fas fa-pencil-alt';
+        last_li.append(pencil);
+       
         todoList.push(String(task));
         localStorage.setItem('todoList', JSON.stringify(todoList));
 
@@ -64,6 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const li = addTaskToList(task);
         document.querySelector('.notodo__list').append(li);
+
+        const last_li = document.querySelector('.notodo__list > li:last-child');
+
+        const bin = document.createElement('i');
+        bin.className = 'far fa-trash-alt'
+        last_li.append(bin);
+        
+        const pencil = document.createElement('i');
+        pencil.className = 'fas fa-pencil-alt';
+        last_li.append(pencil);
 
         notodoList.push(String(task));
         localStorage.setItem('notodoList', JSON.stringify(notodoList));
