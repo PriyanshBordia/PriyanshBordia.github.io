@@ -20,8 +20,8 @@ body {
 	font-family: Chalkduster, Verdana, Geneva, Tahoma, sans-serif;
 	font-weight: 200;
 	font-style: oblique;
-	/* color: whitesmoke; */
-	background-color: black;
+	color: #a8b2d1;
+	background-color: #112240;
 }
 
 #brand {
@@ -29,7 +29,6 @@ body {
 	margin-left: 1.5rem;
 	font-size: 2.25rem;
 	text-align: left;
-	color: yellow;
 }
 
 a {
