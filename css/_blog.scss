@@ -5,7 +5,14 @@
         width: 550px;
         height: 350px;
         border-radius: 2px;
+        border: .2rem solid $LightestSlate;
 	}
+
+    video {
+        margin: auto;
+        border-radius: 2px;
+        border: .2rem solid $LightestSlate;
+    }
 
     &__grid {
 

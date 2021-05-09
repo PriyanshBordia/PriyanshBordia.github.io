@@ -635,6 +635,13 @@ hr {
   width: 550px;
   height: 350px;
   border-radius: 2px;
+  border: 0.2rem solid #ccd6f6;
+}
+
+.blog video {
+  margin: auto;
+  border-radius: 2px;
+  border: 0.2rem solid #ccd6f6;
 }
 
 .blog__grid {
