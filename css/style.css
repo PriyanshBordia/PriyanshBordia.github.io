@@ -609,6 +609,8 @@ hr {
 .tools__grid__img img {
   width: 100%;
   height: 100%;
+  border-radius: 2px;
+  border: 0.2rem solid #ccd6f6;
 }
 
 .tools__grid__text {
