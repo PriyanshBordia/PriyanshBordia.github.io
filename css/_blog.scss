@@ -1,7 +1,5 @@
 .blog {
 
-    // display: flex;
-
     img {
 
         width: 550px;
@@ -18,14 +16,13 @@
 
     &__grid {
 
-        display: flex;
+        // display: flex;
         max-width: 1200px;
         margin: auto;
         margin-top: 5rem;
         margin-bottom: 3rem;
         text-align: center;
-        align-items: center; 
-        display: flex;
+        align-items: center;
     }
 
     &__content {
