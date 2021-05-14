@@ -88,6 +88,14 @@
             color: $Casablanca;
             text-align: center;
         }
+
+        a:hover {
+            color: $LightNavy;
+            background-color: $LightestSlate;
+            transition: all 200ms ease-in-out;
+            -webkit-transition: all 150ms ease-in-out;
+            border-radius: 3px;
+        }
     }
 
     &__links {
@@ -105,8 +113,6 @@
 
         a:hover {
             color: $NeonGreen;
-            // border-bottom: 1px solid $NeonGreen;
-            // transition: top ease-in-out 0.4s;
             transition: all 200ms ease-in-out;
             -webkit-transition: all 150ms ease-in-out;
         }

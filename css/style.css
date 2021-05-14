@@ -288,6 +288,15 @@ hr {
   text-align: center;
 }
 
+.header__menu a:hover {
+  color: #112240;
+  background-color: #ccd6f6;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  border-radius: 3px;
+}
+
 .header__links a {
   position: relative;
   font-size: 1.25rem;
