@@ -643,7 +643,7 @@ hr {
 }
 
 .blog img {
-  max-width: 550px;
+  max-width: 500px;
   max-height: 350px;
   border-radius: 2px;
   border: 0.2rem solid #ccd6f6;
