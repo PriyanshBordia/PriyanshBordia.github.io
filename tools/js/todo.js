@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    setDisabled(true);
+
     var todoList = new Array();
     var notodoList = new Array();
 
@@ -17,11 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const last_li = document.querySelector('.todo__list > li:last-child');
 
             const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt'
+            bin.className = 'far fa-trash-alt';
+            bin.value = 'b' + String(i);
             last_li.append(bin);
 
             const pencil = document.createElement('i');
             pencil.className = 'fas fa-pencil-alt';
+            pencil.value = 'p' + String(i);
             last_li.append(pencil);
         }
     }
@@ -40,17 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const last_li = document.querySelector('.notodo__list > li:last-child');
 
             const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt'
+            bin.className = 'far fa-trash-alt';
+            bin.value = 'b' + String(i);
             last_li.append(bin);
 
             const pencil = document.createElement('i');
             pencil.className = 'fas fa-pencil-alt';
+            pencil.value = 'p' + String(i);
             last_li.append(pencil);
         }
     }
     
-    setDisabled(true);
-
     document.querySelector('#task').onkeyup = () => {
 
         if((document.querySelector('#task').value.trim()).length > 0)
@@ -71,11 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const last_li = document.querySelector('.todo__list > li:last-child');
 
         const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt'
+        bin.className = 'far fa-trash-alt';
+        bin.value = 'b' + String(todoList.length - 1);
         last_li.append(bin);
 
         const pencil = document.createElement('i');
         pencil.className = 'fas fa-pencil-alt';
+        pencil.value = 'p' + String(todoList.length - 1);
         last_li.append(pencil);
        
         todoList.push(String(task));
@@ -98,11 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const last_li = document.querySelector('.notodo__list > li:last-child');
 
         const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt'
+        bin.className = 'far fa-trash-alt';
+        bin.value = 'b' + String(notodoList.length - 1);
         last_li.append(bin);
         
         const pencil = document.createElement('i');
         pencil.className = 'fas fa-pencil-alt';
+        pencil.value = 'p' + String(notodoList.length - 1);
         last_li.append(pencil);
 
         notodoList.push(String(task));
@@ -115,16 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     };
 
+    document.querySelectorAll('.bin').onclick = () => {
+        console.log('in fas');
+    };
+
+    document.querySelectorAll('.pencil').onclick = () => {
+        console.log('in far');
+    };
+
     function setDisabled(value) {
         document.querySelector('#todo').disabled = value;
         document.querySelector('#notodo').disabled = value;
     };
 
-    function addTaskToList(task) {
+    function addTaskToList(taskName) {
 
         var li = document.createElement('li');
-        li.innerHTML = task;
-
+        li.innerHTML = taskName;
         return li;
     }; 
+
+    function removeTaskFromList(list, taskId) {
+        
+        list.splice(taskId, 1);
+    };
 });
