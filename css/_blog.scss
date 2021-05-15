@@ -2,9 +2,10 @@
 
     img {
 
+        width: 100%;
         max-width: 550px;
-        margin: auto;
         height: 350px;
+        margin: auto;
         border-radius: 2px;
         border: .2rem solid $LightestSlate;
 	}
