@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.querySelectorAll('.bin').onclick = () => {
-        console.log('in fas');
+        // document.body.parentNode; 
     };
 
     document.querySelectorAll('.pencil').onclick = () => {
