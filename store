@@ -15,3 +15,22 @@
 <!-- <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
 </div> -->
+
+
+&:before {
+	content: "";
+	width: 0;
+	height: 0.1em;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background: $color;
+	transition: all 0.3s;
+}
+
+&:hover {
+	&:before {
+		width: 100%;
+		left: 0;
+	}
+}

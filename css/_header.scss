@@ -87,13 +87,14 @@
             padding: 0.625rem;
             color: $Casablanca;
             text-align: center;
+
+			transition: all 200ms ease-in-out;
+            -webkit-transition: all 150ms ease-in-out;
         }
 
         a:hover {
             color: $LightNavy;
             background-color: $LightestSlate;
-            transition: all 200ms ease-in-out;
-            -webkit-transition: all 150ms ease-in-out;
             border-radius: 3px;
         }
     }
@@ -102,8 +103,9 @@
 
         a {
             position: relative;
-            font-size: $font-md;
+			padding: .2rem;
             color: grey;
+            font-size: $font-md;
             transition: color 200ms ease-in-out;
 
             &:not(:last-child) {
@@ -112,10 +114,14 @@
         }
 
         a:hover {
-            color: $NeonGreen;
-            transition: all 200ms ease-in-out;
-            -webkit-transition: all 150ms ease-in-out;
-        }
-    }
-}
+            // color: $NeonGreen;
+			color: $LightNavy;
+            background-color: $LightestSlate;
+            border-radius: 3px;
+			// border-bottom: 2px solid gold;
 
+			transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+  		}
+	}
+}

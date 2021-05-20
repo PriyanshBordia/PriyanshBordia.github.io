@@ -286,21 +286,22 @@ hr {
   padding: 0.625rem;
   color: #F6AF44;
   text-align: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
 }
 
 .header__menu a:hover {
   color: #112240;
   background-color: #ccd6f6;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  -webkit-transition: all 150ms ease-in-out;
   border-radius: 3px;
 }
 
 .header__links a {
   position: relative;
-  font-size: 1.25rem;
+  padding: .2rem;
   color: grey;
+  font-size: 1.25rem;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
 }
@@ -310,10 +311,11 @@ hr {
 }
 
 .header__links a:hover {
-  color: #64ffda;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  -webkit-transition: all 150ms ease-in-out;
+  color: #112240;
+  background-color: #ccd6f6;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
 }
 
 .feature__grid {
@@ -391,6 +393,9 @@ hr {
   font-size: 1.25rem;
   border: 1px solid #64ffda;
   border-radius: 3px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
 }
 
 .main__button:hover {

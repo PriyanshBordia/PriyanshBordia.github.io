@@ -45,6 +45,9 @@
         font-size: $font-md;
         border: 1px solid $NeonGreen;
         border-radius: 3px;
+		
+		-webkit-transition-duration: 0.4s;  /* Safari */
+  		transition-duration: 0.4s;
 
         &:hover {
             background-color: $LightestNavy;
