@@ -297,13 +297,16 @@ hr {
   border-radius: 3px;
 }
 
+.header__links {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+
 .header__links a {
   position: relative;
   padding: .2rem;
   color: grey;
   font-size: 1.25rem;
-  -webkit-transition: color 200ms ease-in-out;
-  transition: color 200ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
@@ -314,8 +317,6 @@ hr {
   color: #112240;
   background-color: #ccd6f6;
   border-radius: 3px;
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
 }
 
 .feature__grid {

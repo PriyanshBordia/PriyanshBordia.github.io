@@ -101,12 +101,14 @@
 
     &__links {
 
+		transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+
         a {
             position: relative;
 			padding: .2rem;
             color: grey;
             font-size: $font-md;
-            transition: color 200ms ease-in-out;
 
             &:not(:last-child) {
                 margin-right: 32px;
@@ -119,9 +121,6 @@
             background-color: $LightestSlate;
             border-radius: 3px;
 			// border-bottom: 2px solid gold;
-
-			transition: all .3s ease-in-out;
-            -webkit-transition: all .3s ease-in-out;
   		}
 	}
 }
