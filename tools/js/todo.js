@@ -20,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const bin = document.createElement('i');
             bin.className = 'far fa-trash-alt';
-            bin.value = 'b' + String(i);
+            // bin.value = 'b' + String(i);
+			bin.addEventListener('click', () => removeTaskFromList(li, todoList, i));
             last_li.append(bin);
 
             const pencil = document.createElement('i');
             pencil.className = 'fas fa-pencil-alt';
-            pencil.value = 'p' + String(i);
+            // pencil.value = 'p' + String(i);
+			// pencil.addEventListener('click', () => editTask(li, todoList, i));
             last_li.append(pencil);
         }
     }
@@ -45,12 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const bin = document.createElement('i');
             bin.className = 'far fa-trash-alt';
-            bin.value = 'b' + String(i);
+            // bin.value = 'b' + String(i);
+			bin.addEventListener('click', () => removeTaskFromList(li, notodoList, i));
             last_li.append(bin);
 
             const pencil = document.createElement('i');
             pencil.className = 'fas fa-pencil-alt';
-            pencil.value = 'p' + String(i);
+            // pencil.value = 'p' + String(i);
+			// pencil.addEventListener('click', () => editTask(li, notodoList, i));
             last_li.append(pencil);
         }
     }
@@ -76,12 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const bin = document.createElement('i');
         bin.className = 'far fa-trash-alt';
-        bin.value = 'b' + String(todoList.length - 1);
+        // bin.value = 'b' + String(todoList.length - 1);
+		bin.addEventListener('click', () => removeTaskFromList(li, todoList, todoList.length));
         last_li.append(bin);
 
         const pencil = document.createElement('i');
         pencil.className = 'fas fa-pencil-alt';
-        pencil.value = 'p' + String(todoList.length - 1);
+        // pencil.value = 'p' + String(todoList.length - 1);
+		// pencil.addEventListener('click', () => editTask(li, todoList, todoList.length));
         last_li.append(pencil);
        
         todoList.push(String(task));
@@ -89,7 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setDisabled(true);
 
-        document.querySelector('#task').value = '';
+		console.log(task);
+		console.log(todoList[todoList.length - 1]);
+
+		document.querySelector('#task').value = '';
 
         return false;
     };
@@ -105,12 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const bin = document.createElement('i');
         bin.className = 'far fa-trash-alt';
-        bin.value = 'b' + String(notodoList.length - 1);
+        // bin.value = 'b' + String(notodoList.length - 1);
+		bin.addEventListener('click', () => removeTaskFromList(li, notodoList, notodoList.length - 1));
         last_li.append(bin);
         
         const pencil = document.createElement('i');
         pencil.className = 'fas fa-pencil-alt';
-        pencil.value = 'p' + String(notodoList.length - 1);
+        // pencil.value = 'p' + String(notodoList.length - 1);
+		// pencil.addEventListener('click', () => editTask(li, notodoList, notodoList.length));
         last_li.append(pencil);
 
         notodoList.push(String(task));
@@ -123,18 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     };
 
-    document.querySelectorAll('.bin').onclick = () => {
-        // document.body.parentNode; 
-    };
-
-    document.querySelectorAll('.pencil').onclick = () => {
-        console.log('in far');
-    };
-
     function setDisabled(value) {
         document.querySelector('#todo').disabled = value;
         document.querySelector('#notodo').disabled = value;
     };
+
+	document.querySelectorAll('.bin').onclick = () => {
+		console.log('bin')
+		// removeTaskFromList( , 'todoList');
+	};
+
+	document.querySelectorAll('.pencil').onclick = () => {
+		console.log('pencil');
+	};
 
     function addTaskToList(taskName) {
 
@@ -143,8 +155,39 @@ document.addEventListener('DOMContentLoaded', () => {
         return li;
     }; 
 
-    function removeTaskFromList(list, taskId) {
-        
-        list.splice(taskId, 1);
+	function editTask(input, list, taskName)
+	{
+		if (input.disabled == true)
+			input.disabled = false;
+		
+		else
+		{
+			input.disabled = true;
+			let indexOf = list.indexOf(taskName);
+			list[indexOf] = input.value;
+			localStorage.setItem(list, JSON.stringify(list));
+		}
+	};
+
+	function removeTaskFromList(li, list, taskId) {
+		try {
+			li.parentNode.removeChild(li);
+			// console.log(taskName);
+			// let taskId = todoList.indexOf(taskName);
+			console.log(taskId);
+			if (taskId >= 0)
+			{
+				todoList.splice(taskId, 1);
+				console.log(todoList);
+				localStorage.setItem('todoList', JSON.stringify(todoList));
+			}
+
+			else
+				console.log('Index out of bound.!!');
+		} 
+
+		catch (error) {
+			console.error();
+		}
     };
 });
