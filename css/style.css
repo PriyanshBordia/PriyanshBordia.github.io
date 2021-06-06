@@ -372,7 +372,12 @@ hr {
 
 .main__positions {
   font-size: 3.2rem;
+  font-weight: 250;
   color: #a8b2d1;
+}
+
+.main__typingText {
+  color: #F6AF44;
 }
 
 .main__description {
