@@ -46,6 +46,10 @@ h3 {
     border-bottom: 1px solid #8892b0;
 }
 
+code {
+	overflow: scroll;
+}
+
 .small {
     padding: .2rem;
     font-size: 1.2rem;
