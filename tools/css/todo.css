@@ -46,10 +46,6 @@ h3 {
     border-bottom: 1px solid #8892b0;
 }
 
-code {
-	overflow: scroll;
-}
-
 .small {
     padding: .2rem;
     font-size: 1.2rem;
@@ -59,7 +55,6 @@ code {
     align-items: center;
     border-radius: 3px;
     background-color: cornsilk;
-    /* overflow: scroll; */
 }
 
 .container {
@@ -108,4 +103,30 @@ footer {
 
 footer:hover {
 	color: #64ffda;
+}
+
+
+@keyframes sliding {
+	0% {
+		transform: translateX(0);
+		background-color:green;
+	}
+
+	100% {
+		transform: translateX(-100%);
+		background-color:red;
+	}
+}
+
+#quote {
+	overflow: hidden;
+	width: 100px;
+  	height: 100px;
+	animation-name: sliding;
+	animation-direction: normal;
+	animation-delay: 2s;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	/* animation-timing-function: ease-in-out; */
 }
