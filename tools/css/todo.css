@@ -68,7 +68,7 @@ code p {
 
 #quotes {
 	white-space: nowrap;
-	animation: sliding 40s linear infinite; 
+	animation: sliding 40s linear infinite;
 	animation-delay: 2s;
 }
 
