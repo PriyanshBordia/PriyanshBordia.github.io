@@ -700,9 +700,9 @@ hr {
 }
 
 .experience {
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto 6rem auto;
   padding: 2rem auto 2rem auto;
-  width: 50rem;
+  max-width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
