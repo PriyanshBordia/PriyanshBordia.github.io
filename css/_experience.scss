@@ -14,7 +14,7 @@
 
 	margin: 2rem auto 2rem auto;
 	padding: 2rem auto 2rem auto;
-	width: 40rem;
+	width: 50rem;
 	display: flex;
 	position: relative;
 	overflow-x: hidden;
@@ -66,7 +66,7 @@
 				color: $NeonGreen;
 			}
 
-			@for $i from 1 through 3 {
+			@for $i from 1 through 1 {
 				&.tab-#{$i}.active {
 					& ~ .highlighter {
 						transform: translateY(#{($i*$tab-height) - $tab-height});
@@ -120,6 +120,42 @@
 				height: auto;
 				transition: opacity 0.5s ease;
 				z-index: 2;
+			}
+			
+			&__title {
+
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+
+			&__name {
+
+				font-size: 1.4rem;
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				color: $NeonGreen;
+			}
+
+			&__date {
+				padding: 1rem auto 1rem 1rem;
+				line-height: 2rem;
+				border-bottom: .125rem solid $LightestNavy;
+			}
+
+			ul {
+  				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			ul li::before {
+				padding: .6rem;
+				width: 1.5em; 
+				content: '▷';
+				color: $NeonGreen;
+				font-size: 1rem;
+				font-weight: 300;
+				display: inline-block;
+				margin-left: -1em;
 			}
   		}
 	}
