@@ -1,64 +1,101 @@
 function play() {
-    var audio = new Audio('./media/music/chime.mp3');
-    audio.play();
-};
+  var audio = new Audio("./media/music/chime.mp3");
+  audio.play();
+}
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM Loaded..!!");
 
-    console.log('DOM Loaded..!!');    
+  const typingEffect = document.querySelector(".main__typingText");
 
-    const btnHamburger = document.querySelector('#btnHamburger');
-    const body = document.querySelector('body');
-    const header = document.querySelector('.header');
-    const footer = document.querySelector('.footer');
-    const fadeElements = document.querySelectorAll('.has-fade');
+  const typingText = [
+    "Software Developer",
+    "Student",
+    "Tech Geek",
+    "Footballer",
+  ];
+  const typingDelay = 200;
+  const eraseDelay = 100;
+  const newTextDelay = 2000;
+  let idx = 0;
+  let charIdx = 0;
 
+  type();
 
-    btnHamburger.onclick = () => {
+  function type() {
+    if (charIdx < typingText[idx].length) {
+      typingEffect.textContent += typingText[idx].charAt(charIdx);
+      charIdx++;
 
-        if (header.classList.contains('open'))
-        {
-            header.classList.remove('open');
-            body.classList.remove('no-scroll');
-            fadeElements.forEach((element) => {
-                element.classList.remove('fade-in');
-                element.classList.add('fade-out');
-            });
+      setTimeout(type, typingDelay);
+    } else {
+      setTimeout(erase, newTextDelay);
+    }
+  }
 
-            footer.classList.remove('fixed-bottom');
-        }
+  function erase() {
+    if (charIdx > 0) {
+      typingEffect.textContent = typingText[idx].substring(0, charIdx - 1);
+      charIdx--;
+      setTimeout(erase, eraseDelay);
+    } else {
+      idx++;
+      if (idx >= typingText.length) idx = 0;
 
-        else
-        {
-            header.classList.add('open');
-            body.classList.add('no-scroll');
-            fadeElements.forEach((element) => {
-                element.classList.remove('fade-out');
-                element.classList.add('fade-in');
-            });
+      setTimeout(type, typingDelay);
+    }
+  }
 
-            footer.classList.add('fixed-bottom');
-        }
-    };
+  const btnHamburger = document.querySelector("#btnHamburger");
+  const body = document.querySelector("body");
+  const header = document.querySelector(".header");
+  const footer = document.querySelector(".footer");
+  const fadeElements = document.querySelectorAll(".has-fade");
 
-	const tabs = document.querySelector('.experience__tabs');
+  btnHamburger.onclick = () => {
+    if (header.classList.contains("open")) {
+      header.classList.remove("open");
+      body.classList.remove("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-in");
+        element.classList.add("fade-out");
+      });
 
-	tabs.addEventListener('click', e => handleClick(e));
+      footer.classList.remove("fixed-bottom");
+    } else {
+      header.classList.add("open");
+      body.classList.add("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-out");
+        element.classList.add("fade-in");
+      });
 
-	function handleClick(e) {
-		const target = e.target;
-		const tabNum = target.dataset.tab;
-		const activeTab = document.querySelector('.experience__tabs .active');
-		const activeContent = document.querySelector('.experience__content .visible');
-		const currentContent = document.querySelector(`.experience__content__section[data-tab='${tabNum}']`);
+      footer.classList.add("fixed-bottom");
+    }
+  };
 
-		if (!tabNum) {
-			return;
-		}
+  const tabs = document.querySelector(".experience__tabs");
 
-		activeTab.classList.remove('active');
-		target.classList.add('active');
-		activeContent.classList.remove('visible');
-		currentContent.classList.add('visible');
-	};
+  tabs.addEventListener("click", (e) => handleClick(e));
+
+  function handleClick(e) {
+    const target = e.target;
+    const tabNum = target.dataset.tab;
+    const activeTab = document.querySelector(".experience__tabs .active");
+    const activeContent = document.querySelector(
+      ".experience__content .visible"
+    );
+    const currentContent = document.querySelector(
+      `.experience__content__section[data-tab='${tabNum}']`
+    );
+
+    if (!tabNum) {
+      return;
+    }
+
+    activeTab.classList.remove("active");
+    target.classList.add("active");
+    activeContent.classList.remove("visible");
+    currentContent.classList.add("visible");
+  }
 });

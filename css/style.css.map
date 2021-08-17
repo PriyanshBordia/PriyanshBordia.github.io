@@ -15,6 +15,7 @@
         "_tools.scss",
         "_blog.scss",
         "_experience.scss",
+        "_facts.scss",
         "_footer.scss"
     ],
     "names": [],
