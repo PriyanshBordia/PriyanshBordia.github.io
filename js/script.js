@@ -1,110 +1,101 @@
 function play() {
-    var audio = new Audio('./media/music/chime.mp3');
-    audio.play();
-};
+  var audio = new Audio("./media/music/chime.mp3");
+  audio.play();
+}
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM Loaded..!!");
 
-    console.log('DOM Loaded..!!');    
+  const typingEffect = document.querySelector(".main__typingText");
 
-	const typingEffect = document.querySelector(".main__typingText");
+  const typingText = [
+    "Software Developer",
+    "Student",
+    "Tech Geek",
+    "Footballer",
+  ];
+  const typingDelay = 200;
+  const eraseDelay = 100;
+  const newTextDelay = 2000;
+  let idx = 0;
+  let charIdx = 0;
 
-	const typingText = ["Software Developer", "Student", "Tech Geek", "Footballer"];
-	const typingDelay = 200;
-	const eraseDelay = 100;
-	const newTextDelay = 2000;
-	let idx = 0;
-	let charIdx = 0;
+  type();
 
-	type();
+  function type() {
+    if (charIdx < typingText[idx].length) {
+      typingEffect.textContent += typingText[idx].charAt(charIdx);
+      charIdx++;
 
-	function type()
-	{
-		if (charIdx < typingText[idx].length)
-		{
-			typingEffect.textContent += typingText[idx].charAt(charIdx);
-			charIdx++;
+      setTimeout(type, typingDelay);
+    } else {
+      setTimeout(erase, newTextDelay);
+    }
+  }
 
-			setTimeout(type, typingDelay);
-		}
+  function erase() {
+    if (charIdx > 0) {
+      typingEffect.textContent = typingText[idx].substring(0, charIdx - 1);
+      charIdx--;
+      setTimeout(erase, eraseDelay);
+    } else {
+      idx++;
+      if (idx >= typingText.length) idx = 0;
 
-		else
-		{
-			setTimeout(erase, newTextDelay);
-		}
-	}
+      setTimeout(type, typingDelay);
+    }
+  }
 
-	function erase()
-	{
-		if (charIdx > 0)
-		{
-			typingEffect.textContent = typingText[idx].substring(0, charIdx - 1);
-			charIdx--;
-			setTimeout(erase, eraseDelay);
-		}
+  const btnHamburger = document.querySelector("#btnHamburger");
+  const body = document.querySelector("body");
+  const header = document.querySelector(".header");
+  const footer = document.querySelector(".footer");
+  const fadeElements = document.querySelectorAll(".has-fade");
 
-		else
-		{
-			idx++;
-			if (idx >= typingText.length)
-				idx = 0;
+  btnHamburger.onclick = () => {
+    if (header.classList.contains("open")) {
+      header.classList.remove("open");
+      body.classList.remove("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-in");
+        element.classList.add("fade-out");
+      });
 
-			setTimeout(type, typingDelay);
-		}
-	}
+      footer.classList.remove("fixed-bottom");
+    } else {
+      header.classList.add("open");
+      body.classList.add("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-out");
+        element.classList.add("fade-in");
+      });
 
-    const btnHamburger = document.querySelector('#btnHamburger');
-    const body = document.querySelector('body');
-    const header = document.querySelector('.header');
-    const footer = document.querySelector('.footer');
-    const fadeElements = document.querySelectorAll('.has-fade');
+      footer.classList.add("fixed-bottom");
+    }
+  };
 
+  const tabs = document.querySelector(".experience__tabs");
 
-    btnHamburger.onclick = () => {
+  tabs.addEventListener("click", (e) => handleClick(e));
 
-        if (header.classList.contains('open'))
-        {
-            header.classList.remove('open');
-            body.classList.remove('no-scroll');
-            fadeElements.forEach((element) => {
-                element.classList.remove('fade-in');
-                element.classList.add('fade-out');
-            });
+  function handleClick(e) {
+    const target = e.target;
+    const tabNum = target.dataset.tab;
+    const activeTab = document.querySelector(".experience__tabs .active");
+    const activeContent = document.querySelector(
+      ".experience__content .visible"
+    );
+    const currentContent = document.querySelector(
+      `.experience__content__section[data-tab='${tabNum}']`
+    );
 
-            footer.classList.remove('fixed-bottom');
-        }
+    if (!tabNum) {
+      return;
+    }
 
-        else
-        {
-            header.classList.add('open');
-            body.classList.add('no-scroll');
-            fadeElements.forEach((element) => {
-                element.classList.remove('fade-out');
-                element.classList.add('fade-in');
-            });
-
-            footer.classList.add('fixed-bottom');
-        }
-    };
-
-	const tabs = document.querySelector('.experience__tabs');
-
-	tabs.addEventListener('click', e => handleClick(e));
-
-	function handleClick(e) {
-		const target = e.target;
-		const tabNum = target.dataset.tab;
-		const activeTab = document.querySelector('.experience__tabs .active');
-		const activeContent = document.querySelector('.experience__content .visible');
-		const currentContent = document.querySelector(`.experience__content__section[data-tab='${tabNum}']`);
-
-		if (!tabNum) {
-			return;
-		}
-
-		activeTab.classList.remove('active');
-		target.classList.add('active');
-		activeContent.classList.remove('visible');
-		currentContent.classList.add('visible');
-	};
+    activeTab.classList.remove("active");
+    target.classList.add("active");
+    activeContent.classList.remove("visible");
+    currentContent.classList.add("visible");
+  }
 });
