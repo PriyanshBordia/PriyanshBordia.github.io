@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	"Develop Software",
     "am a Student",
     "am a Tech Geek",
-    "love to play Football",
+    "play Football",
   ];
   const typingDelay = 200;
   const eraseDelay = 150;
