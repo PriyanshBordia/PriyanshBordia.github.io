@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const typingEffect = document.querySelector(".main__typingText");
 
   const typingText = [
-    "Software Developer",
-    "Student",
-    "Tech Geek",
-    "Footballer",
+    "Engineer Software",
+	"Develop Software",
+    "am a Student",
+    "am a Tech Geek",
+    "love to play Football",
   ];
   const typingDelay = 200;
   const eraseDelay = 100;
