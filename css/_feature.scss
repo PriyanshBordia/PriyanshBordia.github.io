@@ -11,7 +11,7 @@
 
 	&__item {
 		
-		// padding: 0.9375rem;
+		padding: 0.125rem;
 	}
 
 	&__title {
@@ -19,7 +19,7 @@
 		padding: 1rem;
 		font-size: 2rem;
 		color: $NeonGreen;
-		border: 1px solid $LightestSlate;
+		border: .0625rem solid $LightestSlate;
 		
 		i:hover {
     		transform: rotate(-180deg);
@@ -32,7 +32,7 @@
 
 	&__description {
 		line-height: 1.5rem;
-		border: 1px solid $LightSlate;
+		border: .0625rem solid $LightSlate;
 
 		&__subtitle {
 			font-size: 1.5rem;

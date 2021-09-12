@@ -1,8 +1,8 @@
-$width-xs: 0px;
-$width-sm: 576px;
-$width-md: 768px;
-$width-lg: 992px;
-$width-xl: 1200px;
+$width-xs: 0;
+$width-sm: 36rem;
+$width-md: 48rem;
+$width-lg: 62rem;
+$width-xl: 75rem;
 
 $btn-size-xxs: 1.0in;
 $btn-size-xs: 2.0in;
@@ -49,3 +49,14 @@ $std-font: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
 
 
 $tab-height: 2.8rem;
+
+$px-rem-1: .0625rem;
+$px-rem-2: .125rem;
+$px-rem-3: .1875rem;
+$px-rem-4: .25rem;
+$px-rem-5: .3125rem;
+$px-rem-6: .375rem;
+$px-rem-7: .4375rem;
+$px-rem-8: .5rem;
+$px-rem-9: .5625rem;
+$px-rem-10: .625rem;

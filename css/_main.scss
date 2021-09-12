@@ -33,7 +33,7 @@
 
     &__description {
 
-        max-width: 700px;
+        max-width: 43.75rem;
         font-weight: 300;
         font-size: 1rem;
         color: $LightestSlate;
@@ -49,8 +49,8 @@
         width: $btn-size-xs;
         // color: $NeonGreen;
         font-size: $font-md;
-        border: 1px solid $NeonGreen;
-        border-radius: 3px;
+        border: .0625rem solid $NeonGreen;
+        border-radius: .1875rem;
 
 		-webkit-transition-duration: 0.4s;  /* Safari */
   		transition-duration: 0.4s;

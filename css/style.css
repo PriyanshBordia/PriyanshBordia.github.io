@@ -115,7 +115,7 @@ body.no-scroll {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 100px;
+  max-width: 6.25rem;
   margin: auto;
   position: absolute;
   top: 50%;
@@ -212,8 +212,8 @@ hr {
 .header {
   position: relative;
   z-index: 1;
-  border-top: 1px solid #112240;
-  border-bottom: 1px solid #112240;
+  border-top: 0.0625rem solid #112240;
+  border-bottom: 0.0625rem solid #112240;
 }
 
 .header.open .header__toggle > span:first-child {
@@ -233,10 +233,10 @@ hr {
 .header .overlay {
   opacity: 0;
   position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0a192f), to(#233554));
   background-image: linear-gradient(to bottom, #0a192f, #233554);
 }
@@ -262,12 +262,12 @@ hr {
   background-color: #64ffda;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-transform-origin: 3px 1px;
-          transform-origin: 3px 1px;
+  -webkit-transform-origin: .1875rem .0625rem;
+          transform-origin: .1875rem .0625rem;
 }
 
 .header__toggle > span:not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: .3125rem;
 }
 
 .header__menu {
@@ -279,7 +279,7 @@ hr {
   background: #e6f1ff;
   margin-top: 1.5rem;
   padding: 1.625rem;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
 }
 
 .header__menu a {
@@ -295,7 +295,7 @@ hr {
 .header__menu a:hover {
   color: #112240;
   background-color: #ccd6f6;
-  border-radius: 3px;
+  border-radius: .1875rem;
 }
 
 .header__links {
@@ -311,13 +311,13 @@ hr {
 }
 
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .header__links a:hover {
   color: #112240;
   background-color: #ccd6f6;
-  border-radius: 3px;
+  border-radius: .1875rem;
 }
 
 .feature__grid {
@@ -327,11 +327,15 @@ hr {
   background-color: #112240;
 }
 
+.feature__item {
+  padding: 0.125rem;
+}
+
 .feature__title {
   padding: 1rem;
   font-size: 2rem;
   color: #64ffda;
-  border: 1px solid #ccd6f6;
+  border: 0.0625rem solid #ccd6f6;
 }
 
 .feature__title i:hover {
@@ -341,7 +345,7 @@ hr {
 
 .feature__description {
   line-height: 1.5rem;
-  border: 1px solid #a8b2d1;
+  border: 0.0625rem solid #a8b2d1;
 }
 
 .feature__description__subtitle {
@@ -382,7 +386,7 @@ hr {
 }
 
 .main__description {
-  max-width: 700px;
+  max-width: 43.75rem;
   font-weight: 300;
   font-size: 1rem;
   color: #ccd6f6;
@@ -398,8 +402,8 @@ hr {
           align-items: center;
   width: 2in;
   font-size: 1.25rem;
-  border: 1px solid #64ffda;
-  border-radius: 3px;
+  border: 0.0625rem solid #64ffda;
+  border-radius: .1875rem;
   -webkit-transition-duration: 0.4s;
   /* Safari */
   transition-duration: 0.4s;
@@ -432,7 +436,7 @@ hr {
 }
 
 .content__body {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: auto;
   font-weight: 200;
   font-size: 1.2rem;
@@ -465,7 +469,7 @@ hr {
           align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   .project__grid {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -503,7 +507,7 @@ hr {
   padding: 1.125rem 1.5625rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .project__content__details p {
     background-color: transparent;
     padding: 1.125rem 0;
@@ -542,7 +546,7 @@ hr {
   color: #a8b2d1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .project__content {
     grid-column: 1 / -1;
     padding: 2.5rem;
@@ -553,7 +557,7 @@ hr {
   position: relative;
   z-index: -1;
   background-color: #64ffda;
-  border-radius: 2px;
+  border-radius: .125rem;
   grid-column: 6 / -1;
   grid-row: 1 / -1;
 }
@@ -570,11 +574,11 @@ hr {
   z-index: 3;
   background-color: #0a192f;
   mix-blend-mode: screen;
-  border-radius: 2px;
+  border-radius: .125rem;
 }
 
 .project__icon img {
-  border-radius: 2px;
+  border-radius: .125rem;
   position: relative;
   mix-blend-mode: multiply;
   -webkit-filter: grayscale(100%) contrast(1);
@@ -586,7 +590,7 @@ hr {
   text-decoration: none !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   .project__icon img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -595,13 +599,13 @@ hr {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   .project__icon {
     height: 100%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .project__icon {
     grid-column: 1 / -1;
     opacity: 0.25;
@@ -609,12 +613,12 @@ hr {
 }
 
 .tools {
-  max-width: 1200px;
+  max-width: 75rem;
   margin-top: 2rem;
 }
 
 .tools__grid {
-  max-width: 450px;
+  max-width: 28.125rem;
   margin-top: 1rem;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -624,14 +628,14 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   background-color: #112240;
-  border: 1px solid #a8b2d1;
-  border-radius: 2px;
+  border: 0.0625 solid #a8b2d1;
+  border-radius: .125rem;
 }
 
 .tools__grid__img img {
   width: 100%;
   height: 100%;
-  border-radius: 2px;
+  border-radius: .125rem;
   border: 0.2rem solid #ccd6f6;
 }
 
@@ -639,7 +643,7 @@ hr {
   margin: 1rem;
   padding: 1rem;
   background-color: #233554;
-  border: 1px solid #aaa;
+  border: .0625rem solid #aaa;
 }
 
 .tools__grid__button {
@@ -647,8 +651,8 @@ hr {
   padding: 0.7rem;
   width: 2.5in;
   font-size: 1.25rem;
-  border: 1px solid #64ffda;
-  border-radius: 7px;
+  border: 0.0625rem solid #64ffda;
+  border-radius: .4375rem;
 }
 
 .tools__grid__button:hover {
@@ -657,22 +661,22 @@ hr {
 
 .blog img {
   width: 100%;
-  max-width: 550px;
+  max-width: 34.375rem;
   height: 100%;
-  max-height: 350px;
+  max-height: 21.875rem;
   margin: auto;
-  border-radius: 2px;
+  border-radius: .125rem;
   border: 0.2rem solid #ccd6f6;
 }
 
 .blog video {
   margin: auto;
-  border-radius: 2px;
+  border-radius: .125rem;
   border: 0.2rem solid #ccd6f6;
 }
 
 .blog__grid {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: auto;
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -683,7 +687,7 @@ hr {
 }
 
 .blog__content {
-  max-width: 500px;
+  max-width: 31.25rem;
   margin: auto;
 }
 
@@ -701,7 +705,7 @@ hr {
 }
 
 .blog__img {
-  max-width: 680px;
+  max-width: 42.5rem;
   margin: auto;
 }
 
