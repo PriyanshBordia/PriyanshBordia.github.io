@@ -8,32 +8,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		localStorage.setItem("todoList", JSON.stringify(todoList));
 	else {
 		todoList = JSON.parse(localStorage.getItem("todoList"));
-
 		for (var i = 0; i < todoList.length; i++) {
+
+			const div = document.createElement("div");
+			div.classList.add("row");
+			const taskId = i;
+			div.value = taskId;
+			document.querySelector(".todo__list").append(div);
 
 			taskName = todoList[i];
 
 			const li = addTaskToList(taskName);
-			document.querySelector(".todo__list").append(li);
-
-			const taskId = i;
-			li.value = taskId;
+			li.classList.add("col-md-10");
 
 			const bin = document.createElement("i");
+			bin.classList.add("col-md-1");
 			bin.classList.add("far");
 			bin.classList.add("fa-trash-alt");
 			bin.classList.add("remove");
-			bin.addEventListener("click", () => removeTaskFromList(li, taskId, "todo"));
+			bin.addEventListener("click", () => removeTaskFromList(div, taskId, "todo"));
 
 			const pencil = document.createElement("i");
+			pencil.classList.add("col-md-1");
 			pencil.classList.add("fas");
 			pencil.classList.add("fa-pencil-alt");
 			pencil.classList.add("edit");
-			pencil.addEventListener('click', () => editTask(li, taskId, "todo"));
+			pencil.addEventListener('click', () => editTask(div, taskId, "todo"));
 
-			const last_li = document.querySelector(".todo__list > li:last-child");
-			last_li.append(bin);
-			last_li.append(pencil);
+			const last_div = document.querySelector(".todo__list > div:last-child");
+			
+			last_div.append(li);
+			last_div.append(pencil);
+			last_div.append(bin);
 		}
 	}
 
@@ -44,31 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		
 		for (var i = 0; i < notodoList.length; i++) {
 
+			const div = document.createElement("div");
+			div.classList.add("row");
+			const taskId = i;
+			div.value = taskId;
+			document.querySelector(".notodo__list").append(div);
+
 			taskName = notodoList[i];
 
 			const li = addTaskToList(taskName);
-			document.querySelector(".notodo__list").append(li);
-
-			const taskId = i;
-
-			li.value = taskId;
+			li.classList.add("col-md-10");
 
 			const bin = document.createElement("i");
+			bin.classList.add("col-md-1");
 			bin.classList.add("far");
 			bin.classList.add("fa-trash-alt");
 			bin.classList.add("remove");
-			bin.addEventListener("click", () => removeTaskFromList(li, taskId, "notodo"));
+			bin.addEventListener("click", () => removeTaskFromList(div, taskId, "notodo"));
 
 			const pencil = document.createElement("i");
+			pencil.classList.add("col-md-1");
 			pencil.classList.add("fas");
 			pencil.classList.add("fa-pencil-alt");
 			pencil.classList.add("edit");
-			pencil.addEventListener('click', () => editTask(li, taskId, "notodo"));
+			pencil.addEventListener('click', () => editTask(div, taskId, "notodo"));
 
-			const last_li = document.querySelector(".notodo__list > li:last-child");
-			last_li.append(bin);
-			last_li.append(pencil);
+			const last_div = document.querySelector(".notodo__list > div:last-child");
 
+			last_div.append(li);
+			last_div.append(pencil);
+			last_div.append(bin);
 		}
 	}
 
@@ -82,30 +93,35 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.querySelector("#todo").onclick = () => {
 
 		taskName = document.querySelector("#task").value.trim();
-		
-		const li = addTaskToList(taskName);
-		document.querySelector(".todo__list").append(li);
-
+	
+		const div = document.createElement("div");
+		div.classList.add("row");
 		const taskId = todoList.length;
-		console.log(taskId);
-		
-		li.value = taskId;
+		div.value = taskId;
+		document.querySelector(".todo__list").append(div);
+
+		const li = addTaskToList(taskName);
+		li.classList.add("col-md-10");
 
 		const bin = document.createElement("i");
+		bin.classList.add("col-md-1");
 		bin.classList.add("far");
 		bin.classList.add("fa-trash-alt");
 		bin.classList.add("remove");
-		bin.addEventListener("click", () => removeTaskFromList(li, taskId, "todo"));
+		bin.addEventListener("click", () => removeTaskFromList(div, taskId, "todo"));
 
 		const pencil = document.createElement("i");
+		pencil.classList.add("col-md-1");
 		pencil.classList.add("fas");
 		pencil.classList.add("fa-pencil-alt");
 		pencil.classList.add("edit");
-		pencil.addEventListener('click', () => editTask(li, taskId, "todo"));
+		pencil.addEventListener('click', () => editTask(div, taskId, "todo"));
 		
-		const last_li = document.querySelector(".todo__list > li:last-child");
-		last_li.append(bin);
-		last_li.append(pencil);
+		const last_div = document.querySelector(".todo__list > div:last-child");
+		
+		last_div.append(li);
+		last_div.append(pencil);
+		last_div.append(bin);
 
 		todoList.push(String(taskName));
 		localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -121,31 +137,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		
 		taskName = document.querySelector("#task").value.trim();
 
-		const li = addTaskToList(taskName);
-		document.querySelector(".notodo__list").append(li);
-
+		const div = document.createElement("div");
+		div.classList.add("row"); 
 		const taskId = notodoList.length;
-		console.log(taskId);
+		div.value = taskId;
+		document.querySelector(".notodo__list").append(div);
 
-		li.value = taskId;
+		const li = addTaskToList(taskName);
+		li.classList.add("col-md-10");
 
 		const bin = document.createElement("i");
+		bin.classList.add("col-md-1");
 		bin.classList.add("far");
 		bin.classList.add("fa-trash-alt");
 		bin.classList.add("remove");
-		bin.addEventListener("click", () => removeTaskFromList(li, taskId, "notodo"));
+		bin.addEventListener("click", () => removeTaskFromList(div, taskId, "notodo"));
 
 		const pencil = document.createElement("i");
+		pencil.classList.add("col-md-1");
 		pencil.classList.add("fas");
 		pencil.classList.add("fa-pencil-alt");
 		pencil.classList.add("edit");
-		pencil.addEventListener('click', () => editTask(li, taskId, "notodo"));
+		pencil.addEventListener('click', () => editTask(div, taskId, "notodo"));
 
-		const last_li = document.querySelector(".notodo__list > li:last-child");
-		last_li.append(bin);
-		last_li.append(pencil);
+		const last_div = document.querySelector(".notodo__list > div:last-child");
 
-		notodoList.push(String(task));
+		last_div.append(li);
+		last_div.append(pencil);
+		last_div.append(bin);
+
+		notodoList.push(String(taskName));
 		localStorage.setItem("notodoList", JSON.stringify(notodoList));
 
 		setDisabled(true);
@@ -174,14 +195,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		return li;
   	}
 
-  	function editTask(li, taskId, list) {
+  	function editTask(div, taskId, list) {
 		if (li.disabled == true) 
 			li.disabled = !li.disabled;
 
 		else {
 			li.disabled = !li.disabled;
-			console.log(li.value);
-			console.log(li.innerHTML);
 
 			if (taskId >= 0) 
 			{
@@ -199,8 +218,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
   	}
 
-	function removeTaskFromList(li, taskId, list) {
-		li.parentNode.removeChild(li);
+	function removeTaskFromList(div, taskId, list) {
+		div.parentNode.removeChild(div);
 		if (taskId >= 0) 
 		{
 			if (list == "todo")

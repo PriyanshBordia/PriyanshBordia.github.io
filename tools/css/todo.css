@@ -56,67 +56,65 @@ code p {
 }
 
 .small {
-    position: relative;
-	max-width: 500px;
+    /* position: relative; */
+	max-width: 400px;
 	max-height: 30px;
 	margin: auto;
 	display: flex;
-	overflow: hidden;
     border-radius: 3px;
     background-color: cornsilk;
 }
 
-#quotes {
+/* #quotes {
 	white-space: nowrap;
 	animation: sliding 25s linear infinite;
 	animation-delay: 2s;
 	animation-fill-mode: initial;
-}
+} */
 
 .container {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: .4rem;
     align-items: center;
     font-size: 1.2rem;
     line-height: 2.2rem;
-    border: 1px solid cornflowerblue;
+	border: .25rem solid #233554;
+}
+
+.col-md-6 .row {
+	margin-left: .5rem;
+}
+
+.col-md-10, .col-md-1 {
+	padding: .2rem;
+}
+
+.col-md-10 {
+	line-height: 2rem;
 }
 
 .todo__list, .notodo__list {
-    margin: 1.5rem;
+    margin: 1rem;
     padding: 2rem;
-    border: 1px solid #64ffda;
+    border: .125rem solid #64ffda;
 }
 
-li i:first-child {
-    float: right;
-}
-
-li i:last-child {
-    float: right;
-    margin-right: 1rem;
-}
-
-i {
-	padding: .5rem;
-}
 
 i:hover {
     cursor: pointer;
 }
 
 .fa-pencil-alt:hover {
-    color:green;
+    color: brown;
 }
 
 .fa-trash-alt:hover {
-    color:red;
+    color: grey;
 }
 
 footer {
 	margin: 1.5rem;
-	color: thistle;
     font-weight: 100;
 	text-align: center;
 }
@@ -125,14 +123,13 @@ footer:hover {
 	color: #64ffda;
 }
 
+/* 
 @keyframes sliding {
 	0% {
 		transform: translateX(0);
-		/* background-color:green; */
 	}
 
 	100% {
 		transform: translateX(-100%);
-		/* background-color:red; */
 	}
-}
+} */
