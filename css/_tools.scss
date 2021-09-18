@@ -1,11 +1,11 @@
 .tools {
 
-    max-width: 1200px;
+    max-width: 75rem;
     margin-top: 2rem;
 
     &__grid {
 
-        max-width: 450px;
+        max-width: 28.125rem;
         margin-top: 1rem;
         margin-right: auto;
         margin-bottom: 1rem;
@@ -13,15 +13,15 @@
         text-align: center;
         align-items: center;
         background-color: $LightNavy;
-        border: 1px solid $LightSlate;
-        border-radius: 2px;
+        border: .0625 solid $LightSlate;
+        border-radius: .125rem;
 
         &__img {
 
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: 2px;
+                border-radius: .125rem;
                 border: .2rem solid $LightestSlate;
             }
         }
@@ -30,7 +30,7 @@
             margin: 1rem;
             padding: 1rem;
             background-color: $LightestNavy;
-            border: 1px solid #aaa;
+            border: .0625rem solid #aaa;
         }
 
         &__button {
@@ -40,8 +40,8 @@
             width: $btn-size-sm;            
             // color: $NeonGreen;
             font-size: $font-md;
-            border: 1px solid $NeonGreen;
-            border-radius: 7px;
+            border: .0625rem solid $NeonGreen;
+            border-radius: .4375rem;
 
             &:hover {
                 background-color: $LightestNavy;

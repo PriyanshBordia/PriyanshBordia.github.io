@@ -1,150 +1,209 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+	setDisabled(true);
 
-    setDisabled(true);
+	var todoList = [];
+	var notodoList = [];
 
-    var todoList = new Array();
-    var notodoList = new Array();
+	if (!localStorage.getItem("todoList"))
+		localStorage.setItem("todoList", JSON.stringify(todoList));
+	else {
+		todoList = JSON.parse(localStorage.getItem("todoList"));
 
-    if (!localStorage.getItem('todoList'))
-        localStorage.setItem('todoList', JSON.stringify(todoList));
-    else
-    {
-        todoList = JSON.parse(localStorage.getItem('todoList'));
+		for (var i = 0; i < todoList.length; i++) {
 
-        for (var i = 0; i < todoList.length; i++)
-        {
-            const li = addTaskToList(todoList[i]);
-            document.querySelector('.todo__list').append(li);
+			taskName = todoList[i];
 
-            const last_li = document.querySelector('.todo__list > li:last-child');
+			const li = addTaskToList(taskName);
+			document.querySelector(".todo__list").append(li);
 
-            const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt';
-            bin.value = 'b' + String(i);
-            last_li.append(bin);
+			const taskId = i;
+			li.value = taskId;
 
-            const pencil = document.createElement('i');
-            pencil.className = 'fas fa-pencil-alt';
-            pencil.value = 'p' + String(i);
-            last_li.append(pencil);
-        }
-    }
+			const bin = document.createElement("i");
+			bin.classList.add("far");
+			bin.classList.add("fa-trash-alt");
+			bin.classList.add("remove");
+			bin.addEventListener("click", () => removeTaskFromList(li, taskId, "todo"));
 
-    if (!localStorage.getItem('notodoList'))
-        localStorage.setItem('notodoList', JSON.stringify(notodoList));
-    else
-    {
-        notodoList = JSON.parse(localStorage.getItem('notodoList'));
+			const pencil = document.createElement("i");
+			pencil.classList.add("fas");
+			pencil.classList.add("fa-pencil-alt");
+			pencil.classList.add("edit");
+			pencil.addEventListener('click', () => editTask(li, taskId));
 
-        for (var i = 0; i < notodoList.length; i++)
-        {
-            const li = addTaskToList(notodoList[i]);
-            document.querySelector('.notodo__list').append(li);
+			const last_li = document.querySelector(".todo__list > li:last-child");
+			last_li.append(bin);
+			last_li.append(pencil);
+		}
+	}
 
-            const last_li = document.querySelector('.notodo__list > li:last-child');
+	if (!localStorage.getItem("notodoList"))
+		localStorage.setItem("notodoList", JSON.stringify(notodoList));
+	else {
+		notodoList = JSON.parse(localStorage.getItem("notodoList"));
+		
+		for (var i = 0; i < notodoList.length; i++) {
 
-            const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt';
-            bin.value = 'b' + String(i);
-            last_li.append(bin);
+			taskName = notodoList[i];
 
-            const pencil = document.createElement('i');
-            pencil.className = 'fas fa-pencil-alt';
-            pencil.value = 'p' + String(i);
-            last_li.append(pencil);
-        }
-    }
-    
-    document.querySelector('#task').onkeyup = () => {
+			const li = addTaskToList(taskName);
+			document.querySelector(".notodo__list").append(li);
 
-        if((document.querySelector('#task').value.trim()).length > 0)
-            setDisabled(false);
-        else
-            setDisabled(true);
-    };
+			const taskId = i;
 
-    // const button = document.querySelectorAll('button');
+			li.value = taskId;
 
-    document.querySelector('#todo').onclick = () => {
-        
-        task = document.querySelector('#task').value.trim();
+			const bin = document.createElement("i");
+			bin.classList.add("far");
+			bin.classList.add("fa-trash-alt");
+			bin.classList.add("remove");
+			bin.addEventListener("click", () => removeTaskFromList(li, taskId, "notodo"));
 
-        const li = addTaskToList(task);
-        document.querySelector('.todo__list').append(li);
-        
-        const last_li = document.querySelector('.todo__list > li:last-child');
+			const pencil = document.createElement("i");
+			pencil.classList.add("fas");
+			pencil.classList.add("fa-pencil-alt");
+			pencil.classList.add("edit");
+			pencil.addEventListener('click', () => editTask(li, taskId));
 
-        const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt';
-        bin.value = 'b' + String(todoList.length - 1);
-        last_li.append(bin);
+			const last_li = document.querySelector(".notodo__list > li:last-child");
+			last_li.append(bin);
+			last_li.append(pencil);
 
-        const pencil = document.createElement('i');
-        pencil.className = 'fas fa-pencil-alt';
-        pencil.value = 'p' + String(todoList.length - 1);
-        last_li.append(pencil);
-       
-        todoList.push(String(task));
-        localStorage.setItem('todoList', JSON.stringify(todoList));
+		}
+	}
 
-        setDisabled(true);
+	document.querySelector("#task").onkeyup = () => {
+		if (document.querySelector("#task").value.trim().length > 0)
+		  	setDisabled(false);
+		else 
+			setDisabled(true);
+	};
 
-        document.querySelector('#task').value = '';
+	document.querySelector("#todo").onclick = () => {
 
-        return false;
-    };
+		taskName = document.querySelector("#task").value.trim();
+		
+		const li = addTaskToList(taskName);
+		document.querySelector(".todo__list").append(li);
 
-    document.querySelector('#notodo').onclick = () => {
+		const taskId = todoList.length;
+		console.log(taskId);
+		
+		li.value = taskId;
 
-        task = document.querySelector('#task').value.trim();
+		const bin = document.createElement("i");
+		bin.classList.add("far");
+		bin.classList.add("fa-trash-alt");
+		bin.classList.add("remove");
+		bin.addEventListener("click", () => removeTaskFromList(li, taskId, "todo"));
 
-        const li = addTaskToList(task);
-        document.querySelector('.notodo__list').append(li);
+		const pencil = document.createElement("i");
+		pencil.classList.add("fas");
+		pencil.classList.add("fa-pencil-alt");
+		pencil.classList.add("edit");
+		pencil.addEventListener('click', () => editTask(li, taskId));
+		
+		const last_li = document.querySelector(".todo__list > li:last-child");
+		last_li.append(bin);
+		last_li.append(pencil);
 
-        const last_li = document.querySelector('.notodo__list > li:last-child');
+		todoList.push(String(taskName));
+		localStorage.setItem("todoList", JSON.stringify(todoList));
 
-        const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt';
-        bin.value = 'b' + String(notodoList.length - 1);
-        last_li.append(bin);
-        
-        const pencil = document.createElement('i');
-        pencil.className = 'fas fa-pencil-alt';
-        pencil.value = 'p' + String(notodoList.length - 1);
-        last_li.append(pencil);
+		setDisabled(true);
 
-        notodoList.push(String(task));
-        localStorage.setItem('notodoList', JSON.stringify(notodoList));
+		document.querySelector("#task").value = "";
 
-        setDisabled(true);
+		return false;
+	};
 
-        document.querySelector('#task').value = '';
+	document.querySelector("#notodo").onclick = () => {
+		
+		taskName = document.querySelector("#task").value.trim();
 
-        return false;
-    };
+		const li = addTaskToList(taskName);
+		document.querySelector(".notodo__list").append(li);
 
-    document.querySelectorAll('.bin').onclick = () => {
-        // document.body.parentNode; 
-    };
+		const taskId = notodoList.length;
+		console.log(taskId);
 
-    document.querySelectorAll('.pencil').onclick = () => {
-        console.log('in far');
-    };
+		li.value = taskId;
 
-    function setDisabled(value) {
-        document.querySelector('#todo').disabled = value;
-        document.querySelector('#notodo').disabled = value;
-    };
+		const bin = document.createElement("i");
+		bin.classList.add("far");
+		bin.classList.add("fa-trash-alt");
+		bin.classList.add("remove");
+		bin.addEventListener("click", () => removeTaskFromList(li, taskId, "notodo"));
 
-    function addTaskToList(taskName) {
+		const pencil = document.createElement("i");
+		pencil.classList.add("fas");
+		pencil.classList.add("fa-pencil-alt");
+		pencil.classList.add("edit");
+		pencil.addEventListener('click', () => editTask(li, taskId));
 
-        var li = document.createElement('li');
-        li.innerHTML = taskName;
-        return li;
-    }; 
+		const last_li = document.querySelector(".notodo__list > li:last-child");
+		last_li.append(bin);
+		last_li.append(pencil);
 
-    function removeTaskFromList(list, taskId) {
-        
-        list.splice(taskId, 1);
-    };
+		notodoList.push(String(task));
+		localStorage.setItem("notodoList", JSON.stringify(notodoList));
+
+		setDisabled(true);
+
+		document.querySelector("#task").value = "";
+
+		return false;
+	};
+
+	function setDisabled(value) {
+		document.querySelector("#todo").disabled = value;
+		document.querySelector("#notodo").disabled = value;
+	}
+
+	document.querySelectorAll(".remove").onclick = () => {
+		console.log("bin");
+  	};
+
+	document.querySelectorAll(".edit").onclick = () => {
+		console.log("pencil");
+	};
+
+  	function addTaskToList(taskName) {
+		var li = document.createElement("li");
+		li.innerHTML = taskName;
+		return li;
+  	}
+
+  	function editTask(li, taskName) {
+		if (input.disabled == true) 
+			input.disabled = false;
+
+		else {
+			li.disabled = true;
+			let indexOf = list.indexOf(taskName);
+			list[indexOf] = input.value;
+			localStorage.setItem(list, JSON.stringify(list));
+		}
+  	}
+
+	function removeTaskFromList(li, taskId, list) {
+		li.parentNode.removeChild(li);
+		if (taskId >= 0) {
+
+			if (list == "todo")
+			{
+				todoList.splice(taskId, 1);
+				localStorage.setItem("todoList", JSON.stringify(todoList));
+			}
+
+			else if (list == "notodo")
+			{
+				notodoList.splice(taskId, 1);
+				localStorage.setItem("notodoList", JSON.stringify(notodoList));
+			}
+		} 
+
+		else 
+			console.log("Index out of bound.!!");	
+	}
 });

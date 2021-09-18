@@ -8,9 +8,10 @@
     &__img {
 
         img {
-            max-width: 11rem;
-            max-height: 11rem;
-            border: 2px solid $LightestNavy;
+            max-width: 12.25rem;
+            max-height: 12.25rem;
+			padding: .125rem;
+            border: .125rem solid $LightestNavy;
             border-radius: 5rem;
         }
     }
@@ -23,9 +24,9 @@
 
     &__body {
         
-        max-width: 900px;
+        max-width: 56.25rem;
         margin: auto;
-        font-weight: 200px;
+        font-weight: 200;
         font-size: 1.2rem;
         line-height: 2.25rem;
     }

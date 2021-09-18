@@ -98,6 +98,10 @@ li i:last-child {
     margin-right: 1rem;
 }
 
+i {
+	padding: .5rem;
+}
+
 i:hover {
     cursor: pointer;
 }
@@ -120,7 +124,6 @@ footer {
 footer:hover {
 	color: #64ffda;
 }
-
 
 @keyframes sliding {
 	0% {
