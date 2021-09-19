@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const div = document.createElement("div");
 			div.classList.add("row");
-			const taskId = i;
-			div.value = taskId;
 			document.querySelector(".todo__list").append(div);
 
 			taskName = todoList[i];
 
 			const li = addTaskToList(taskName);
 			li.classList.add("col-md-10");
+
+			const taskId = i;
 
 			const bin = document.createElement("i");
 			bin.classList.add("col-md-1");
@@ -47,19 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		localStorage.setItem("notodoList", JSON.stringify(notodoList));
 	else {
 		notodoList = JSON.parse(localStorage.getItem("notodoList"));
-		
 		for (var i = 0; i < notodoList.length; i++) {
 
 			const div = document.createElement("div");
 			div.classList.add("row");
-			const taskId = i;
-			div.value = taskId;
 			document.querySelector(".notodo__list").append(div);
 
 			taskName = notodoList[i];
 
 			const li = addTaskToList(taskName);
 			li.classList.add("col-md-10");
+
+			const taskId = i;
 
 			const bin = document.createElement("i");
 			bin.classList.add("col-md-1");
@@ -96,12 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 		const div = document.createElement("div");
 		div.classList.add("row");
-		const taskId = todoList.length;
-		div.value = taskId;
 		document.querySelector(".todo__list").append(div);
 
 		const li = addTaskToList(taskName);
 		li.classList.add("col-md-10");
+
+		const taskId = todoList.length;
 
 		const bin = document.createElement("i");
 		bin.classList.add("col-md-1");
@@ -139,12 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const div = document.createElement("div");
 		div.classList.add("row"); 
-		const taskId = notodoList.length;
-		div.value = taskId;
 		document.querySelector(".notodo__list").append(div);
 
 		const li = addTaskToList(taskName);
 		li.classList.add("col-md-10");
+
+		const taskId = notodoList.length;
 
 		const bin = document.createElement("i");
 		bin.classList.add("col-md-1");
@@ -224,6 +223,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		{
 			if (list == "todo")
 			{
+				for (var i = taskId; i < todoList.length; i++)
+				{
+
+				}
+
 				todoList.splice(taskId, 1);
 				localStorage.setItem("todoList", JSON.stringify(todoList));
 			}
