@@ -6,3 +6,5 @@
 - Real Time Polling Voting App
 - Edit feature for tasks
 - Kanban Board
+- PageRank 
+- Minesweeper
