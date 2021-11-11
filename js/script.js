@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	"am a Student",
 	"am a Tech Geek",
 	"play Football",
-  ];
+  ]
+
   const typingDelay = 200;
   const eraseDelay = 150;
   const newTextDelay = 2000;
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	} else {
 	  setTimeout(erase, newTextDelay);
 	}
-  }
+  };
 
   function erase() {
 	if (charIdx > 0) {
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	  setTimeout(type, typingDelay);
 	}
-  }
+  };
 
   const btnHamburger = document.querySelector("#btnHamburger");
   const body = document.querySelector("body");
