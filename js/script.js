@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
   }
 
-  const btnHamburger = document.querySelectorAll("#btnHamburger");
-  const body = document.querySelectorAll("body");
-  const header = document.querySelectorAll(".header");
-  const footer = document.querySelectorAll(".footer");
+  const btnHamburger = document.querySelector("#btnHamburger");
+  const body = document.querySelector("body");
+  const header = document.querySelector(".header");
+  const footer = document.querySelector(".footer");
   const fadeElements = document.querySelectorAll(".has-fade");
 
   btnHamburger.onclick = () => {
