@@ -32,5 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	  footer.classList.add("fixed-bottom");
 	}
+
+	if (document.title == "Experience | Priyansh Bordia")
+	{
+
+		const experience = document.querySelector(".experience");
+
+		if (experience.style.opacity == "0")
+		{
+			experience.style.opacity = "1";
+		}
+		else
+		{
+			experience.style.opacity = "0";
+		}
+	}
   };
 });
