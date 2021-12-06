@@ -8,3 +8,5 @@
 - Kanban Board
 - PageRank 
 - Minesweeper
+- Djanjo RestFramework, API Docs
+- Pagination
