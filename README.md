@@ -5,8 +5,8 @@
 - Add all the projects that were done during the course of learning.
 - Real Time Polling Voting App
 - Edit feature for tasks
-- Kanban Board
+- Kanban Board (Wood)
 - PageRank 
 - Minesweeper
-- Djanjo RestFramework, API Docs
-- Pagination
+- Djanjo - 1. RestFramework, 2. API Docs, 3. Pagination
+- Blockchain
