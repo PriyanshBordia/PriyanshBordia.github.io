@@ -8,5 +8,3 @@
 - Kanban Board (Wood)
 - PageRank 
 - Minesweeper
-- Djanjo - 1. RestFramework, 2. API Docs, 3. Pagination
-- Blockchain
