@@ -6,5 +6,9 @@
 - Real Time Polling Voting App
 - Edit feature for tasks
 - Kanban Board (Wood)
-- PageRank 
+
+- Tic-Tac-Toe (Submit)
 - Minesweeper
+- PageRank (Submit)
+- Heridity 
+
