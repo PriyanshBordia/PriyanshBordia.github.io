@@ -9,4 +9,5 @@
 - Minesweeper
 - PageRank (Submit)
 - Heridity 
+- Week 3
 
