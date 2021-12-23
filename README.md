@@ -1,6 +1,7 @@
 # PriyanshBordia.github.io
 
 - Add all the projects that were done during the course of learning.
+- Miniature World
 - Real Time Polling Voting App
 - Edit feature for tasks
 - Kanban Board (Wood)
