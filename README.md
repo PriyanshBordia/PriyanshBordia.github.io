@@ -5,7 +5,7 @@
 - Real Time Polling Voting App
 - Edit feature for tasks
 - Kanban Board (Wood)
-
+-------------------------------
 - Tic-Tac-Toe (Submit)
 - Minesweeper
 - PageRank (Submit)
@@ -13,4 +13,5 @@
 - Week 3
 - Week 4
 - Week 5
-
+------------------------------
+- macOS app 
