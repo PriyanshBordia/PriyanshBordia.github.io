@@ -19,4 +19,7 @@
 ------------------------------
 - fast.ai
 -------------------------------
-- update, deploy LMS-LNMIIT
+- LMS-LNMIIT
+  - Add policy
+  - Add route
+  - deploy
