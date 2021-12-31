@@ -1,6 +1,6 @@
 # PriyanshBordia.github.io
 
-- Add all the projects that were done during the course of learning.
+- Add all the projects.
 - Miniature World
 - Real Time Polling Voting App
 - Edit feature for tasks
@@ -18,8 +18,10 @@
 - macOS app 
 ------------------------------
 - fast.ai
--------------------------------
+------------------------------
 - LMS-LNMIIT
   - Add policy
   - Add route
   - deploy
+------------------------------
+- Docker
