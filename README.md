@@ -25,3 +25,4 @@
   - deploy
 ------------------------------
 - Docker
+- Cloud (AWS, Azure)
