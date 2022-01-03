@@ -25,4 +25,12 @@
   - deploy
 ------------------------------
 - Docker
-- Cloud (AWS, Azure)
+- Cloud (AWS, Azure) 
+-----------------------------
+- Pagination
+- RestFramework
+- tests.py
+- forms.py
+- db_router.py
+----------------------------
+
