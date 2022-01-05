@@ -1,10 +1,11 @@
 # PriyanshBordia.github.io
 
+- Kanban Board (Wood) 
+----------------------------
 - Add all the projects.
 - Miniature World
 - Real Time Polling Voting App
 - Edit feature for tasks
-- Kanban Board (Wood)
 -------------------------------
 - Tic-Tac-Toe (Submit)
 - Minesweeper
