@@ -34,4 +34,6 @@
 - forms.py
 - db_router.py
 ----------------------------
-
+- Indexing
+- Cronjobs
+- Tmux
