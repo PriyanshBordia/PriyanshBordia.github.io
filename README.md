@@ -36,4 +36,6 @@
 ----------------------------
 - Indexing
 - Cronjobs
-- Tmux
+- Tmux 
+--------------------------
+- Advanced DB queries
