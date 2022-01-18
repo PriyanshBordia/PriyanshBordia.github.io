@@ -94,10 +94,10 @@ code p {
 	line-height: 2rem;
 }
 
-.todo__list, .notodo__list {
+.todo__list, .notodo__list, .wishlist, .in_progress, .review, .done {
     margin: 1rem;
     padding: 2rem;
-    border: .125rem solid #64ffda;
+    border: .125rem solid #c2dde6;
 }
 
 
