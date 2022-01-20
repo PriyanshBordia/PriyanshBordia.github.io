@@ -6,6 +6,7 @@
 - Miniature World
 - Real Time Polling Voting App
 - Edit feature for tasks
+- Scroll Bar below navbar with % scrolled.
 -------------------------------
 - Tic-Tac-Toe (Submit)
 - Minesweeper
