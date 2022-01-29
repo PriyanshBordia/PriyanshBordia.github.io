@@ -9,7 +9,7 @@
 - Scroll Bar below navbar with % scrolled.
 -------------------------------
 - Tic-Tac-Toe (Submit)
-- Minesweeper
+- Minesweeper (Todo)
 - PageRank (Submit)
 - Heridity 
 - Week 3
