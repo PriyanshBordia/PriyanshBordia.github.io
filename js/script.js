@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.title == "Experience | Priyansh Bordia") {
-
       const experience = document.querySelector(".experience");
 
       if (experience.style.opacity == "0") {
@@ -45,9 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const footer__grid__text =
-      document.querySelector(".footer__grid__text .has-hover")
+  const footer__grid__text = document.querySelector(
+    ".footer__grid__text .has-hover"
+  );
   console.log(footer__grid__text);
   footer__grid__text.innerHTML =
-      "By Priyansh Bordia &copy; 2020-" + new Date().getFullYear();
+    "By Priyansh Bordia &copy; 2020-" + new Date().getFullYear();
 });
