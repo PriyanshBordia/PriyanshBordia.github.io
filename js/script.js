@@ -13,39 +13,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(".has-fade");
 
   btnHamburger.onclick = () => {
-	if (header.classList.contains("open")) {
-	  header.classList.remove("open");
-	  body.classList.remove("no-scroll");
-	  fadeElements.forEach((element) => {
-		element.classList.remove("fade-in");
-		element.classList.add("fade-out");
-	  });
+    if (header.classList.contains("open")) {
+      header.classList.remove("open");
+      body.classList.remove("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-in");
+        element.classList.add("fade-out");
+      });
 
-	  footer.classList.remove("fixed-bottom");
-	} else {
-	  header.classList.add("open");
-	  body.classList.add("no-scroll");
-	  fadeElements.forEach((element) => {
-		element.classList.remove("fade-out");
-		element.classList.add("fade-in");
-	  });
+      footer.classList.remove("fixed-bottom");
+    } else {
+      header.classList.add("open");
+      body.classList.add("no-scroll");
+      fadeElements.forEach((element) => {
+        element.classList.remove("fade-out");
+        element.classList.add("fade-in");
+      });
 
-	  footer.classList.add("fixed-bottom");
-	}
+      footer.classList.add("fixed-bottom");
+    }
 
-	if (document.title == "Experience | Priyansh Bordia")
-	{
+    if (document.title == "Experience | Priyansh Bordia") {
+      const experience = document.querySelector(".experience");
 
-		const experience = document.querySelector(".experience");
-
-		if (experience.style.opacity == "0")
-		{
-			experience.style.opacity = "1";
-		}
-		else
-		{
-			experience.style.opacity = "0";
-		}
-	}
+      if (experience.style.opacity == "0") {
+        experience.style.opacity = "1";
+      } else {
+        experience.style.opacity = "0";
+      }
+    }
   };
+
+  const footer__grid__text = document.querySelector(
+    ".footer__grid__text .has-hover"
+  );
+  console.log(footer__grid__text);
+  footer__grid__text.innerHTML =
+    "By Priyansh Bordia &copy; 2020-" + new Date().getFullYear();
 });
