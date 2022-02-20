@@ -26,6 +26,7 @@
 -----------------------------
 - Pagination
 - RestFramework
+- Indexinng Models - Meta
 - tests.py
 - forms.py
 - db_router.py
