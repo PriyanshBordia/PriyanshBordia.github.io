@@ -32,7 +32,7 @@
 - db_router.py
 ----------------------------
 - Indexing
-- Cronjobs
+- Cronjobs using GitHub Actions
 - Tmux 
 --------------------------
 - Advanced DB queries
