@@ -188,7 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   	function editTask(div, list) {
 
-
 		input = div.childNodes[0];
 
 		if (input.disabled == true) 
@@ -215,14 +214,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function removeTaskFromList(div, list) {
 		div.parentNode.removeChild(div);
-		taskId = todoList.indexOf(String(div.childNodes[0].innerHTML));
 		if (list == "todo")
 		{
+			taskId = todoList.indexOf(String(div.childNodes[0].innerHTML));
 			todoList.splice(taskId, 1);
 			localStorage.setItem("todoList", JSON.stringify(todoList));
 		}
 		else if (list == "notodo")
 		{
+			taskId = notodoList.indexOf(String(div.childNodes[0].innerHTML));
 			notodoList.splice(taskId, 1);
 			localStorage.setItem("notodoList", JSON.stringify(notodoList));
 		}
