@@ -2,6 +2,7 @@
 
 - Kanban Board (Wood) 
 - Fodd Exp Alerting app
+- Fix DB issues
 ----------------------------
 - Add all the projects.
 - Miniature World
