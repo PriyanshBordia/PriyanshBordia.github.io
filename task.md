@@ -9,7 +9,7 @@
 - Real Time Polling Voting App
 - Edit feature for tasks
 - Scroll Bar below navbar with % scrolled.
--------------------------------
+--
 - Tic-Tac-Toe (Submit)
 - Minesweeper (Todo)
 - PageRank (Submit)
@@ -17,20 +17,24 @@
 - Week 3
 - Week 4
 - Week 5
-------------------------------
+--
 - iOS app
 - macOS app 
-------------------------------
+--
 - fast.ai
-------------------------------
+--
 - Docker
 - Cloud (AWS, Azure) 
------------------------------
+--
 - Pagination
 - RestFramework
 - Indexinng Models - Meta
 - tests.py
 - forms.py
 - db_router.py
-----------------------------
+--
 - Indexing
+- Cronjobs using GitHub Actions
+- Tmux 
+--
+ - Advanced DB queries
