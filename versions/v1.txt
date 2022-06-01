@@ -1,6 +1,6 @@
 
 <!-- v1 -->
-<div class="container conatiner-fluid">
+<div class="container container-fluid">
     <div class="content">
         <div class="content-head">
             <span id="sp-text">Priyansh Bordia</span>
