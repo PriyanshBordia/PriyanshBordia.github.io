@@ -15,3 +15,7 @@
 
 ### HTML
 - [Jinja](https://jinja.palletsprojects.com)
+
+
+#### Misc
+- [libraries.io](https://libraries.io)
