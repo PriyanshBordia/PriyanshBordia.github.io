@@ -19,3 +19,4 @@
 
 #### Misc
 - [libraries.io](https://libraries.io)
+- [Email Verification](http://michaelherold.github.io/pyIsEmail)
