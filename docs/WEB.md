@@ -20,3 +20,9 @@
 #### Misc
 - [libraries.io](https://libraries.io)
 - [Email Verification](http://michaelherold.github.io/pyIsEmail)
+
+#### GitHub Workflow
+ - [Pre-commit](https://pre-commit.com)
+
+#### Code Esthetics
+- [Black](https://black.readthedocs.io/en/stable/integrations/editors.html)
