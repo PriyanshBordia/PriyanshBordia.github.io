@@ -26,17 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			bin.classList.add("remove");
 			bin.addEventListener("click", () => removeTaskFromList(div, "todo"));
 
-			const pencil = document.createElement("i");
-			pencil.classList.add("col-md-1");
-			pencil.classList.add("fas");
-			pencil.classList.add("fa-pencil-alt");
-			pencil.classList.add("edit");
-			pencil.addEventListener('click', () => editTask(div, "todo"));
+			// const pencil = document.createElement("i");
+			// pencil.classList.add("col-md-1");
+			// pencil.classList.add("fas");
+			// pencil.classList.add("fa-pencil-alt");
+			// pencil.classList.add("edit");
+			// pencil.addEventListener('click', () => editTask(div, "todo"));
 
 			const last_div = document.querySelector(".todo__list > div:last-child");
 			
 			last_div.append(li);
-			last_div.append(pencil);
+			// last_div.append(pencil);
 			last_div.append(bin);
 		}
 	}
@@ -63,17 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			bin.classList.add("remove");
 			bin.addEventListener("click", () => removeTaskFromList(div, "notodo"));
 
-			const pencil = document.createElement("i");
-			pencil.classList.add("col-md-1");
-			pencil.classList.add("fas");
-			pencil.classList.add("fa-pencil-alt");
-			pencil.classList.add("edit");
-			pencil.addEventListener('click', () => editTask(div, "notodo"));
+			// const pencil = document.createElement("i");
+			// pencil.classList.add("col-md-1");
+			// pencil.classList.add("fas");
+			// pencil.classList.add("fa-pencil-alt");
+			// pencil.classList.add("edit");
+			// pencil.addEventListener('click', () => editTask(div, "notodo"));
 
 			const last_div = document.querySelector(".notodo__list > div:last-child");
 
 			last_div.append(li);
-			last_div.append(pencil);
+			// last_div.append(pencil);
 			last_div.append(bin);
 		}
 	}
@@ -103,17 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		bin.classList.add("remove");
 		bin.addEventListener("click", () => removeTaskFromList(div, "todo"));
 
-		const pencil = document.createElement("i");
-		pencil.classList.add("col-md-1");
-		pencil.classList.add("fas");
-		pencil.classList.add("fa-pencil-alt");
-		pencil.classList.add("edit");
-		pencil.addEventListener('click', () => editTask(div, "todo"));
+		// const pencil = document.createElement("i");
+		// pencil.classList.add("col-md-1");
+		// pencil.classList.add("fas");
+		// pencil.classList.add("fa-pencil-alt");
+		// pencil.classList.add("edit");
+		// pencil.addEventListener('click', () => editTask(div, "todo"));
 		
 		const last_div = document.querySelector(".todo__list > div:last-child");
 		
 		last_div.append(li);
-		last_div.append(pencil);
+		// last_div.append(pencil);
 		last_div.append(bin);
 
 		todoList.push(String(taskName));
@@ -144,17 +144,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		bin.classList.add("remove");
 		bin.addEventListener("click", () => removeTaskFromList(div, "notodo"));
 
-		const pencil = document.createElement("i");
-		pencil.classList.add("col-md-1");
-		pencil.classList.add("fas");
-		pencil.classList.add("fa-pencil-alt");
-		pencil.classList.add("edit");
-		pencil.addEventListener('click', () => editTask(div, "notodo"));
+		// const pencil = document.createElement("i");
+		// pencil.classList.add("col-md-1");
+		// pencil.classList.add("fas");
+		// pencil.classList.add("fa-pencil-alt");
+		// pencil.classList.add("edit");
+		// pencil.addEventListener('click', () => editTask(div, "notodo"));
 
 		const last_div = document.querySelector(".notodo__list > div:last-child");
 
 		last_div.append(li);
-		last_div.append(pencil);
+		// last_div.append(pencil);
 		last_div.append(bin);
 
 		notodoList.push(String(taskName));
@@ -172,13 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector("#notodo").disabled = value;
 	}
 
-	document.querySelectorAll(".remove").onclick = () => {
-		console.log("bin");
-  	};
+	// document.querySelectorAll(".remove").onclick = () => {
+	// 	console.log("bin");
+  	// };
 
-	document.querySelectorAll(".edit").onclick = () => {
-		console.log("pencil");
-	};
+	// document.querySelectorAll(".edit").onclick = () => {
+	// 	console.log("pencil");
+	// };
 
   	function addTaskToList(taskName) {
 		var li = document.createElement("li");
