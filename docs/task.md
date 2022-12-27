@@ -1,15 +1,38 @@
 # A List
 
 - Kanban Board (Wood) 
-- Fodd Exp Alerting app
-- Fix DB issues
 ----------------------------
-- Add all the projects.
+- Add all the weekend projects.
 - Miniature World
+
+#### DevOps
+- Docker
+- Cloud (AWS, Azure) 
+- Cronjobs using GitHub Actions
+
+#### Django
+- Pagination
+- RestFramework
+- Indexinng Models - Meta
+- tests.py
+- forms.py
+- db_router.py
+- Indexing
+
+#### Project Bucket List
 - Real Time Polling Voting App
+
+#### Feature
 - Edit feature for tasks
 - Scroll Bar below navbar with % scrolled.
---
+
+#### To Create
+- iOS app
+- watchOS app
+- macOS app
+- ipadOS app
+
+#### CS50's AI50
 - Tic-Tac-Toe (Submit)
 - Minesweeper (Todo)
 - PageRank (Submit)
@@ -17,24 +40,7 @@
 - Week 3
 - Week 4
 - Week 5
---
-- iOS app
-- macOS app 
---
+
+#### Read
 - fast.ai
---
-- Docker
-- Cloud (AWS, Azure) 
---
-- Pagination
-- RestFramework
-- Indexinng Models - Meta
-- tests.py
-- forms.py
-- db_router.py
---
-- Indexing
-- Cronjobs using GitHub Actions
-- Tmux 
---
- - Advanced DB queries
+
