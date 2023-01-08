@@ -49,5 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   console.log(footer__grid__text);
   footer__grid__text.innerHTML =
-    "By Priyansh Bordia &copy; 2020-" + new Date().getFullYear();
+    "Created by Priyansh Bordia &copy; 2020-" + new Date().getFullYear();
 });
