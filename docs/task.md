@@ -11,13 +11,7 @@
 - Cronjobs using GitHub Actions
 
 #### Django
-- Pagination
 - RestFramework
-- Indexinng Models - Meta
-- tests.py
-- forms.py
-- db_router.py
-- Indexing
 
 #### Project Bucket List
 - Real Time Polling Voting App
