@@ -1,35 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
 	setDisabled(true);
 
-	var todoList = [];
-	var notodoList = [];
+	var data = new Map();
 
-	["todo", "notodo"].forEach(load);
+	var Lists = ["todo", "notodo"];
+	Lists.forEach(load);
 
-	function load(list) {
-		if (!localStorage.getItem(list))
-			localStorage.setItem(list, JSON.stringify([]));
+	function load(listName) {
+		if (!localStorage.getItem(listName))
+			localStorage.setItem(listName, JSON.stringify([]));
 		else {
-			data = JSON.parse(localStorage.getItem(list));
-			for (var i = 0; i < data.length; i++) {
+			data[listName] = JSON.parse(localStorage.getItem(listName));
+			for (var i = 0; i < data[listName].length; i++) {
 
 				const div = document.createElement("div");
 				div.classList.add("row");
 
-				var html_identefier = "." + list + "__list";
-				console.log(string);
-				document.querySelector(string).append(div);
+				var html_identefier = "." + listName + "__list";
+				document.querySelector(html_identefier).append(div);
 
-				taskName = data[i];
+				taskName = data[listName][i];
 
 				const li = addTaskToList(taskName);
 				li.classList.add("col-md-10");
 
 				const bin = getBinElement();
-				bin.addEventListener("click", () => removeTaskFromList(div, "todo"));
+				bin.addEventListener("click", () => removeTask(div, listName));
 
 				const pencil = getPencilElement();
-				pencil.addEventListener('click', () => editTask(div, "todo"));
+				pencil.addEventListener('click', () => editTask(div, listName));
 
 				const last_div = document.querySelector(html_identefier + " > div:last-child");
 				last_div.append(li);
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		li.classList.add("col-md-10");
 
 		const bin = getBinElement()
-		bin.addEventListener("click", () => removeTaskFromList(div, "todo"));
+		bin.addEventListener("click", () => removeTask(div, "todo"));
 
 		const pencil = getPencilElement()
 		pencil.addEventListener('click', () => editTask(div, "todo"));
@@ -69,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		last_div.append(pencil);
 		last_div.append(bin);
 
-		todoList.push(String(taskName));
-		localStorage.setItem("todo", JSON.stringify(todoList));
+		data["todo"].push(String(taskName));
+		localStorage.setItem("todo", JSON.stringify(data["todo"]));
 
 		setDisabled(true);
 
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		li.classList.add("col-md-10");
 
 		const bin = getBinElement();
-		bin.addEventListener("click", () => removeTaskFromList(div, "notodo"));
+		bin.addEventListener("click", () => removeTask(div, "notodo"));
 
 		const pencil = getPencilElement();
 		pencil.addEventListener('click', () => editTask(div, "notodo"));
@@ -102,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		last_div.append(pencil);
 		last_div.append(bin);
 
-		notodoList.push(String(taskName));
-		localStorage.setItem("notodoList", JSON.stringify(notodoList));
+		data["notodo"].push(String(taskName));
+		localStorage.setItem("notodo", JSON.stringify(data["notodo"]));
 
 		setDisabled(true);
 
@@ -113,8 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	function setDisabled(value) {
-		document.querySelector("#todo").disabled = value;
-		document.querySelector("#notodo").disabled = value;
+		for (listName in Lists)
+			document.querySelector("#" + listName).disabled = value;
 	}
 
 	// document.querySelectorAll(".remove").onclick = () => {
@@ -135,11 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		return li;
 	}
 
-	function editTask(div, list) {
-		let children = [...div.childNodes];
-		li = children[0]
-		pencil = children[1];
-		bin = children[2];
+	function editTask(div, listName) {
+		value = div.childNodes[0].innerHTML;
 
 		while (div.hasChildNodes()) {
 			div.removeChild(div.lastChild);
@@ -151,40 +147,47 @@ document.addEventListener("DOMContentLoaded", () => {
 		input.classList.add("form-control-md");
 		input.classList.add("mt-1");
 		input.classList.add("mb-1");
-		input.value = li.innerHTML;
-		input.placeholder = li.innerHTML;
+		input.value = value;
+		input.placeholder = value;
+		input.id = value;
 		div.append(input);
 
 		const check = getCheckElement();
 		div.append(check);
-		check.addEventListener("click", () => updateTask(div, list));
+		check.addEventListener("click", () => updateTask(div, listName));
+	};
 
-		if (list == "todo") {
-			todoList[taskId] = li.innerHTML;
-			localStorage.setItem("todoList", JSON.stringify(todoList));
-		}
-		else if (list == "notodo") {
-			notodoList[taskId] = li.innerHTML;
-			localStorage.setItem("notodoList", JSON.stringify(notodoList));
-		}
-		else
-			console.log("Incorrect List!");
-	}
+	function updateTask(div, listName) {
+		input = div.childNodes[0];
+		taskId = input.id;
+		console.log(taskId);
+		data[listName][taskId] = input.value;
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
 
-	function removeTaskFromList(div, list) {
+		while (div.hasChildNodes()) {
+			div.removeChild(div.lastChild);
+		};
+
+		taskName = data[listName][taskId]
+		const li = addTaskToList(taskName);
+		li.classList.add("col-md-10");
+
+		const bin = getBinElement();
+		bin.addEventListener("click", () => removeTask(div, listName));
+
+		const pencil = getPencilElement();
+		pencil.addEventListener('click', () => editTask(div, listName));
+
+		div.append(li);
+		div.append(pencil);
+		div.append(bin);
+	};
+
+	function removeTask(div, listName) {
 		div.parentNode.removeChild(div);
-		if (list == "todo") {
-			taskId = todoList.indexOf(String(div.childNodes[0].innerHTML));
-			todoList.splice(taskId, 1);
-			localStorage.setItem("todoList", JSON.stringify(todoList));
-		}
-		else if (list == "notodo") {
-			taskId = notodoList.indexOf(String(div.childNodes[0].innerHTML));
-			notodoList.splice(taskId, 1);
-			localStorage.setItem("notodoList", JSON.stringify(notodoList));
-		}
-		else
-			console.log("Incorrect List.!!");
+		taskId = data[listName].indexOf(String(div.childNodes[0].innerHTML));
+		data[listName].splice(taskId, 1);
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
 	};
 
 	function getCheckElement() {
