@@ -14,11 +14,10 @@
 - RestFramework
 
 #### Project Bucket List
-- Real Time Polling Voting App
+- Real-Time Polling Voting App
 
 #### Feature
-- Edit feature for tasks
-- Scroll Bar below navbar with % scrolled.
+- Scroll Bar below the navbar with % scrolled.
 
 #### To Create
 - iOS app
@@ -30,7 +29,7 @@
 - Tic-Tac-Toe (Submit)
 - Minesweeper (Todo)
 - PageRank (Submit)
-- Heridity 
+- Heredity 
 - Week 3
 - Week 4
 - Week 5
