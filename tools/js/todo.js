@@ -113,7 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function setDisabled(value) {
 		for (listName in Lists)
-			document.querySelector("#" + listName).disabled = value;
+			console.log(listName);
+		document.querySelector("#" + listName).disabled = value;
 	}
 
 	// document.querySelectorAll(".remove").onclick = () => {
@@ -149,18 +150,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		input.classList.add("mb-1");
 		input.value = value;
 		input.placeholder = value;
-		input.id = value;
+		input.id = data[listName].indexOf(String(value));;
 		div.append(input);
 
 		const check = getCheckElement();
 		div.append(check);
 		check.addEventListener("click", () => updateTask(div, listName));
+
+		console.log(div);
 	};
 
 	function updateTask(div, listName) {
 		input = div.childNodes[0];
 		taskId = input.id;
-		console.log(taskId);
 		data[listName][taskId] = input.value;
 		localStorage.setItem(listName, JSON.stringify(data[listName]));
 
