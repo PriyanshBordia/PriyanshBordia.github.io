@@ -112,9 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	function setDisabled(value) {
-		for (listName in Lists)
-			console.log(listName);
-		document.querySelector("#" + listName).disabled = value;
+		document.querySelector("#todo").disabled = value;
+		document.querySelector("#notodo").disabled = value;
 	}
 
 	// document.querySelectorAll(".remove").onclick = () => {
