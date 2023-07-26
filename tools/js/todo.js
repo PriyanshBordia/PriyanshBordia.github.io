@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				last_div.append(bin);
 			}
 		}
-	};
+	}
 
 	document.querySelector("#task").onkeyup = () => {
 		if (document.querySelector("#task").value.trim().length > 0)
 			setDisabled(false);
 		else
 			setDisabled(true);
-	};
+	}
 
 	function setDisabled(value) {
 		for (i in Lists) {
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		while (div.hasChildNodes()) {
 			div.removeChild(div.lastChild);
-		};
+		}
 
 		const input = document.createElement("input");
 		input.classList.add("col-md-10");
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		input.classList.add("mb-1");
 		input.value = value;
 		input.placeholder = value;
-		input.id = data[listName].indexOf(String(value));;
+		input.id = data[listName].indexOf(String(value));
 		div.append(input);
 
 		const check = getCheckElement();
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		while (div.hasChildNodes()) {
 			div.removeChild(div.lastChild);
-		};
+		}
 
 		taskName = data[listName][taskId]
 		const li = createTask(taskName);
