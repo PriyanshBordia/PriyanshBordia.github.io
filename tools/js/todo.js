@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	Lists.forEach(load);
 
 	function load(listName) {
+		document.querySelector('#' + listName).addEventListener("click", () => addTask(listName));
 		if (!localStorage.getItem(listName))
 			localStorage.setItem(listName, JSON.stringify([]));
 		else {
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				taskName = data[listName][i];
 
-				const li = addTaskToList(taskName);
+				const li = createTask(taskName);
 				li.classList.add("col-md-10");
 
 				const bin = getBinElement();
@@ -45,75 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			setDisabled(true);
 	};
 
-	document.querySelector("#todo").onclick = () => {
-
-		taskName = document.querySelector("#task").value.trim();
-
-		const div = document.createElement("div");
-		div.classList.add("row");
-		document.querySelector(".todo__list").append(div);
-
-		const li = addTaskToList(taskName);
-		li.classList.add("col-md-10");
-
-		const bin = getBinElement()
-		bin.addEventListener("click", () => removeTask(div, "todo"));
-
-		const pencil = getPencilElement()
-		pencil.addEventListener('click', () => editTask(div, "todo"));
-
-		const last_div = document.querySelector(".todo__list > div:last-child");
-
-		last_div.append(li);
-		last_div.append(pencil);
-		last_div.append(bin);
-
-		data["todo"].push(String(taskName));
-		localStorage.setItem("todo", JSON.stringify(data["todo"]));
-
-		setDisabled(true);
-
-		document.querySelector("#task").value = "";
-
-		return false;
-	};
-
-	document.querySelector("#notodo").onclick = () => {
-
-		taskName = document.querySelector("#task").value.trim();
-
-		const div = document.createElement("div");
-		div.classList.add("row");
-		document.querySelector(".notodo__list").append(div);
-
-		const li = addTaskToList(taskName);
-		li.classList.add("col-md-10");
-
-		const bin = getBinElement();
-		bin.addEventListener("click", () => removeTask(div, "notodo"));
-
-		const pencil = getPencilElement();
-		pencil.addEventListener('click', () => editTask(div, "notodo"));
-
-		const last_div = document.querySelector(".notodo__list > div:last-child");
-
-		last_div.append(li);
-		last_div.append(pencil);
-		last_div.append(bin);
-
-		data["notodo"].push(String(taskName));
-		localStorage.setItem("notodo", JSON.stringify(data["notodo"]));
-
-		setDisabled(true);
-
-		document.querySelector("#task").value = "";
-
-		return false;
-	};
-
 	function setDisabled(value) {
-		document.querySelector("#todo").disabled = value;
-		document.querySelector("#notodo").disabled = value;
+		for (i in Lists) {
+			document.querySelector('#' + Lists[i]).disabled = value;
+		}
 	}
 
 	// document.querySelectorAll(".remove").onclick = () => {
@@ -124,11 +60,45 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 	console.log("pencil");
 	// };
 
-	document.querySelectorAll(".check").onclick = () => {
-		console.log("check");
+	// document.querySelectorAll(".check").onclick = () => {
+	// console.log("check");
+	// };
+
+
+	function addTask(listName) {
+		html_attribute = "." + listName + "__list";
+		taskName = document.querySelector("#task").value.trim();
+
+		const div = document.createElement("div");
+		div.classList.add("row");
+		document.querySelector(html_attribute).append(div);
+
+		const li = createTask(taskName);
+		li.classList.add("col-md-10");
+
+		const bin = getBinElement()
+		bin.addEventListener("click", () => removeTask(div, listName));
+
+		const pencil = getPencilElement()
+		pencil.addEventListener('click', () => editTask(div, listName));
+
+		const last_div = document.querySelector(html_attribute + " > div:last-child");
+
+		last_div.append(li);
+		last_div.append(pencil);
+		last_div.append(bin);
+
+		data[listName].push(String(taskName));
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
+
+		setDisabled(true);
+
+		document.querySelector("#task").value = "";
+
+		return false;
 	};
 
-	function addTaskToList(taskName) {
+	function createTask(taskName) {
 		var li = document.createElement("li");
 		li.innerHTML = taskName;
 		return li;
@@ -142,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		};
 
 		const input = document.createElement("input");
-		input.classList.add("col-md-8");
+		input.classList.add("col-md-10");
 		input.classList.add("form-control");
 		input.classList.add("form-control-md");
 		input.classList.add("mt-1");
@@ -155,8 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const check = getCheckElement();
 		div.append(check);
 		check.addEventListener("click", () => updateTask(div, listName));
-
-		console.log(div);
 	};
 
 	function updateTask(div, listName) {
@@ -170,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		};
 
 		taskName = data[listName][taskId]
-		const li = addTaskToList(taskName);
+		const li = createTask(taskName);
 		li.classList.add("col-md-10");
 
 		const bin = getBinElement();
@@ -193,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function getCheckElement() {
 		const check = document.createElement("i");
-		check.classList.add("col-md-4");
+		check.classList.add("col-md-2");
 		check.classList.add("far");
 		check.classList.add("fa-check");
 		check.classList.add("check");
