@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				last_div.append(pencil);
 				last_div.append(bin);
 			}
+		}
 	};
 
 	document.querySelector("#task").onkeyup = () => {
@@ -84,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const last_div = document.querySelector(html_attribute + " > div:last-child");
 
 		last_div.append(li);
-		// last_div.append(pencil);
+		last_div.append(pencil);
 		last_div.append(bin);
 
 		data[listName].push(String(taskName));
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector("#task").value = "";
 
 		return false;
-	};
+	}
 
 	function createTask(taskName) {
 		var li = document.createElement("li");
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const check = getCheckElement();
 		div.append(check);
 		check.addEventListener("click", () => updateTask(div, listName));
-	};
+	}
 
 	function updateTask(div, listName) {
 		input = div.childNodes[0];
@@ -149,14 +150,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		div.append(li);
 		div.append(pencil);
 		div.append(bin);
-	};
+	}
 
 	function removeTask(div, listName) {
 		div.parentNode.removeChild(div);
 		taskId = data[listName].indexOf(String(div.childNodes[0].innerHTML));
 		data[listName].splice(taskId, 1);
 		localStorage.setItem(listName, JSON.stringify(data[listName]));
-	};
+	}
 
 	function getCheckElement() {
 		const check = document.createElement("i");
@@ -166,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		check.classList.add("check");
 		check.classList.add("m-auto");
 		return check;
-	};
+	}
 
 	function getPencilElement() {
 		const pencil = document.createElement("i");
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		pencil.classList.add("mt-1");
 		pencil.classList.add("mb-1");
 		return pencil;
-	};
+	}
 
 	function getBinElement() {
 		const bin = document.createElement("i");
@@ -188,5 +189,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		bin.classList.add("mt-1");
 		bin.classList.add("mb-1");
 		return bin;
-	};
-});
+	}
+})
