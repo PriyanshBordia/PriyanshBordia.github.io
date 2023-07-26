@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				last_div.append(pencil);
 				last_div.append(bin);
 			}
-		}
 	};
 
 	document.querySelector("#task").onkeyup = () => {
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const last_div = document.querySelector(html_attribute + " > div:last-child");
 
 		last_div.append(li);
-		last_div.append(pencil);
+		// last_div.append(pencil);
 		last_div.append(bin);
 
 		data[listName].push(String(taskName));
