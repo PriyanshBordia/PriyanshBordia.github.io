@@ -3,15 +3,6 @@
 - Kanban Board (Wood) 
 ----------------------------
 - Add all the weekend projects.
-- Miniature World
-
-#### DevOps
-- Docker
-- Cloud (AWS, Azure) 
-- Cronjobs using GitHub Actions
-
-#### Django
-- RestFramework
 
 #### Project Bucket List
 - Real-Time Polling Voting App
