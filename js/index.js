@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		"play Football",
 	]
 
-	const typingDelay = 200;
-	const eraseDelay = 150;
-	const newTextDelay = 2000;
+	const typingDelay = 100;
+	const eraseDelay = 50;
+	const newTextDelay = 1000;
 	let idx = 0;
 	let charIdx = 0;
 
