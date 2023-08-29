@@ -1,130 +1,193 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+	setDisabled(true);
 
-    var todoList = new Array();
-    var notodoList = new Array();
+	var data = new Map();
 
-    if (!localStorage.getItem('todoList'))
-        localStorage.setItem('todoList', JSON.stringify(todoList));
-    else
-    {
-        todoList = JSON.parse(localStorage.getItem('todoList'));
+	var Lists = ["todo", "notodo"];
+	Lists.forEach(load);
 
-        for (var i = 0; i < todoList.length; i++)
-        {
-            const li = addTaskToList(todoList[i]);
-            document.querySelector('.todo__list').append(li);
+	function load(listName) {
+		document.querySelector('#' + listName).addEventListener("click", () => addTask(listName));
+		if (!localStorage.getItem(listName))
+			localStorage.setItem(listName, JSON.stringify([]));
+		else {
+			data[listName] = JSON.parse(localStorage.getItem(listName));
+			for (var i = 0; i < data[listName].length; i++) {
 
-            const last_li = document.querySelector('.todo__list > li:last-child');
+				const div = document.createElement("div");
+				div.classList.add("row");
 
-            const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt'
-            last_li.append(bin);
+				var html_identefier = "." + listName + "__list";
+				document.querySelector(html_identefier).append(div);
 
-            const pencil = document.createElement('i');
-            pencil.className = 'fas fa-pencil-alt';
-            last_li.append(pencil);
-        }
-    }
+				taskName = data[listName][i];
 
-    if (!localStorage.getItem('notodoList'))
-        localStorage.setItem('notodoList', JSON.stringify(notodoList));
-    else
-    {
-        notodoList = JSON.parse(localStorage.getItem('notodoList'));
+				const li = createTask(taskName);
+				li.classList.add("col-md-10");
 
-        for (var i = 0; i < notodoList.length; i++)
-        {
-            const li = addTaskToList(notodoList[i]);
-            document.querySelector('.notodo__list').append(li);
+				const bin = getBinElement();
+				bin.addEventListener("click", () => removeTask(div, listName));
 
-            const last_li = document.querySelector('.notodo__list > li:last-child');
+				const pencil = getPencilElement();
+				pencil.addEventListener('click', () => editTask(div, listName));
 
-            const bin = document.createElement('i');
-            bin.className = 'far fa-trash-alt'
-            last_li.append(bin);
+				const last_div = document.querySelector(html_identefier + " > div:last-child");
+				last_div.append(li);
+				last_div.append(pencil);
+				last_div.append(bin);
+			}
+		}
+	}
 
-            const pencil = document.createElement('i');
-            pencil.className = 'fas fa-pencil-alt';
-            last_li.append(pencil);
-        }
-    }
-    
-    setDisabled(true);
+	document.querySelector("#task").onkeyup = () => {
+		if (document.querySelector("#task").value.trim().length > 0)
+			setDisabled(false);
+		else
+			setDisabled(true);
+	}
 
-    document.querySelector('#task').onkeyup = () => {
+	function setDisabled(value) {
+		for (i in Lists) {
+			document.querySelector('#' + Lists[i]).disabled = value;
+		}
+	}
 
-        if((document.querySelector('#task').value.trim()).length > 0)
-            setDisabled(false);
-        else
-            setDisabled(true);
-    };
+	// document.querySelectorAll(".remove").onclick = () => {
+	// 	console.log("bin");
+	// };
 
-    // const button = document.querySelectorAll('button');
+	// document.querySelectorAll(".edit").onclick = () => {
+	// 	console.log("pencil");
+	// };
 
-    document.querySelector('#todo').onclick = () => {
-        
-        task = document.querySelector('#task').value.trim();
+	// document.querySelectorAll(".check").onclick = () => {
+	// console.log("check");
+	// };
 
-        const li = addTaskToList(task);
-        document.querySelector('.todo__list').append(li);
-        
-        const last_li = document.querySelector('.todo__list > li:last-child');
 
-        const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt'
-        last_li.append(bin);
+	function addTask(listName) {
+		html_attribute = "." + listName + "__list";
+		taskName = document.querySelector("#task").value.trim();
 
-        const pencil = document.createElement('i');
-        pencil.className = 'fas fa-pencil-alt';
-        last_li.append(pencil);
-       
-        todoList.push(String(task));
-        localStorage.setItem('todoList', JSON.stringify(todoList));
+		const div = document.createElement("div");
+		div.classList.add("row");
+		document.querySelector(html_attribute).append(div);
 
-        setDisabled(true);
+		const li = createTask(taskName);
+		li.classList.add("col-md-10");
 
-        document.querySelector('#task').value = '';
+		const bin = getBinElement()
+		bin.addEventListener("click", () => removeTask(div, listName));
 
-        return false;
-    };
+		const pencil = getPencilElement()
+		pencil.addEventListener('click', () => editTask(div, listName));
 
-    document.querySelector('#notodo').onclick = () => {
+		const last_div = document.querySelector(html_attribute + " > div:last-child");
 
-        task = document.querySelector('#task').value.trim();
+		last_div.append(li);
+		last_div.append(pencil);
+		last_div.append(bin);
 
-        const li = addTaskToList(task);
-        document.querySelector('.notodo__list').append(li);
+		data[listName].push(String(taskName));
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
 
-        const last_li = document.querySelector('.notodo__list > li:last-child');
+		setDisabled(true);
 
-        const bin = document.createElement('i');
-        bin.className = 'far fa-trash-alt'
-        last_li.append(bin);
-        
-        const pencil = document.createElement('i');
-        pencil.className = 'fas fa-pencil-alt';
-        last_li.append(pencil);
+		document.querySelector("#task").value = "";
 
-        notodoList.push(String(task));
-        localStorage.setItem('notodoList', JSON.stringify(notodoList));
+		return false;
+	}
 
-        setDisabled(true);
+	function createTask(taskName) {
+		var li = document.createElement("li");
+		li.innerHTML = taskName;
+		return li;
+	}
 
-        document.querySelector('#task').value = '';
+	function editTask(div, listName) {
+		value = div.childNodes[0].innerHTML;
 
-        return false;
-    };
+		while (div.hasChildNodes()) {
+			div.removeChild(div.lastChild);
+		}
 
-    function setDisabled(value) {
-        document.querySelector('#todo').disabled = value;
-        document.querySelector('#notodo').disabled = value;
-    };
+		const input = document.createElement("input");
+		input.classList.add("col-md-10");
+		input.classList.add("form-control");
+		input.classList.add("form-control-md");
+		input.classList.add("mt-1");
+		input.classList.add("mb-1");
+		input.value = value;
+		input.placeholder = value;
+		input.id = data[listName].indexOf(String(value));
+		div.append(input);
 
-    function addTaskToList(task) {
+		const check = getCheckElement();
+		div.append(check);
+		check.addEventListener("click", () => updateTask(div, listName));
+	}
 
-        var li = document.createElement('li');
-        li.innerHTML = task;
+	function updateTask(div, listName) {
+		input = div.childNodes[0];
+		taskId = input.id;
+		data[listName][taskId] = input.value;
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
 
-        return li;
-    }; 
-});
+		while (div.hasChildNodes()) {
+			div.removeChild(div.lastChild);
+		}
+
+		taskName = data[listName][taskId]
+		const li = createTask(taskName);
+		li.classList.add("col-md-10");
+
+		const bin = getBinElement();
+		bin.addEventListener("click", () => removeTask(div, listName));
+
+		const pencil = getPencilElement();
+		pencil.addEventListener('click', () => editTask(div, listName));
+
+		div.append(li);
+		div.append(pencil);
+		div.append(bin);
+	}
+
+	function removeTask(div, listName) {
+		div.parentNode.removeChild(div);
+		taskId = data[listName].indexOf(String(div.childNodes[0].innerHTML));
+		data[listName].splice(taskId, 1);
+		localStorage.setItem(listName, JSON.stringify(data[listName]));
+	}
+
+	function getCheckElement() {
+		const check = document.createElement("i");
+		check.classList.add("col-md-2");
+		check.classList.add("far");
+		check.classList.add("fa-check");
+		check.classList.add("check");
+		check.classList.add("m-auto");
+		return check;
+	}
+
+	function getPencilElement() {
+		const pencil = document.createElement("i");
+		pencil.classList.add("col-md-1");
+		pencil.classList.add("fa");
+		pencil.classList.add("fa-pencil-alt");
+		pencil.classList.add("edit");
+		pencil.classList.add("mt-1");
+		pencil.classList.add("mb-1");
+		return pencil;
+	}
+
+	function getBinElement() {
+		const bin = document.createElement("i");
+		bin.classList.add("col-md-1");
+		bin.classList.add("far");
+		bin.classList.add("fa-trash-alt");
+		bin.classList.add("remove");
+		bin.classList.add("mt-1");
+		bin.classList.add("mb-1");
+		return bin;
+	}
+})

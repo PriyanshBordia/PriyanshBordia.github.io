@@ -1,4 +1,3 @@
-
 # Compiled class file
 *.class
 
@@ -28,3 +27,6 @@ hs_err_pid*
 
 .vscode
 .DS_Store
+.dccache
+.store
+.quotes

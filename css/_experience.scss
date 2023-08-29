@@ -1,0 +1,150 @@
+.experience {
+
+	margin: 2rem auto 6rem auto;
+	padding: 2rem auto 2rem auto;
+	max-width: 50rem;
+	display: flex;
+	position: relative;
+	overflow-x: hidden;
+	align-items: flex-start;
+	line-height: 1.5;
+	font-size: 1rem;
+	font-family: system, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+	color: $LightestSlate;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+
+	a {
+		display: inline-block;
+		color: inherit;
+		text-decoration: none;
+		text-decoration-skip-ink: auto;
+		transition: color 0.25s ease;
+	}
+
+	p, ul, li {
+		margin: 0;
+	}
+
+	&__tabs {
+
+		display: block;
+		position: relative;
+		z-index: 3;
+		width: max-content;
+
+		&__tab {
+
+			padding: .625rem .625rem .625rem .625rem;
+			width: 10rem;
+			height: $tab-height;
+			text-align: center;
+			font-weight: 300;
+			font-size: 1.2rem;
+			color: $NeonGreen;
+			border-left: .125rem solid $LightestNavy;
+			transition: all 0.25s ease;
+
+			&:hover {
+				color: $NeonGreen;
+			}
+
+			&.active {
+				color: $NeonGreen;
+			}
+
+			@for $i from 1 through 1 {
+				&.tab-#{$i}.active {
+					& ~ .highlighter {
+						transform: translateY(#{($i*$tab-height) - $tab-height});
+					}
+				}
+			}
+		}
+
+		.highlighter {
+
+			display: block;
+			position: absolute;
+			width: .0625rem;
+			height: $tab-height;
+			top: 0;
+			left: 0;
+			bottom: 0;		
+			background: $NeonGreen;
+			transform: translateY(0);
+			transition: transform 0.2s ease;
+			transition-delay: 0.1s;
+			z-index: 10;
+		}
+
+		a:first-of-type {
+			border-top-left-radius: .125rem;
+		}
+
+		a:last-of-type {
+			border-top-right-radius: .125rem;
+		}
+  	}
+
+	&__content {
+		
+		position: relative;
+		padding: 0 .125rem;
+
+		&__section {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 0;
+			transition: opacity 0s ease;
+
+			&.visible {
+				position: relative;
+				opacity: 1;
+				width: 100%;
+				height: auto;
+				transition: opacity 0.5s ease;
+				z-index: 2;
+			}
+			
+			&__title {
+
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+
+			&__name {
+
+				font-size: 1.4rem;
+				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+				color: $NeonGreen;
+			}
+
+			&__date {
+				padding: 1rem auto 1rem 1rem;
+				line-height: 2rem;
+				border-bottom: .125rem solid $LightestNavy;
+			}
+
+			ul {
+  				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			ul li::before {
+				padding: .6rem;
+				width: 1.5em; 
+				content: '▷';
+				color: $NeonGreen;
+				font-size: 1rem;
+				font-weight: 300;
+				display: inline-block;
+				margin-left: -1em;
+			}
+  		}
+	}
+}

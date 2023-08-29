@@ -1,0 +1,41 @@
+
+<!-- v1 -->
+<div class="container container-fluid">
+    <div class="content">
+        <div class="content-head">
+            <span id="sp-text">Priyansh Bordia</span>
+
+            <span id="sp-link">
+                <!-- <a href = "blogs.html" target = "_blank">Blog</a> -->
+                <a href="about.html" target="_blank">About</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJIfKlRrjOjtpdyLfEtQO10mp8F2AMufREJsUlohKHaSZbVg/viewform?embedded=true&pli=1" target="_blank">Survey</a>
+                <a href="https://drive.google.com/file/d/1-QIbu3gUQHk2LxPiANF322I9xVQ4z-hl/view" target="_blank">Résumé</a>
+            </span>
+        </div>
+        
+        <span><hr></span>
+
+        <div class="content-body">
+            <header>
+                Hi!
+            </header>
+        
+            <br>
+        
+            <p>
+                I am an UnderGrad studying Computer Science and Engineering(CSE) at LNMIIT Jaipur, India. The major area is Computer Science. Currently, I am working as a Software Engineer Inter at Delta Exchange from home. 
+                <br>
+                For the ones who don't know what a CSE UnderGrad student does let me tell you, a CSE UnderGrad student studies the Science of Computer Day / Night but sticks to a major area for study. Data Science or Data Structures & Algorithms are the highly anticipated ones. Science revolves largely around data that is generated every instance of time. They manipulate this data and try making best use to enhance human understanding about everything around and bring the necessary faculties to work for achieving unprecedented heights.
+            </p>
+        </div>
+        
+        <hr>
+
+        <section class="comments">
+            <script src="https://utteranc.es/client.js" repo="PriyanshBordia/PriyanshBordia.github.io" issue-term="title"
+                label="utteranc.es" theme="github-light" crossorigin="anonymous" async></script>
+        </section>
+        
+        <hr>
+    </div>
+</div>

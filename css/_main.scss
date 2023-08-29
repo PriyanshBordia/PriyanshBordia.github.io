@@ -1,7 +1,7 @@
 .main {
-    
+
     margin-bottom: 8rem;
-    
+
     @include breakpoint-up(large) {
         display: flex;
     }
@@ -22,12 +22,18 @@
     &__positions {
 
         font-size: 3.2rem;
+		font-weight: 250;
         color: $LightSlate;
     }
-    
+
+	&__typingText {
+
+		color: $Casablanca;
+	}
+
     &__description {
 
-        max-width: 700px;
+        max-width: 43.75rem;
         font-weight: 300;
         font-size: 1rem;
         color: $LightestSlate;
@@ -35,16 +41,19 @@
     }
 
     &__button {
-            
+
         margin-top: 4rem;
         padding: 0.7rem;
         text-align: center;
         align-items: center;
-        width: $btn-size-xs;            
-        color: $NeonGreen;
+        width: $btn-size-xs;
+        // color: $NeonGreen;
         font-size: $font-md;
-        border: 1px solid $NeonGreen;
-        border-radius: 3px;
+        border: .0625rem solid $NeonGreen;
+        border-radius: .1875rem;
+
+		-webkit-transition-duration: 0.4s;  /* Safari */
+  		transition-duration: 0.4s;
 
         &:hover {
             background-color: $LightestNavy;

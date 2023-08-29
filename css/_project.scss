@@ -10,7 +10,7 @@
 }
 
 @mixin tablet {
-	@media (max-width: 600px) {
+	@media (max-width: 37.5rem) {
 		@content;
 	}
 }
@@ -35,7 +35,7 @@
 		text-align: center;
 		align-items: center;
   
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 48rem) {
 
 			align-items: flex-start;
 		}
@@ -117,7 +117,7 @@
 		z-index: -1;
 		background-color: $NeonGreen;
 		// background: linear-gradient(0.3turn, $NeonGreen, $DarkNeonGreen);
-		border-radius: 2px;
+		border-radius: .125rem;
 		grid-column: 6 / -1;
 		grid-row: 1 / -1;
 
@@ -133,11 +133,11 @@
 			z-index: 3;
 			background-color: $Navy;
 			mix-blend-mode: screen;
-			border-radius: 2px;
+			border-radius: .125rem;
 		}
 
 		img {
-			border-radius: 2px;
+			border-radius: .125rem;
 			position: relative;
 			mix-blend-mode: multiply;
 			filter: grayscale(100%) contrast(1);
@@ -147,14 +147,14 @@
 				text-decoration: none !important;
 			}
 
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 48rem) {
 				object-fit: cover;
 				width: auto;
 				height: 100%;
 			}
 		}
 
-	  @media screen and (max-width: 768px) {
+	  @media screen and (max-width: 48rem) {
 			height: 100%;
 		}
 

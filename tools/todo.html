@@ -9,29 +9,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
     <script src="https://kit.fontawesome.com/3288abfe00.js" crossorigin="anonymous"></script>
-    
+
     <!-- Java Script -->
-    <script src="js/todo.js"></script>
-    
+	<script src="js/script.js"></script>
+	<script src="js/todo.js"></script>
+
     <!-- CSS -->
     <link href="css/todo.css" rel="stylesheet">
-    
+
     <!-- Icon -->
     <link rel="icon" href="../media/icons/profile0.png">
-    <title> ToDo list | Priyansh Bordia</title>
+    <title> Todo NoTodo | Priyansh Bordia </title>
 </head>
 <body>
     <header class="header">
         <div class="row">
             <div class="col-md-6">
                 <a href="../index.html" title="Home">Tasks</a>
+                <br>
+                <code class="small">
+					<p id="quotes">
+						Time and Patience are the greatest of Warriors.
+						<!-- Wisdom lies in perseverance. -->
+					</p>
+				</code>
             </div>
             <div class="col-md-6">
                 <form id="newTask" class="form-inline">
-                    <input id="task" class="form-control-lg mt-2 ml-auto mr-auto" type="text" autocomplete="off" autofocus placeholder="Add Task">
-                    <div class="btn-group ml-auto mt-2 mr-auto" role="group">
+                    <input id="task" class="form-control-lg mt-4 ml-auto mr-auto" type="text" autocomplete="off" autofocus placeholder="Add Task">
+                    <div class="btn-group ml-auto mt-4 mr-auto" role="group">
                         <button id="todo" class="btn btn-outline-success btn-lg" type="submit">Todo</button>
                         <button id="notodo" class="btn btn-outline-danger btn-lg" type="submit">Not Todo</button>
                     </div>
@@ -43,22 +51,53 @@
     <div class="container container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <h3>Todo</h3>
+                <h3><code><i class="fas fa-list-ul"></i></code> Todo</h3>
                 <ul class="todo__list">
-
                 </ul>
             </div>
-            <!-- <div class="col-md-4"></div> -->
             <div class="col-md-6">
-                <h3>Not Todo</h3>
+                <h3><code><i class="fas fa-list-ul"></i></code> ! Todo</h3>
                 <ul class="notodo__list">
                 </ul>
             </div>
         </div>
     </div>
 
-    <footer class="button">
-        Created by Priyansh Bordia &copy; 2021
+	<div class="container container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>Wishlist</h3>
+				<ul class="wishlist">
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<h3>In Progress</h3>
+				<ul class="in_progress">
+				</ul>
+				</div>
+			<div class="col-md-3">
+				<h3>Review</h3>
+				<ul class="review">
+
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<h3>Done</h3>
+				<ul class="done">
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__grid__handles">
+            </div>
+            <div class="footer__grid__text">
+                <span class="has-hover"></span>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

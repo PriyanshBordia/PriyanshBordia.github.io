@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let lines = [];
     let svg = null;
 
+    if (!localStorage.getItem('points'))
+        localStorage.setItem('points', JSON.stringify(points));
+    else
+        points = JSON.parse(localStorage.getItem('points'));
+
+    if (!localStorage.getItem('lines'))
+        localStorage.setItem('lines', JSON.stringify(lines));
+    else
+        lines = JSON.parse(localStorage.getItem('lines'));
+
     function render() {
         svg = d3.select('#draw')
                 .attr('height', window.innerHeight)
