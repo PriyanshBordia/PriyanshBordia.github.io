@@ -4,7 +4,7 @@ function play() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM Loaded..!!");
+//   console.log("DOM Loaded..!!");
 
   const btnHamburger = document.querySelector("#btnHamburger");
   const body = document.querySelector("body");
