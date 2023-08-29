@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("DOM Loaded..!!");
+	// console.log("DOM Loaded..!!");
 	const tabs = document.querySelector(".experience__tabs");
 
 	tabs.addEventListener("click", (e) => handleClick(e));
