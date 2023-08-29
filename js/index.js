@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("DOM Loaded..!!");
+	// console.log("DOM Loaded..!!");
 
 	const typingEffect = document.querySelector(".main__typingText");
 	
