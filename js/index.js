@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	const typingEffect = document.querySelector(".main__typingText");
 	
 	const typingText = [
-		"Engineer Software",
-		"Develop Software",
-		"am a Student",
-		"am a Tech Geek",
-		"play Football",
+		"engineer Software",
+		"develop Software",
+		"am a teck enthusiast",
+		// "am a Tech Geek",
+		// "play Football",
 	]
 
-	const typingDelay = 100;
+	const typingDelay = 80;
 	const eraseDelay = 50;
-	const newTextDelay = 1000;
+	const newTextDelay = 1200;
 	let idx = 0;
 	let charIdx = 0;
 
