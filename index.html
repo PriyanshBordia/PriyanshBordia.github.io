@@ -19,7 +19,6 @@
 
 	<!-- Java Script -->
 	<script src="js/script.js"></script>
-	<script src="js/index.js"></script>
 
 	<!-- CSS -->
 	<link href="css/style.css" rel="stylesheet">
@@ -31,13 +30,27 @@
 <body>
 	<!-- Header Navigation -->
 	<header class="header">
-		<div class="overlay has-fade"></div>
-		<nav class="container flex flex-jc-sb flex-ai-c">
-			<a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
-				<img src="media/icons/profile4.png" alt="Priyansh Bordia">
-			</a>
-		</nav>
-	</header>
+        <div class="overlay has-fade"></div>
+        <nav class="container flex flex-jc-sb flex-ai-c">
+            <a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
+                <img src="media/icons/profile4.png" alt="Priyansh Bordia">
+            </a>
+            <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="header__links hide-for-mobile">
+                <a href="index.html" title="Home">Home</a><a href="projects.html" title="Projects I have built" target="_blank">Projects</a><a href="blogs.html" title="Blog" target="_blank">Blog</a><a href="tools.html" title="Tools">Tools</a>
+            </div>
+        </nav>
+        <div class="header__menu has-fade">
+            <a href="index.html" title="Home">Home</a>
+            <a href="projects.html" title="Projects I have built" target="_blank">Projects</a>
+            <a href="blogs.html" title="Blog" target="_blank">Blog</a>
+            <a href="tools.html" title="Tools">Tools</a>
+        </div>
+    </header>
 
 	<!-- Introduction -->
 	<main class="main container">
