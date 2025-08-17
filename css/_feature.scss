@@ -1,3 +1,5 @@
+@use "variables";
+
 .feature {
 
 	&__grid {
@@ -6,7 +8,7 @@
 		margin-left: 1rem;
 		text-align: center;
 		// align-items: center;
-		background-color: $LightNavy;
+		background-color: variables.$LightNavy;
 	}
 
 	&__item {
@@ -18,8 +20,8 @@
 		
 		padding: 1rem;
 		font-size: 2rem;
-		color: $NeonGreen;
-		border: .0625rem solid $LightestSlate;
+		color: variables.$NeonGreen;
+		border: .0625rem solid variables.$LightestSlate;
 		
 		i:hover {
     		transform: rotate(-180deg);
@@ -32,7 +34,7 @@
 
 	&__description {
 		line-height: 1.5rem;
-		border: .0625rem solid $LightSlate;
+		border: .0625rem solid variables.$LightSlate;
 
 		&__subtitle {
 			font-size: 1.5rem;

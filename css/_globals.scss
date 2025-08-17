@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 html {
 	font-size: 100%;
 	box-sizing: border-box;
@@ -22,8 +25,8 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 1.125rem;
 	font-weight: 300;
-	color: $Whiteish;
-	background-color: $Navy;
+	color: variables.$Whiteish;
+	background-color: variables.$Navy;
 	overflow-x: hidden;
 
 	&.no-scroll {
@@ -61,12 +64,12 @@ h1, h2, h3 {
 }
 
 a {
-	color: $LightSlate;
+	color: variables.$LightSlate;
 	text-decoration: none !important;
 }
 
 a:hover, i:hover, .has-hover:hover {
-	color: $NeonGreen;
+	color: variables.$NeonGreen;
 	cursor: pointer;
 }
 
@@ -80,7 +83,7 @@ a, i, .has-hover
 hr {
 	margin: 3rem;
 	height: .125rem;
-	background-color: $LightSlate;
+	background-color: variables.$LightSlate;
 }
 
 .row {
@@ -111,13 +114,13 @@ hr {
 
 // Visibility
 .hide-for-mobile {
-	@include breakpoint-down(md) {
+	@include mixins.breakpoint-down(md) {
 		display: none;
 	}
 }
 
 .hide-for-desktop {
-	@include breakpoint-up(lg) {
+	@include mixins.breakpoint-up(lg) {
 		display: none;
 	}
 }

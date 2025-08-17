@@ -1,3 +1,5 @@
+@use "variables";
+
 .blog {
 
     img {
@@ -8,13 +10,13 @@
         max-height: 21.875rem;
         margin: auto;
         border-radius: .125rem;
-        border: .2rem solid $LightestSlate;
+        border: .2rem solid variables.$LightestSlate;
 	}
 
     video {
         margin: auto;
         border-radius: .125rem;
-        border: .2rem solid $LightestSlate;
+        border: .2rem solid variables.$LightestSlate;
     }
 
     &__grid {
@@ -36,7 +38,7 @@
 
             padding: 2rem;
             font-size: 2rem;
-            color: $NeonGreen;
+            color: variables.$NeonGreen;
         }
 
         &__description {

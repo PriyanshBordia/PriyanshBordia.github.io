@@ -1,8 +1,11 @@
+@use "mixins";
+@use "variables";
+
 .main {
 
     margin-bottom: 8rem;
 
-    @include breakpoint-up(large) {
+    @include mixins.breakpoint-up(large) {
         display: flex;
     }
 
@@ -10,25 +13,25 @@
 
         margin-top: 3rem;
         font-size: 1rem;
-        color: $NeonGreen;
+        color: variables.$NeonGreen;
     }
 
     &__name {
 
         font-size: 4.3rem;
-        color: $White;
+        color: variables.$White;
     }
 
     &__positions {
 
         font-size: 3.2rem;
 		font-weight: 250;
-        color: $LightSlate;
+        color: variables.$LightSlate;
     }
 
 	&__typingText {
 
-		color: $Casablanca;
+		color: variables.$Casablanca;
 	}
 
     &__description {
@@ -36,7 +39,7 @@
         max-width: 43.75rem;
         font-weight: 300;
         font-size: 1rem;
-        color: $LightestSlate;
+        color: variables.$LightestSlate;
         line-height: 1.625rem;
     }
 
@@ -46,17 +49,17 @@
         padding: 0.7rem;
         text-align: center;
         align-items: center;
-        width: $btn-size-xs;
+        width: variables.$btn-size-xs;
         // color: $NeonGreen;
-        font-size: $font-md;
-        border: .0625rem solid $NeonGreen;
+        font-size: variables.$font-md;
+        border: .0625rem solid variables.$NeonGreen;
         border-radius: .1875rem;
 
 		-webkit-transition-duration: 0.4s;  /* Safari */
   		transition-duration: 0.4s;
 
         &:hover {
-            background-color: $LightestNavy;
+            background-color: variables.$LightestNavy;
         }
     }
 }
