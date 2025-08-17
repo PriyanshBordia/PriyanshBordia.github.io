@@ -1,3 +1,5 @@
+@use "variables";
+
 .content {
 
     padding: 2rem;
@@ -11,7 +13,7 @@
             max-width: 12.25rem;
             max-height: 12.25rem;
 			padding: .125rem;
-            border: .125rem solid $LightestNavy;
+            border: .125rem solid variables.$LightestNavy;
             border-radius: 5rem;
         }
     }
@@ -19,7 +21,7 @@
     &__title {
 
         font-size: 1rem;
-        color: $NeonGreen;
+        color: variables.$NeonGreen;
     }
 
     &__body {

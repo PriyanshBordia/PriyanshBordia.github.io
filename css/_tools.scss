@@ -1,3 +1,5 @@
+@use "variables";
+
 .tools {
 
     max-width: 75rem;
@@ -12,8 +14,8 @@
         margin-left: auto;
         text-align: center;
         align-items: center;
-        background-color: $LightNavy;
-        border: .0625 solid $LightSlate;
+        background-color: variables.$LightNavy;
+        border: .0625 solid variables.$LightSlate;
         border-radius: .125rem;
 
         &__img {
@@ -22,14 +24,14 @@
                 width: 100%;
                 height: 100%;
                 border-radius: .125rem;
-                border: .2rem solid $LightestSlate;
+                border: .2rem solid variables.$LightestSlate;
             }
         }
 
         &__text {
             margin: 1rem;
             padding: 1rem;
-            background-color: $LightestNavy;
+            background-color: variables.$LightestNavy;
             border: .0625rem solid #aaa;
         }
 
@@ -37,14 +39,14 @@
             
             margin: auto;
             padding: 0.7rem;
-            width: $btn-size-sm;            
+            width: variables.$btn-size-sm;            
             // color: $NeonGreen;
-            font-size: $font-md;
-            border: .0625rem solid $NeonGreen;
+            font-size: variables.$font-md;
+            border: .0625rem solid variables.$NeonGreen;
             border-radius: .4375rem;
 
             &:hover {
-                background-color: $LightestNavy;
+                background-color: variables.$LightestNavy;
             }
         }
     }

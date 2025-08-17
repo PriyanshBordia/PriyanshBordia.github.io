@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
@@ -49,24 +51,24 @@
 		&__label {
 
 			font-family: monospace;
-			color: $NeonGreen;
+			color: variables.$NeonGreen;
 		}
 
 		&__title {
 
 			margin: .75rem 0 2rem;
 			font-size: 2rem;
-			color: $White;
+			color: variables.$White;
 		}
 		
 		&__details {
 			
 			font-size: 1rem;
 			line-height: 1.5;
-			color: $LightestSlate;
+			color: variables.$LightestSlate;
 
 			p {
-				background-color: $LightestNavy;
+				background-color: variables.$LightestNavy;
 				padding: 1.125rem 1.5625rem;
 				
 				@include tablet {
@@ -86,7 +88,7 @@
 				font-family: monospace;
 				font-weight: 100;
 				font-size: 1rem;
-				color: $LightestSlate;
+				color: variables.$LightestSlate;
 
 				&:not(:first-child) {
 					margin-left: 1.2rem;
@@ -100,7 +102,7 @@
 			a {
 				margin-right: 1rem;
 				margin-left: 1rem;
-				color: $LightSlate;
+				color: variables.$LightSlate;
 			}
 
 		}	
@@ -115,7 +117,7 @@
 	&__icon {
 		position: relative;
 		z-index: -1;
-		background-color: $NeonGreen;
+		background-color: variables.$NeonGreen;
 		// background: linear-gradient(0.3turn, $NeonGreen, $DarkNeonGreen);
 		border-radius: .125rem;
 		grid-column: 6 / -1;
@@ -131,7 +133,7 @@
 			right: 0;
 			bottom: 0;
 			z-index: 3;
-			background-color: $Navy;
+			background-color: variables.$Navy;
 			mix-blend-mode: screen;
 			border-radius: .125rem;
 		}

@@ -1,20 +1,19 @@
-@import "variables";
-@import "mixins";
-@import "animations";
+@use "variables";
+@use "mixins";
+@use "animations";
 
-@import "globals";
-@import "header";
-@import "feature";
+@use "globals";
+@use "header";
+@use "feature";
 
-@import "main";
-@import "content";
-@import "project";
-@import "tools";
-@import "blog";
-@import "experience";
+@use "main";
+@use "content";
+@use "project";
+@use "tools";
+@use "blog";
+@use "experience";
 
-@import "experience.scss";
 
-@import "facts";
+@use "facts";
 
-@import "footer";
+@use "footer";
