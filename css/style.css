@@ -681,18 +681,17 @@ hr {
   background-color: #112240;
   border-top: 0.125rem solid #a8b2d1;
   border-bottom: 0.125rem solid #a8b2d1;
-  margin-top: auto;
   margin-bottom: 0%;
 }
 .footer__grid {
-  margin: 1.5rem;
+  margin: 1rem;
   color: #a8b2d1;
   font-size: 1rem;
   text-align: center;
   align-items: center;
 }
 .footer__grid__handles {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 .footer__grid__handles a:not(:last-child) {
   margin-right: 1rem;

@@ -5,12 +5,11 @@
 	background-color: variables.$LightNavy;    
 	border-top: .125rem solid variables.$LightSlate;
 	border-bottom: .125rem solid variables.$LightSlate;
-	margin-top: auto;
 	margin-bottom: 0%;
 	
 	&__grid {
 
-		margin: 1.5rem;
+		margin: 1rem;
 		// padding-bottom: 1rem;
 		color: variables.$LightSlate;
 		font-size: 1rem;
@@ -19,7 +18,7 @@
 
 		&__handles {
 
-			margin-bottom: 1.3rem;
+			margin-bottom: 1rem;
 
 			a {
 				&:not(:last-child)
