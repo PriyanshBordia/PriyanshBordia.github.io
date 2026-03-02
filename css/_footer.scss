@@ -1,37 +1,8 @@
-@use "variables";
+@use "variables" as v;
 
 .footer {
-
-	background-color: variables.$LightNavy;    
-	border-top: .125rem solid variables.$LightSlate;
-	border-bottom: .125rem solid variables.$LightSlate;
-	margin-bottom: 0%;
-	
-	&__grid {
-
-		margin: 1rem;
-		// padding-bottom: 1rem;
-		color: variables.$LightSlate;
-		font-size: 1rem;
-		text-align: center;
-		align-items: center;
-
-		&__handles {
-
-			margin-bottom: 1rem;
-
-			a {
-				&:not(:last-child)
-				{
-					margin-right: 1rem;
-				}
-			}
-		}
-
-		&__text {
-
-			font-weight: 200;
-		}
-	}
+	padding: 2rem 0 3rem;
+	text-align: center;
+	font-size: 0.8125rem;
+	color: var(--text-tertiary);
 }
-

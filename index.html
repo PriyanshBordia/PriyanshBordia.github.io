@@ -1,84 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-	<!-- Required meta tags -->
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="title" content="Priyansh Bordia / Personal homepage">
-	<meta name="description" content="Engineer, Tinkerer, Developer" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta property="og:title" content="Priyansh Bordia / Personal homepage" />
-	<meta property="og:description" content="Engineer, Tinkerer, Developer" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://priyanshbordia.github.io/" />
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<!-- Java Script -->
-	<script src="js/script.js"></script>
-
-	<!-- CSS -->
-	<link href="css/style.css" rel="stylesheet">
-
-	<!-- Icon -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="Priyansh Bordia">
+	<meta name="description" content="Software Engineer. Python, Django, distributed systems.">
+	<meta property="og:title" content="Priyansh Bordia">
+	<meta property="og:description" content="Software Engineer. Python, Django, distributed systems.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://priyanshbordia.github.io/">
 	<link rel="icon" href="media/icons/profile0.png">
-	<title> Woosh! | Priyansh Bordia </title>
+	<link href="css/style.css" rel="stylesheet">
+	<script>
+		(function() {
+			var theme = localStorage.getItem('theme');
+			if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+			}
+		})();
+	</script>
+	<title>Priyansh Bordia</title>
 </head>
 <body>
-	<!-- Header Navigation -->
 	<header class="header">
-        <div class="overlay has-fade"></div>
-        <nav class="container flex flex-jc-sb flex-ai-c">
-            <a href="https://octoprofile.now.sh/user?id=PriyanshBordia" class="header__logo">
-                <img src="media/icons/profile4.png" alt="Priyansh Bordia">
-            </a>
-            <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <div class="header__links hide-for-mobile">
-                <a href="about.html" title="About">About</a><a href="projects.html" title="Projects I have built">Projects</a>
-				<!-- <a href="tools.html" title="Tools">Tools</a> -->
-            </div>
-        </nav>
-        <div class="header__menu has-fade">
-            <a href="about.html" title="About">About</a>
-            <a href="projects.html" title="Projects I have built">Projects</a>
-            <!-- <a href="tools.html" title="Tools">Tools</a> -->
-        </div>
-    </header>
+		<nav class="container">
+			<a href="/" class="header__name">Priyansh Bordia</a>
+			<div class="header__links">
+				<a href="#about">About</a>
+				<a href="#work">Work</a>
+				<a href="#contact">Contact</a>
+				<button class="theme-toggle" aria-label="Toggle theme">Dark</button>
+			</div>
+		</nav>
+	</header>
 
-	<!-- Introduction -->
-	<main class="main container">
-		<p class="main__greeting">Hi, my name is</p>
-		<p class="main__name">Priyansh Bordia</p>
-		<br><br>
-		<p class="main__description">
-			I'm a Software Engineer specializing in building web applications using <code>Django</code>.
-			<br>
-			I also know <code>Elixir</code> and I am learning <code>Golang.</code>
-		</p>
+	<main class="container">
+		<section id="about" class="section">
+			<p class="intro__role">Software Engineer</p>
+			<p class="intro__bio">
+				I build reliable web applications and backend systems. Experienced with Python, Django, and designing systems that handle real-world complexity. I care about clean architecture, thoughtful abstractions, and shipping software that works.
+			</p>
+		</section>
+
+		<hr class="divider">
+
+		<section id="work" class="section">
+			<h2 class="section__title">Selected Work</h2>
+
+			<div class="work__item">
+				<h3 class="work__name">
+					<a href="https://github.com/PriyanshBordia/Marketplace">Baazaar</a>
+				</h3>
+				<p class="work__description">
+					A marketplace platform for buying, selling, and renting articles. Full-stack Django application with PostgreSQL.
+				</p>
+			</div>
+
+			<div class="work__item">
+				<h3 class="work__name">
+					<a href="https://github.com/PriyanshBordia/The-MilkyWay-Airlines">Milky Way Airlines</a>
+				</h3>
+				<p class="work__description">
+					Flight booking system with seat selection and reservation management. Built with Django and PostgreSQL.
+				</p>
+			</div>
+
+			<div class="work__item">
+				<h3 class="work__name">
+					<a href="https://github.com/PriyanshBordia/Spatial-Data-using-FastAPI">Spatial Data API</a>
+				</h3>
+				<p class="work__description">
+					Spatial data service built with FastAPI for querying and managing geospatial datasets.
+				</p>
+			</div>
+
+			<div class="work__item">
+				<h3 class="work__name">
+					<a href="https://github.com/PriyanshBordia/CarbonFC">CarbonFC</a>
+				</h3>
+				<p class="work__description">
+					Carbon footprint calculator that helps users track and understand their environmental impact.
+				</p>
+			</div>
+		</section>
+
+		<hr class="divider">
+
+		<section id="contact" class="section">
+			<h2 class="section__title">Contact</h2>
+			<p class="contact__links">
+				<a href="https://github.com/PriyanshBordia" target="_blank" rel="noopener">GitHub</a>
+				<span class="contact__separator">&middot;</span>
+				<a href="https://www.linkedin.com/in/priyanshbordia/" target="_blank" rel="noopener">LinkedIn</a>
+			</p>
+		</section>
 	</main>
 
-	<!-- Footer Section -->
-	<footer class="footer fixed-bottom">
-		<div class="footer__grid">
-			<div class="footer__grid__handles">
-				<a href="https://github.com/PriyanshBordia" target="_blank" title="PriyanshBordia">
-                    <i class="fa fa-github"
-						onmouseover="play()"></i></a>
-				<a href="https://www.linkedin.com/in/priyanshbordia/" target="_blank" title="Priyansh B."><i
-						class="fa fa-linkedin" onmouseover="play()"></i></a>
-			</div>
-			<div class="footer__grid__text">
-				<span class="has-hover"></span>
-			</div>
+	<footer class="footer">
+		<div class="container">
+			<span>&copy; 2020&ndash;2026 Priyansh Bordia</span>
 		</div>
 	</footer>
+
+	<script>
+		(function() {
+			var btn = document.querySelector('.theme-toggle');
+			function updateLabel() {
+				var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+				btn.textContent = isDark ? 'Light' : 'Dark';
+			}
+			btn.addEventListener('click', function() {
+				var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+				if (isDark) {
+					document.documentElement.removeAttribute('data-theme');
+					localStorage.setItem('theme', 'light');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					localStorage.setItem('theme', 'dark');
+				}
+				updateLabel();
+			});
+			updateLabel();
+		})();
+	</script>
 </body>
 </html>
